@@ -493,8 +493,15 @@ def reverseWord(a_sentence):
 # print(reverseWord("cats are purrfect"))
 
 
-def checkPalindrome():
-    pass
+def checkPalindrome(word):
+    """assumes word is a string
+    returns a boolean, True if word is a palindrome, else False"""
+    return word == reverseStringv1(word)
+
+
+print(checkPalindrome("eye"))
+print(checkPalindrome("cat"))
+print(checkPalindrome("tacocat"))
 
 
 def cubeSum():

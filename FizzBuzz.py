@@ -25,7 +25,7 @@ def fizzBuzz(upto):
             print(num)
 
 
-fizzBuzz(16)
+fizzBuzz(100)
 
 # whhat to do about 0:
 #     count from 1?
