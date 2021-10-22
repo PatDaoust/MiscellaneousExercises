@@ -513,11 +513,23 @@ def cubeSum(num):
     return cube_sum
 
 
-print(cubeSum(9))
+# print(cubeSum(9))
 
 
-def armstrongNumber():
-    pass
+def armstrongNumber(num):
+    """assumes num is an int
+    returns a boolean, True if num is an armstrong number, else False.
+    An armstrong number = sum of digits ** number of digits
+    e.g. 371 = 3**3 + 7**3 + 1**3
+    """
+    digit_sum = 0
+    for digit in str(num):
+        digit_sum += int(digit) ** 3
+    return num == digit_sum
+
+
+# print(armstrongNumber(371))
+# print(armstrongNumber(369))
 
 
 def GCD():
