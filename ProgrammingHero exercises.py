@@ -499,13 +499,21 @@ def checkPalindrome(word):
     return word == reverseStringv1(word)
 
 
-print(checkPalindrome("eye"))
-print(checkPalindrome("cat"))
-print(checkPalindrome("tacocat"))
+# print(checkPalindrome("eye"))
+# print(checkPalindrome("cat"))
+# print(checkPalindrome("tacocat"))
 
 
-def cubeSum():
-    pass
+def cubeSum(num):
+    """assumes num is an int
+    returns an int, the sum of cubes of the ints 1 to n"""
+    cube_sum = 0
+    for i in range(1, num+1):
+        cube_sum += i**2
+    return cube_sum
+
+
+print(cubeSum(9))
 
 
 def armstrongNumber():
