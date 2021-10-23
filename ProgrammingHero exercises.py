@@ -545,5 +545,33 @@ def GCD(num1, num2):
 # print(GCD(5, 11))  # None
 
 
+def divisibleBy(i, nums):
+    """assumes nums is a list of ints
+    assumes i is an int
+    returns a boolean, True if all the ints in nums are divisible by i. else false
+    """
+    for num in nums:
+        if num % i != 0:
+            return False
+    return True
+
+
+# print(divisibleBy(5, [5, 15, 20, 25]))
+# print(divisibleBy(5, [5, 15, 20, 24]))
+
+
+def GCDMulti(nums):
+    """assumes nums is a list of ints
+    returns an int, the greatest common divisor of nums"""
+    for i in range(min(nums), 0, -1):
+        if divisibleBy(i, nums):
+            return i
+
+
+print(GCDMulti([15, 45]))  # 15
+print(GCDMulti([14, 21, 49]))  # 7
+print(GCDMulti([5, 11]))  # None
+
+
 def LCM():
     pass
