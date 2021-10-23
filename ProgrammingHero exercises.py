@@ -568,10 +568,26 @@ def GCDMulti(nums):
             return i
 
 
-print(GCDMulti([15, 45]))  # 15
-print(GCDMulti([14, 21, 49]))  # 7
-print(GCDMulti([5, 11]))  # None
+# print(GCDMulti([15, 45]))  # 15
+# print(GCDMulti([14, 21, 49]))  # 7
+# print(GCDMulti([5, 11]))  # None
 
 
-def LCM():
-    pass
+def LCM(num1, num2):
+    """assumes num1 and num2 are ints
+    returns an int, representing the least common multiple of num1 and num2
+    """
+    # return smallest elem in both num1 and num2 multiples
+    max_possible_LCM = num1 * num2
+    multiples_num1 = set("")
+    multiples_num2 = set("")
+    for i in range(max_possible_LCM, 1, -1):
+        if i % num1 == 0:
+            multiples_num1.add(i)
+        if i % num2 == 0:
+            multiples_num2.add(i)
+    return min(multiples_num1.intersection(multiples_num2))
+
+
+print(LCM(4, 5))
+print(LCM(4, 8))
