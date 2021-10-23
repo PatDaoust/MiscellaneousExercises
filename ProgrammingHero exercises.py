@@ -532,8 +532,17 @@ def armstrongNumber(num):
 # print(armstrongNumber(369))
 
 
-def GCD():
-    pass
+def GCD(num1, num2):
+    """assumes num1 and num2 are ints
+    returns an int, the greatest common divisor of num1 and num2"""
+    for i in range(min(num1, num2), 0, -1):
+        if (num1 % i == 0) and (num2 % i == 0):
+            return i
+
+
+# print(GCD(15, 45))  # 15
+# print(GCD(14, 49))  # 7
+# print(GCD(5, 11))  # None
 
 
 def LCM():
