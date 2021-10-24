@@ -599,7 +599,6 @@ def guessGame():
     if you guess right, you get points
     To end the game, press q or interrupt the script
     """
-    pdb.set_trace()
     # innitialize gameplay variables
     play_game = True
     points = 0
@@ -608,7 +607,7 @@ def guessGame():
     while play_game:
         user_num = input("Please input a whole number 1 to 10: ")
         if user_num in valid_nums:
-            random_num = random.randint(1, 10)
+            random_num = str(random.randint(1, 10))
             if user_num == random_num:
                 points += 10
                 print("That's correct!")
