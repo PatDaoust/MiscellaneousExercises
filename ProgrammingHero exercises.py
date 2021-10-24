@@ -589,5 +589,66 @@ def LCM(num1, num2):
     return min(multiples_num1.intersection(multiples_num2))
 
 
-print(LCM(4, 5))
-print(LCM(4, 8))
+# print(LCM(4, 5))
+# print(LCM(4, 8))
+
+
+def guessGame():
+    """plays a number guessing game in the consol
+    enter a numer 1 through 10 to make a guess
+    if you guess right, you get points
+    To end the game, press q or interrupt the script
+    """
+    pdb.set_trace()
+    # innitialize gameplay variables
+    play_game = True
+    points = 0
+    valid_nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    # play the game
+    while play_game:
+        user_num = input("Please input a whole number 1 to 10: ")
+        if user_num in valid_nums:
+            random_num = random.randint(1, 10)
+            if user_num == random_num:
+                points += 10
+                print("That's correct!")
+                print(f"The random number was {random_num}")
+                print("You've gained 10 points")
+                print(f"You have {points} points")
+            else:
+                points -= 1
+                print("Sorry, that's not the random number")
+                print(f"The random number was {random_num}")
+                print("You've lost 1 point")
+                print(f"You have {points} points")
+        elif user_num == 'q' or user_num == 'Q':
+            play_game = False
+            print("You have pressed 'q', the game is ending now")
+            print("Please play again soon")
+        else:
+            print("Sorry, thats not a valid input")
+            print("Please make sure to enter a whole number 1 to 10 to play")
+            print("Please press 'q' to stop playing")
+
+
+guessGame()
+
+
+def rockPaperScissors():
+    pass
+
+
+def cowsAndBulls():
+    pass
+
+
+def cowsAndBulls4Digits():
+    pass
+
+
+def wordCompletion():
+    pass
+
+
+def wordHangman():
+    pass
