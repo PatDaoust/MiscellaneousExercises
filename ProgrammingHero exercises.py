@@ -626,11 +626,46 @@ def guessGame():
             print("Please play again soon")
         else:
             print("Sorry, thats not a valid input")
-            print("Please make sure to enter a whole number 1 to 10 to play")
-            print("Please press 'q' to stop playing")
+            print("To play make sure to enter a whole number 1 to 10")
+            print("Or press 'q' to stop playing")
 
 
 # guessGame()
+
+def userResultsRockPaperScissors(user_action, random_action):
+    """assumes user_action and random_action are strings
+    matching "rock" or "paper" or "scissors"
+    returns a string; "win", "draw", or "loose"
+    """
+    if user_action == "rock":
+        if random_action == "paper":
+            return "lose"
+        elif random_action == "scissors":
+            return "win"
+        elif random_action == "rock":
+            return "draw"
+        else:
+            return None
+    elif user_action == "paper":
+        if random_action == "rock":
+            return "win"
+        elif random_action == "scissors":
+            return "lose"
+        elif random_action == "paper":
+            return "draw"
+        else:
+            return None
+    elif user_action == "scissors":
+        if random_action == "paper":
+            return "win"
+        elif random_action == "rock":
+            return "lose"
+        elif random_action == "scissors":
+            return "draw"
+        else:
+            return None
+    else:
+        return None
 
 
 def rockPaperScissors():
@@ -638,10 +673,6 @@ def rockPaperScissors():
     if you win the round, you get a point
     if you loose the round, you get knocked out
     """
-    # lets make a plan!
-    # points = 0
-    # rounds = 0
-    # variable to end gameplay
     # infinite loop to play:
     #     user input rock, paper, sissors
     #         q to quit
@@ -650,12 +681,54 @@ def rockPaperScissors():
     #     logic for who wins
     #     win
     #         point += 1
+    #     tie
+    #        pass
     #     lose
     #         knockout
     #         offer to play again
     #             points = 0
     #             rounds += 1
+    # innitialize gameplay variables
+    play_game = True
+    points = 0
+    rounds = 0
+    valid_actions = ["rock", "paper", "scissors"]
+    while play_game:
+        user_action = input("please type 'rock', 'paper', or 'scissors': ")
+        # TODO figure out why not recognize 'rock' as valid input'
+        if user_action in valid_actions:
+            random_action = valid_actions[random.randint(0, 2)]
+            user_result = userResultsRockPaperScissors(user_action, random_action)
+            if user_result == "win":
+                points += 1
+                print(f"The computer played {random_action}")
+                print("Congradulations! You won this hand. You gained a point")
+                print(f"You have {points} points")
+                print(f"You are on round {rounds}")
+            elif user_result == "draw":
+                print(f"The computer played {random_action}")
+                print("This hand was a draw")
+                print(f"You still have {points} points")
+                print(f"You are on round {rounds}")
+            elif user_result == "lose":
+                points = 0
+                rounds += 1
+                print(f"The computer played {random_action}")
+                print("Sorry, you lost this hand and got knocked out.")
+                print("Let's play another round. If you want to quit here, press 'q'")
+            else:
+                print("Sorry, something has gone drastically wrong\nPlease try again")
+        elif user_action == "q" or user_action == "Q":
+            play_game = False
+            print("You have pressed 'q', the game is ending now")
+            print("Please play again soon")
+        else:
+            print("Sorry, thats not a valid input")
+            print("To play, make sure to type 'rock' or 'paper' or 'scissors' correctly")
+            print("Or press 'q' to stop playing")
 
+
+rockPaperScissors()
 
 
 def cowsAndBulls():
