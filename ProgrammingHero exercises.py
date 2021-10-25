@@ -594,7 +594,7 @@ def LCM(num1, num2):
 
 
 def guessGame():
-    """plays a number guessing game in the consol
+    """plays an interactive number guessing game in the console
     enter a numer 1 through 10 to make a guess
     if you guess right, you get points
     To end the game, press q or interrupt the script
@@ -630,11 +630,32 @@ def guessGame():
             print("Please press 'q' to stop playing")
 
 
-guessGame()
+# guessGame()
 
 
 def rockPaperScissors():
-    pass
+    """plays an interactive game of rock-paper-sisscors in the console
+    if you win the round, you get a point
+    if you loose the round, you get knocked out
+    """
+    # lets make a plan!
+    # points = 0
+    # rounds = 0
+    # variable to end gameplay
+    # infinite loop to play:
+    #     user input rock, paper, sissors
+    #         q to quit
+    #     randomly pick r/p/s
+    #         (list with 3 options, random gen int 0/1/2 and call list[randon int])
+    #     logic for who wins
+    #     win
+    #         point += 1
+    #     lose
+    #         knockout
+    #         offer to play again
+    #             points = 0
+    #             rounds += 1
+
 
 
 def cowsAndBulls():
