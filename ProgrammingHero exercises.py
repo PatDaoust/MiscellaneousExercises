@@ -673,29 +673,14 @@ def rockPaperScissors():
     if you win the round, you get a point
     if you loose the round, you get knocked out
     """
-    # infinite loop to play:
-    #     user input rock, paper, sissors
-    #         q to quit
-    #     randomly pick r/p/s
-    #         (list with 3 options, random gen int 0/1/2 and call list[randon int])
-    #     logic for who wins
-    #     win
-    #         point += 1
-    #     tie
-    #        pass
-    #     lose
-    #         knockout
-    #         offer to play again
-    #             points = 0
-    #             rounds += 1
     # innitialize gameplay variables
     play_game = True
     points = 0
     rounds = 0
     valid_actions = ["rock", "paper", "scissors"]
+    # play the game
     while play_game:
         user_action = input("please type 'rock', 'paper', or 'scissors': ")
-        # TODO figure out why not recognize 'rock' as valid input'
         if user_action in valid_actions:
             random_action = valid_actions[random.randint(0, 2)]
             user_result = userResultsRockPaperScissors(user_action, random_action)
@@ -728,7 +713,7 @@ def rockPaperScissors():
             print("Or press 'q' to stop playing")
 
 
-rockPaperScissors()
+# rockPaperScissors()
 
 
 def cowsAndBulls():
