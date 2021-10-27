@@ -720,22 +720,18 @@ def randomIntNoDigitRepeats(lenght):
     """assumes lenght is an int 1-10, representing how many digits long the number is
     returns an int of len lenght
     """
-    # check that 1 <= lenght <= 10, else ValueError
-    # have list of digits
-    # ranfomly select lenght digits
-    # return int of digits
     digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     random_int_str = ""
     if (lenght >= 1) and (lenght <= 10):
         for i in range(lenght):
-            digit = digits.pop(random.randint(0, lenght-i))
+            digit = digits.pop(random.randint(0, 9-i))
             random_int_str += digit
         return random_int_str
     else:
         raise ValueError("please select a lenght between 1 and 10")
 
 
-# print(randomIntNoDigitRepeats(5))
+print(randomIntNoDigitRepeats(5))
 
 
 def cowsAndBulls2Digit():
