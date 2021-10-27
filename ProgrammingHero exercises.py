@@ -716,8 +716,51 @@ def rockPaperScissors():
 # rockPaperScissors()
 
 
-def cowsAndBulls():
+def randomIntNoDigitRepeats(lenght):
+    """assumes lenght is an int 1-10, representing how many digits long the number is
+    returns an int of len lenght
+    """
+    # check that 1 <= lenght <= 10, else ValueError
+    # have list of digits
+    # ranfomly select lenght digits
+    # return int of digits
+    digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    random_int_str = ""
+    if (lenght >= 1) and (lenght <= 10):
+        for i in range(lenght):
+            digit = digits.pop(random.randint(0, lenght-i))
+            random_int_str += digit
+        return random_int_str
+    else:
+        raise ValueError("please select a lenght between 1 and 10")
+
+
+# print(randomIntNoDigitRepeats(5))
+
+
+def cowsAndBulls2Digit():
     pass
+    # to win: guess all the digits
+    # bull = right digit right place
+    #     compare random to guess char by char
+    # cow = right digit wrong place
+    #     sort digits and compare - bulls
+    #
+    # variables:
+    #     random_num = random.randint(10,99)
+    #     guess_num = input()
+    #         make sure is 2 digits long
+    #     cows = 0
+    #     bulls = 0
+    #     turns = 0
+    # when random_num == guess_num:
+    #     win
+    #     print(f"Congrats! You guessed the number in {turns} turns")
+    cows = 0
+    bulls = 0
+    random_num = randomIntNoDigitRepeats()
+    while bulls < 2:
+        pass
 
 
 def cowsAndBulls4Digits():
