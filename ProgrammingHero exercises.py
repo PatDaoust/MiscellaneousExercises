@@ -774,7 +774,9 @@ def cowsAndBulls2Digit():
             play_game = False
 
 
-# cowsAndBulls2Digit()
+cowsAndBulls2Digit()
+# TODO track down bug where 1 is not recignized as digit
+# test case random_num_str = 19
 
 
 def cowsAndBulls4Digits():
