@@ -731,35 +731,58 @@ def randomIntNoDigitRepeats(lenght):
         raise ValueError("please select a lenght between 1 and 10")
 
 
-print(randomIntNoDigitRepeats(5))
+# print(randomIntNoDigitRepeats(5))
 
 
 def cowsAndBulls2Digit():
-    pass
-    # to win: guess all the digits
-    # bull = right digit right place
-    #     compare random to guess char by char
-    # cow = right digit wrong place
-    #     sort digits and compare - bulls
-    #
-    # variables:
-    #     random_num = random.randint(10,99)
-    #     guess_num = input()
-    #         make sure is 2 digits long
-    #     cows = 0
-    #     bulls = 0
-    #     turns = 0
-    # when random_num == guess_num:
-    #     win
-    #     print(f"Congrats! You guessed the number in {turns} turns")
+    """play a game of cows and bulls with a 2 digit number
+    your goal is to guess all the correct digits in all the correct possitions
+    bulls are a count of how many correct digits are in the correct possition
+    cows are a count of how many correct digits are in the wrong possition
+    """
     cows = 0
     bulls = 0
-    random_num = randomIntNoDigitRepeats()
-    while bulls < 2:
-        pass
+    turns = 0
+    play_game = True
+    random_num_str = randomIntNoDigitRepeats(2)
+    # note: random_num may have a leading 0. is this a feature or a bug?
+    while play_game:
+        guess_num_str = input("Please input your 2 digit guess: ")
+        while len(guess_num_str) != 2:
+            print("That guess is not 2 digits long")
+            guess_num_str = input("Please input your 2 digit guess: ")
+        if bulls < 2:
+            bulls = 0
+            cows = 0
+            # update bulls
+            for i in range(2):
+                if random_num_str[i] == guess_num_str[i]:
+                    bulls += 1
+            # update cows
+            guess_sorted = ''.join(sorted(guess_num_str))
+            random_sorted = ''.join(sorted(random_num_str))
+            for i in range(2):
+                if guess_sorted[i] == random_sorted[i]:
+                    cows += 1
+            cows -= bulls
+            print(f"You have {cows} cows")
+            print(f"You have {bulls} bulls")
+            turns += 1
+        if random_num_str == guess_num_str:
+            print(f"Congrats! You guessed the number in {turns} turns")
+            print(f"The number was {random_num_str}")
+            play_game = False
+
+
+# cowsAndBulls2Digit()
 
 
 def cowsAndBulls4Digits():
+    """play a game of cows and bulls with a 2 digit number
+    your goal is to guess all the correct digits in all the correct possitions
+    bulls are a count of how many correct digits are in the correct possition
+    cows are a count of how many correct digits are in the wrong possition
+    """
     pass
 
 
