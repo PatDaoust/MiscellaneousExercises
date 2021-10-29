@@ -759,10 +759,8 @@ def cowsAndBulls2Digit():
                 if random_num_str[i] == guess_num_str[i]:
                     bulls += 1
             # update cows
-            guess_sorted = ''.join(sorted(guess_num_str))
-            random_sorted = ''.join(sorted(random_num_str))
-            for i in range(2):
-                if guess_sorted[i] == random_sorted[i]:
+            for digit in guess_num_str:
+                if digit in random_num_str:
                     cows += 1
             cows -= bulls
             print(f"You have {cows} cows")
@@ -775,8 +773,6 @@ def cowsAndBulls2Digit():
 
 
 cowsAndBulls2Digit()
-# TODO track down bug where 1 is not recignized as digit
-# test case random_num_str = 19
 
 
 def cowsAndBulls4Digits():
