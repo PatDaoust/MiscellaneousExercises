@@ -813,7 +813,53 @@ def cowsAndBulls4Digits():
             play_game = False
 
 
-cowsAndBulls4Digits()
+# cowsAndBulls4Digits()
+
+
+def cowsAndBullsXDigits(digits):
+    """assumes x in an int 1-10 inclusive
+    play a game of cows and bulls with a x digit number
+    your goal is to guess all the correct digits in all the correct possitions
+    bulls are a count of how many correct digits are in the correct possition
+    cows are a count of how many correct digits are in the wrong possition
+    """
+    cows = 0
+    bulls = 0
+    turns = 0
+    play_game = True
+    # check that digits is 1-10
+    valid_digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    if digits not in valid_digits:
+        raise ValueError("Please select a value of digits from 1 to 10, inclusive")
+    random_num_str = randomIntNoDigitRepeats(digits)
+    # note: random_num may have a leading 0. is this a feature or a bug?
+    while play_game:
+        guess_num_str = input(f"Please input your {digits} digit guess: ")
+        while len(guess_num_str) != digits:
+            print(f"That guess is not {digits} digits long")
+            guess_num_str = input(f"Please input your {digits} digit guess: ")
+        if bulls < digits:
+            bulls = 0
+            cows = 0
+            # update bulls
+            for i in range(digits):
+                if random_num_str[i] == guess_num_str[i]:
+                    bulls += 1
+            # update cows
+            for digit in guess_num_str:
+                if digit in random_num_str:
+                    cows += 1
+            cows -= bulls
+            print(f"You have {cows} cows")
+            print(f"You have {bulls} bulls")
+            turns += 1
+        if random_num_str == guess_num_str:
+            print(f"Congrats! You guessed the number in {turns} turns")
+            print(f"The number was {random_num_str}")
+            play_game = False
+
+
+# cowsAndBullsXDigits(5)
 
 
 def wordCompletion():
