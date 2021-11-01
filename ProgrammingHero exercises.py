@@ -781,7 +781,36 @@ def cowsAndBulls4Digits():
     bulls are a count of how many correct digits are in the correct possition
     cows are a count of how many correct digits are in the wrong possition
     """
-    pass
+    cows = 0
+    bulls = 0
+    turns = 0
+    play_game = True
+    random_num_str = randomIntNoDigitRepeats(4)
+    # note: random_num may have a leading 0. is this a feature or a bug?
+    while play_game:
+        guess_num_str = input("Please input your 4 digit guess: ")
+        while len(guess_num_str) != 4:
+            print("That guess is not 4 digits long")
+            guess_num_str = input("Please input your 4 digit guess: ")
+        if bulls < 4:
+            bulls = 0
+            cows = 0
+            # update bulls
+            for i in range(4):
+                if random_num_str[i] == guess_num_str[i]:
+                    bulls += 1
+            # update cows
+            for digit in guess_num_str:
+                if digit in random_num_str:
+                    cows += 1
+            cows -= bulls
+            print(f"You have {cows} cows")
+            print(f"You have {bulls} bulls")
+            turns += 1
+        if random_num_str == guess_num_str:
+            print(f"Congrats! You guessed the number in {turns} turns")
+            print(f"The number was {random_num_str}")
+            play_game = False
 
 
 cowsAndBulls4Digits()
