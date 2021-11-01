@@ -772,16 +772,19 @@ def cowsAndBulls2Digit():
             play_game = False
 
 
-cowsAndBulls2Digit()
+# cowsAndBulls2Digit()
 
 
 def cowsAndBulls4Digits():
-    """play a game of cows and bulls with a 2 digit number
+    """play a game of cows and bulls with a 4 digit number
     your goal is to guess all the correct digits in all the correct possitions
     bulls are a count of how many correct digits are in the correct possition
     cows are a count of how many correct digits are in the wrong possition
     """
     pass
+
+
+cowsAndBulls4Digits()
 
 
 def wordCompletion():
