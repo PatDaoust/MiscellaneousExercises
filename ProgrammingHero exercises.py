@@ -862,9 +862,21 @@ def cowsAndBullsXDigits(digits):
 # cowsAndBullsXDigits(5)
 
 
-def wordCompletion():
+def simpleCalculator():
     pass
 
 
-def wordHangman():
+def passwordGenerator():
+    pass
+
+
+def passwordWithRequirements():
+    pass
+
+
+def permutations():
+    pass
+
+
+def generateSentences():
     pass
