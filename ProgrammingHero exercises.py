@@ -862,8 +862,23 @@ def cowsAndBullsXDigits(digits):
 # cowsAndBullsXDigits(5)
 
 
-def simpleCalculator():
-    pass
+def simpleCalculator(num1, num2, operation):
+    """assumes num1 and num2 are numbers
+    assumes operation is a string, the symbols + - * /  or %,
+    representing addition, subtraction, multiplication, division, and modulo respectively
+    """
+    if (num1 is not float) and (num1 is not int):
+        assert TypeError("num1 must be a float or int")
+    if (num2 is not float) and (num2 is not int):
+        assert TypeError("num2 must be a float or int")
+    return eval("num1" + operation + "num2")
+
+
+# print(simpleCalculator(2, 3.0, "+"))
+# print(simpleCalculator(2, 3.0, "-"))
+# print(simpleCalculator(2, 3.0, "*"))
+# print(simpleCalculator(2, 3.0, "/"))
+# print(simpleCalculator(2, 3.0, "%"))
 
 
 def passwordGenerator():
