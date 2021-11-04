@@ -868,9 +868,9 @@ def simpleCalculator(num1, num2, operation):
     representing addition, subtraction, multiplication, division, and modulo respectively
     """
     if (num1 is not float) and (num1 is not int):
-        assert TypeError("num1 must be a float or int")
+        raise TypeError("num1 must be a float or int")
     if (num2 is not float) and (num2 is not int):
-        assert TypeError("num2 must be a float or int")
+        raise TypeError("num2 must be a float or int")
     return eval("num1" + operation + "num2")
 
 
@@ -879,10 +879,23 @@ def simpleCalculator(num1, num2, operation):
 # print(simpleCalculator(2, 3.0, "*"))
 # print(simpleCalculator(2, 3.0, "/"))
 # print(simpleCalculator(2, 3.0, "%"))
+print(simpleCalculator("a", 3.0, "+"))
 
 
-def passwordGenerator():
-    pass
+def passwordGenerator(lenght=12):
+    """assumes lenght is an int, representing how long the password should be
+    returns a string of ASCII characters, a suggested password"""
+    if not isinstance(lenght, int):
+        print("error entered")
+        assert TypeError("lenght must be an int")
+    print(lenght)
+    # pull up chars with built in
+    # select lenght amount of random chars
+
+
+# print(passwordGenerator())
+# print(passwordGenerator("a"))
+# print(passwordGenerator(5))
 
 
 def passwordWithRequirements():
