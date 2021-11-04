@@ -9,6 +9,7 @@ import random
 import pdb
 import math
 from itertools import count, islice
+import string
 
 
 def userInputToNumber():
@@ -886,11 +887,21 @@ def passwordGenerator(lenght=12):
     """assumes lenght is an int, representing how long the password should be
     returns a string of ASCII characters, a suggested password"""
     if not isinstance(lenght, int):
-        print("error entered")
         raise TypeError("lenght must be an int")
-    print(lenght)
-    # pull up chars with built in
-    # select lenght amount of random chars
+    password = ""
+    # innitialize valid characters
+    chars_list = []
+    for char in string.ascii_letters:
+        chars_list.append(char)
+    for char in string.digits:
+        chars_list.append(char)
+    for char in string.punctuation:
+        chars_list.append(char)
+    # pick password chars
+    for i in range(lenght):
+        random_char = chars_list[random.randint(0, len(chars_list)-1)]
+        password += random_char
+    return password
 
 
 # print(passwordGenerator())
