@@ -879,7 +879,7 @@ def simpleCalculator(num1, num2, operation):
 # print(simpleCalculator(2, 3.0, "*"))
 # print(simpleCalculator(2, 3.0, "/"))
 # print(simpleCalculator(2, 3.0, "%"))
-print(simpleCalculator("a", 3.0, "+"))
+# print(simpleCalculator("a", 3.0, "+"))
 
 
 def passwordGenerator(lenght=12):
@@ -887,7 +887,7 @@ def passwordGenerator(lenght=12):
     returns a string of ASCII characters, a suggested password"""
     if not isinstance(lenght, int):
         print("error entered")
-        assert TypeError("lenght must be an int")
+        raise TypeError("lenght must be an int")
     print(lenght)
     # pull up chars with built in
     # select lenght amount of random chars
