@@ -885,7 +885,7 @@ def simpleCalculator(num1, num2, operation):
 
 def passwordGenerator(lenght=12):
     """assumes lenght is an int, representing how long the password should be
-    returns a string of ASCII characters, a suggested password"""
+    returns a string of ASCII characters, representing a suggested password"""
     if not isinstance(lenght, int):
         raise TypeError("lenght must be an int")
     password = ""
@@ -909,8 +909,23 @@ def passwordGenerator(lenght=12):
 # print(passwordGenerator(5))
 
 
-def passwordWithRequirements():
-    pass
+def passwordWithRequirements(lenght=12):
+    """assumes lenght is an int >=4, representing how long the password should be
+    returns a string of ASCII characters, representing a suggested password
+    containing at least 1 uppercase, 1 lowercase, 1 digit, and 1 symbol"""
+    # plan:
+        # randomly pick extra chars, append
+        # randomly pick 1 each of the 4 categories, place in random index
+    if not isinstance(lenght, int):
+        raise TypeError("lenght must be an int greater than or equal to 4")
+    if lenght < 4:
+        raise ValueError("lenght must be an int greater than or equal to 4")
+
+
+print(passwordWithRequirements())
+# print(passwordWithRequirements("a"))
+# print(passwordWithRequirements(5))
+# print(passwordWithRequirements(3))
 
 
 def permutations():
