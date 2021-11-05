@@ -913,19 +913,46 @@ def passwordWithRequirements(lenght=12):
     """assumes lenght is an int >=4, representing how long the password should be
     returns a string of ASCII characters, representing a suggested password
     containing at least 1 uppercase, 1 lowercase, 1 digit, and 1 symbol"""
-    # plan:
-        # randomly pick extra chars, append
-        # randomly pick 1 each of the 4 categories, place in random index
     if not isinstance(lenght, int):
         raise TypeError("lenght must be an int greater than or equal to 4")
     if lenght < 4:
         raise ValueError("lenght must be an int greater than or equal to 4")
+    password = ""
+    # innitialize valid characters
+    chars_list = []
+    for char in string.ascii_letters:
+        chars_list.append(char)
+    for char in string.digits:
+        chars_list.append(char)
+    for char in string.punctuation:
+        chars_list.append(char)
+    # pick most password chars
+    for i in range(lenght-4):
+        random_char = chars_list[random.randint(0, len(chars_list)-1)]
+        password += random_char
+    # pick requirement password chars
+    random_lowercase = string.ascii_lowercase[random.randint(0, len(string.ascii_lowercase)-1)]
+    random_index = random.randint(0, lenght-5)
+    password = password[:random_index] + random_lowercase + password[random_index:]
+    random_uppercase = string.ascii_uppercase[random.randint(0, len(string.ascii_uppercase)-1)]
+    random_index = random.randint(0, lenght-5)
+    password = password[:random_index] + random_uppercase + password[random_index:]
+    random_digit = string.digits[random.randint(0, len(string.digits)-1)]
+    random_index = random.randint(0, lenght-5)
+    password = password[:random_index] + random_digit + password[random_index:]
+    random_symbol = string.punctuation[random.randint(0, len(string.punctuation)-1)]
+    random_index = random.randint(0, lenght-5)
+    password = password[:random_index] + random_symbol + password[random_index:]
+    # return
+    return password
 
 
-print(passwordWithRequirements())
+# print(passwordWithRequirements())
 # print(passwordWithRequirements("a"))
 # print(passwordWithRequirements(5))
 # print(passwordWithRequirements(3))
+# print(passwordWithRequirements(2500))
+
 
 
 def permutations():
