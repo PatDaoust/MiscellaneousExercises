@@ -993,11 +993,23 @@ def get_permutations(sequence):
 def generateSentences(words_list_list):
     """assumes words_list_list is a list of lists of strings
     returns a string, representing a sentence,
-    made of 1 string from each sub list of words_list_list
+    made by concatenating 1 string from each sub list of words_list_list
     """
-    pass
+    # innitialize variables
+    sentence = ""
+    # pick 1 word from each sublist
+    for sublist in words_list_list:
+        random_word = sublist[random.randint(0, len(sublist)-1)]
+        sentence += " " + random_word
+    return sentence
 
 
-# TODO make 3 word lists
-# TODO make words_list_list
-# print(generateSentences(words_list_list))
+words_list1 = ["cats", "kittens", "puppies", "doggos"]
+words_list2 = ["are", "will be", "have been"]
+words_list3 = ["cute", "fuzzy", "cuddly", "friendly", "lovable"]
+words_list4 = ["goofballs", "friends", "companions"]
+words_list_list1 = [words_list1, words_list2, words_list3]
+words_list_list2 = [words_list1, words_list2, words_list3, words_list4]
+
+# print(generateSentences(words_list_list1))
+print(generateSentences(words_list_list2))
