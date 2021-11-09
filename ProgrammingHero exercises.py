@@ -10,6 +10,7 @@ import pdb
 import math
 from itertools import count, islice
 import string
+import time
 
 
 def userInputToNumber():
@@ -1012,4 +1013,23 @@ words_list_list1 = [words_list1, words_list2, words_list3]
 words_list_list2 = [words_list1, words_list2, words_list3, words_list4]
 
 # print(generateSentences(words_list_list1))
-print(generateSentences(words_list_list2))
+# print(generateSentences(words_list_list2))
+
+
+def simpleDigitalClock():
+    time_object = time.localtime()
+    hour = time_object.tm_hour
+    minute = time_object.tm_min
+    second = time_object.tm_sec
+    print(f"it is {hour}h{minute} and {second} seconds")
+
+
+simpleDigitalClock()
+
+
+def birthdatRemaining():
+    pass
+
+
+def calculateAge():
+    pass
