@@ -1017,6 +1017,7 @@ words_list_list2 = [words_list1, words_list2, words_list3, words_list4]
 
 
 def simpleDigitalClock():
+    """print the current time"""
     time_object = time.localtime()
     hour = time_object.tm_hour
     minute = time_object.tm_min
@@ -1024,11 +1025,21 @@ def simpleDigitalClock():
     print(f"it is {hour}h{minute} and {second} seconds")
 
 
-simpleDigitalClock()
+# simpleDigitalClock()
 
 
-def birthdatRemaining():
+def birthdayRemaining(birth_month, birth_day):
+    """assumes birth_month is an int in range 1-12 e.g. 1
+    assumes birth_day is an int in range 1-31 e.g. 2
+    collectively these repressent a calendar day e.g. january 2nd
+    returns an int, representing the number of days to the next birthday"""
     pass
+    # compare months
+    # compare days
+    # add uo days between birth and now
+
+
+birthdayRemaining(11, 11)
 
 
 def calculateAge():
