@@ -1069,16 +1069,24 @@ def birthdayRemaining(birth_month, birth_day):
         birthday_year_day += 31
     if birth_month > 11:
         birthday_year_day += 30
-    if birth_month > 12:
-        print("panic!")
-    print(year_day_now)  # TODO remove
-    print(birthday_year_day)  # TODO remove
-    return year_day_now - birthday_year_day
+    # calc day differenctial
+    days_diffrence = birthday_year_day - year_day_now
+    return days_diffrence % 365
 
 
-birthdayRemaining(11, 11)
-# test: month = 0,1, 12, 13
-# test: day = 0,1,31, 32
+# print(birthdayRemaining(11, 11))
+# print(birthdayRemaining(11, 9))
+# print(birthdayRemaining(0, 9))  # expected value error
+# print(birthdayRemaining(1, 9))  #expected pass
+# print(birthdayRemaining(12, 9))  #expected pass
+# print(birthdayRemaining(13, 9))  # expected value error
+# print(birthdayRemaining(12, 0))  # expected value error
+# print(birthdayRemaining(12, 1))  #expected pass
+# print(birthdayRemaining(12, 31))  #expected pass
+# print(birthdayRemaining(12, 32))  # expected value error
+# print(birthdayRemaining(12, 0.5))  # expected type error
+# print(birthdayRemaining("a", 1))  # expected type error
+# print(birthdayRemaining(12, None))  # expected type error
 
 
 def calculateAge():
