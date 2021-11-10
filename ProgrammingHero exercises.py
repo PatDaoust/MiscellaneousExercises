@@ -1029,17 +1029,56 @@ def simpleDigitalClock():
 
 
 def birthdayRemaining(birth_month, birth_day):
-    """assumes birth_month is an int in range 1-12 e.g. 1
-    assumes birth_day is an int in range 1-31 e.g. 2
+    """assumes birth_month is an int in range 1-12 inclusive e.g. 1
+    assumes birth_day is an int in range 1-31 inclusive e.g. 2
     collectively these repressent a calendar day e.g. january 2nd
-    returns an int, representing the number of days to the next birthday"""
-    pass
-    # compare months
-    # compare days
-    # add uo days between birth and now
+    returns an int, representing the number of days to the next birthday
+    note: does not account for leap days, please manually add +1 on leap years"""
+    # check input values
+    if not isinstance(birth_month, int) or not isinstance(birth_day, int):
+        raise TypeError("birth_month must be an int in range 1-12 inclusive\
+                        birth_day must be an int in range 1-31 inclusive")
+    if birth_month < 1 or birth_month > 12:
+        raise ValueError("birth_month must be an int in range 1-12 inclusive")
+    if birth_day < 1 or birth_day > 31:
+        raise ValueError("birth_day must be an int in range 1-31 inclusive")
+    # innitialize now
+    year_day_now = time.localtime().tm_yday
+    # calc birthday year_day
+    birthday_year_day = birth_day
+    if birth_month > 1:
+        birthday_year_day += 31
+    if birth_month > 2:
+        birthday_year_day += 28
+        # note: does not account for leap days, please manually add +1 on leap years
+    if birth_month > 3:
+        birthday_year_day += 31
+    if birth_month > 4:
+        birthday_year_day += 30
+    if birth_month > 5:
+        birthday_year_day += 31
+    if birth_month > 6:
+        birthday_year_day += 30
+    if birth_month > 7:
+        birthday_year_day += 31
+    if birth_month > 8:
+        birthday_year_day += 31
+    if birth_month > 9:
+        birthday_year_day += 30
+    if birth_month > 10:
+        birthday_year_day += 31
+    if birth_month > 11:
+        birthday_year_day += 30
+    if birth_month > 12:
+        print("panic!")
+    print(year_day_now)  # TODO remove
+    print(birthday_year_day)  # TODO remove
+    return year_day_now - birthday_year_day
 
 
 birthdayRemaining(11, 11)
+# test: month = 0,1, 12, 13
+# test: day = 0,1,31, 32
 
 
 def calculateAge():
