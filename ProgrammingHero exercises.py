@@ -1106,7 +1106,41 @@ def calculateAge(birth_year, birth_month, birth_day):
     #     return years
     # else:
     #     return years+1
-    print(birth_year)
+    # check input values
+    if not isinstance(birth_month, int) or not isinstance(birth_day, int):
+        raise TypeError("birth_month must be an int in range 1-12 inclusive\
+                        birth_day must be an int in range 1-31 inclusive")
+    if birth_month < 1 or birth_month > 12:
+        raise ValueError("birth_month must be an int in range 1-12 inclusive")
+    if birth_day < 1 or birth_day > 31:
+        raise ValueError("birth_day must be an int in range 1-31 inclusive")
+    # innitialize now
+    now = time.localtime()
+    year_now = now.tm_year
+    month_now = now.tm_mon
+    day_now = now.tm_mday
+    # calc age
+    year_diffrence = year_now - birth_year
+    if month_now < birth_month:
+        return year_diffrence - 1
+    elif month_now == birth_month:
+        if day_now < birth_day:
+            return year_diffrence - 1
+        elif day_now == birth_day:
+            print("happy birthday!")
+            return year_diffrence
+        else:
+            return year_diffrence
+    else:
+        return year_diffrence
 
 
-calculateAge(1993, 1, 2)
+# print(calculateAge(1993, 1, 2))
+# print(calculateAge(1993, 11, 2))
+# print(calculateAge(1993, 11, 11))
+# print(calculateAge(1993, 11, 21))
+# print(calculateAge(1993, 12, 2))
+# print(calculateAge(1993, "a", 2))
+# print(calculateAge(1993, 11, 2.2))
+# print(calculateAge(1000, 11, 2))
+# print(calculateAge(2993, 11, 2))
