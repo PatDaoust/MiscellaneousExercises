@@ -1071,11 +1071,15 @@ def birthdayRemaining(birth_month, birth_day):
         birthday_year_day += 30
     # calc day differenctial
     days_diffrence = birthday_year_day - year_day_now
+    if days_diffrence == 0:
+        print("Happy birthday!!!")
+        return days_diffrence
     return days_diffrence % 365
 
 
 # print(birthdayRemaining(11, 11))
 # print(birthdayRemaining(11, 9))
+# print(birthdayRemaining(11, 10))
 # print(birthdayRemaining(0, 9))  # expected value error
 # print(birthdayRemaining(1, 9))  #expected pass
 # print(birthdayRemaining(12, 9))  #expected pass
@@ -1089,5 +1093,20 @@ def birthdayRemaining(birth_month, birth_day):
 # print(birthdayRemaining(12, None))  # expected type error
 
 
-def calculateAge():
-    pass
+def calculateAge(birth_year, birth_month, birth_day):
+    """assumes birth_year is a 4 digit int e.g. 1993
+    assumes birth_month is an int in range 1-12 inclusive e.g. 1
+    assumes birth_day is an int in range 1-31 inclusive e.g. 2
+    collectively these repressent a specific day e.g. january 2nd 1993
+    returns an int, representing how old someone born on the inputted day is
+    """
+    # make a plan
+    # get years
+    # if today is before birth day and birth month:
+    #     return years
+    # else:
+    #     return years+1
+    print(birth_year)
+
+
+calculateAge(1993, 1, 2)
