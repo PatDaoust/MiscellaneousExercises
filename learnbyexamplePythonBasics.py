@@ -61,7 +61,27 @@ def caseInsensitiveStringMatch(string1, string2):
     return string1.lower() == string2.lower()
 
 
-print(caseInsensitiveStringMatch('nice', 'nice'))  #expect True
-print(caseInsensitiveStringMatch('Hi there', 'hi there'))  #expect True
-print(caseInsensitiveStringMatch('GoOd DaY', 'gOOd dAy'))  #expect True
-print(caseInsensitiveStringMatch('foo', 'food'))  #expect False
+# print(caseInsensitiveStringMatch('nice', 'nice'))  # expect True
+# print(caseInsensitiveStringMatch('Hi there', 'hi there'))  # expect True
+# print(caseInsensitiveStringMatch('GoOd DaY', 'gOOd dAy'))  # expect True
+# print(caseInsensitiveStringMatch('foo', 'food'))  # expect False
+
+
+"""
+Q2c) Returns True/False - two strings are anagrams
+    (assume input consists of alphabets only)
+"""
+
+
+def isAnagram(string1, string2):
+    """assumes string1 and string2 are string of alphabetical chars of any case
+    returns a boolean, True is string1 and string2 are casse insensite anagrams
+    else False
+    """
+    return sorted(string1.lower()) == sorted(string2.lower())
+
+
+# print(isAnagram('god', 'Dog'))  # expect True
+# print(isAnagram('beat', 'table'))  # expect False
+# print(isAnagram('Tap', 'paT'))  # expect True
+# print(isAnagram('beat', 'abet'))  # expect True
