@@ -8,18 +8,6 @@ Q1a) Ask user information, for ex: name, department, college etc
 and display them using print function
 """
 
-# # Sample of how program might ask user input and display output afterwards
-# $ ./usr_ip.py
-# Please provide the following details
-# Enter your name: learnbyexample
-# Enter your department: ECE
-# Enter your college: PSG Tech
-
-# ------------------------------------
-# Name       : learnbyexample
-# Department : ECE
-# College    : PSG Tech
-
 
 def userDetailsCollector():
     """prints out details the user inputs"""
@@ -32,4 +20,46 @@ def userDetailsCollector():
     print(f"Department : {department}")
 
 
-userDetailsCollector()
+# userDetailsCollector()
+
+
+"""
+Q2a Returns length of integer numbers
+"""
+
+
+def integerLenght(num):
+    """assumes num is an integer
+    returns an int, representing the lenght of num"""
+    if not isinstance(num, int):
+        raise TypeError("provide only integer input")
+    num_str = str(num)
+    lenght = len(num_str)
+    if num_str[0] == "-":
+        lenght -= 1
+    return lenght
+
+
+# print(integerLenght(42))  #expected 2
+# print(integerLenght(962306349871524124750813401378124))   #expected 33
+# print(integerLenght(+42))  #expected 2
+# print(integerLenght(-42))  #expected 2
+# print(integerLenght("a"))  #expected TypeError
+# print(integerLenght(2.4))  #expected TypeError
+
+"""
+Q2b) Returns True/False - two strings are same irrespective of lowercase/uppercase
+
+>>> str_cmp('nice', 'nice')
+True
+>>> str_cmp('Hi there', 'hi there')
+True
+>>> str_cmp('GoOd DaY', 'gOOd dAy')
+True
+>>> str_cmp('foo', 'food')
+False
+"""
+
+
+def caseInsensitiveStringMatch():
+    pass
