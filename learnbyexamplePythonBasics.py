@@ -50,16 +50,18 @@ def integerLenght(num):
 """
 Q2b) Returns True/False - two strings are same irrespective of lowercase/uppercase
 
->>> str_cmp('nice', 'nice')
-True
->>> str_cmp('Hi there', 'hi there')
-True
->>> str_cmp('GoOd DaY', 'gOOd dAy')
-True
->>> str_cmp('foo', 'food')
-False
 """
 
 
-def caseInsensitiveStringMatch():
-    pass
+def caseInsensitiveStringMatch(string1, string2):
+    """assumes string1 and string 2 are strings
+    returns a boolean, True if string1 and string2 match irrespective of case,
+    else False
+    """
+    return string1.lower() == string2.lower()
+
+
+print(caseInsensitiveStringMatch('nice', 'nice'))  #expect True
+print(caseInsensitiveStringMatch('Hi there', 'hi there'))  #expect True
+print(caseInsensitiveStringMatch('GoOd DaY', 'gOOd dAy'))  #expect True
+print(caseInsensitiveStringMatch('foo', 'food'))  #expect False
