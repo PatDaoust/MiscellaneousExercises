@@ -85,3 +85,28 @@ def isAnagram(string1, string2):
 # print(isAnagram('beat', 'table'))  # expect False
 # print(isAnagram('Tap', 'paT'))  # expect True
 # print(isAnagram('beat', 'abet'))  # expect True
+
+
+"""
+Q2d)  Returns corresponding integer or floating-point number
+"""
+
+
+def floatConverter(num):
+    """assumes num is an int, float, or string representing a number
+    returns a float, representing num"""
+    if isinstance(num, float) or isinstance(num, int) or isinstance(num, str):
+        return float(num)
+    else:
+        raise TypeError("not a valid input")
+
+
+# print(floatConverter(3))  # expect 3
+# print(floatConverter(0x1f))  # expect 31
+# print(floatConverter(3.32))  # expect 3.32
+# print(floatConverter('123'))  # expect 123
+# print(floatConverter('-78'))  # expect -78
+# print(floatConverter(" 42  \n "))  # expect 42
+# print(floatConverter('3.982e5'))  # expect 398200.0
+# print(floatConverter(['1', '2.3']))  # expect TypeError: not a valid input
+# print(floatConverter('foo'))  # expect ValueError: could not convert string to float
