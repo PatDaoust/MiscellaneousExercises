@@ -162,3 +162,96 @@ def sixBySevenSequence(lower_limit, upper_limit):
 
 
 # sixBySevenSequence(1, 100)
+
+
+"""
+Q3b) Print all numbers from 1 to 1000 which reads the same in reversed form
+    in both binary and decimal format
+
+$ ./dec_bin.py
+1 1
+3 11
+5 101
+7 111
+9 1001
+33 100001
+99 1100011
+313 100111001
+585 1001001001
+717 1011001101
+bonus: add octal and hexadecimal checks as well
+
+$ ./dec_bin_oct.py
+1 0b1 0o1
+3 0b11 0o3
+5 0b101 0o5
+7 0b111 0o7
+9 0b1001 0o11
+585 0b1001001001 0o1111
+
+$ ./dec_bin_oct_hex.py
+1 0b1 0o1 0x1
+3 0b11 0o3 0x3
+5 0b101 0o5 0x5
+7 0b111 0o7 0x7
+9 0b1001 0o11 0x9
+"""
+
+
+def isDecimalPalindrome(num):
+    """assumes num is an integer
+    returns True if num in decimal form is a palindrome, else False"""
+    return str(num) == str(num)[::-1]
+
+
+# print(isDecimalPalindrome(1))  # expect True
+# print(isDecimalPalindrome(2))  # expect True
+# print(isDecimalPalindrome(99))  # expect True
+# print(isDecimalPalindrome(100))  # expect False
+
+
+def isBinaryPalindrome(num):
+    """assumes num is an integer
+    returns True if num in binary form is a palindrome, else False"""
+    return str(bin(num))[2::] == str(bin(num))[:1:-1]
+
+
+# print(isBinaryPalindrome(1))  # expect True
+# print(isBinaryPalindrome(2))  # expect False
+# print(isBinaryPalindrome(99))  # expect True
+# print(isBinaryPalindrome(100))  # expect False
+
+
+def isOctalPalindrome(num):
+    """assumes num is an integer
+    returns True if num in octal form is a palindrome, else False"""
+    return str(oct(num))[2::] == str(oct(num))[:1:-1]
+
+
+# print(isOctalPalindrome(1))  # expect True
+# print(isOctalPalindrome(2))  # expect True
+# print(isOctalPalindrome(99))  # expect False
+# print(isOctalPalindrome(100))  # expect False
+# print(isOctalPalindrome(585))  # expect True
+
+
+def isHexadecimalPalindrome(num):
+    """assumes num is an integer
+    returns True if num in hexadecimal form is a palindrome, else False"""
+    return str(hex(num))[2::] == str(hex(num))[:1:-1]
+
+
+# print(isHexadecimalPalindrome(1))  # expect True
+# print(isHexadecimalPalindrome(2))  # expect True
+# print(isHexadecimalPalindrome(34))  # expect True
+# print(isHexadecimalPalindrome(99))  # expect False
+# print(isHexadecimalPalindrome(100))  # expect False
+# print(isHexadecimalPalindrome(585))  # expect False
+
+
+def decimalAndBinaryPalindromes():
+    pass
+
+
+def decimalBinaryOctalHexaPalindromes():
+    pass
