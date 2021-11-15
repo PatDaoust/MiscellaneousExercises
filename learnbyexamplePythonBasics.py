@@ -110,3 +110,55 @@ def floatConverter(num):
 # print(floatConverter('3.982e5'))  # expect 398200.0
 # print(floatConverter(['1', '2.3']))  # expect TypeError: not a valid input
 # print(floatConverter('foo'))  # expect ValueError: could not convert string to float
+
+
+"""Q3a) Write a function that returns
+
+'Good' for numbers divisible by 7
+'Food' for numbers divisible by 6
+'Universe' for numbers divisible by 42
+'Oops' for all other numbers
+Only one output, divisible by 42 takes precedence
+
+bonus: use a loop to print number and corresponding string for numbers 1 to 100
+
+"""
+
+
+def sixBySeven(num):
+    """assumes num is an integer
+    returns a string
+    if num is divisible by 42, returns "universe"
+    elif num is divisible by 6, returns "food"
+    elif num is divisible by 7, returns "good"
+    else returns "oops"
+    """
+    if num % 42 == 0:
+        return "universe"
+    elif num % 6 == 0:
+        return "food"
+    elif num % 7 == 0:
+        return "good"
+    else:
+        return "oops"
+
+
+# print(sixBySeven(66))  # expect "food"
+# print(sixBySeven(13))  # expect "oops"
+# print(sixBySeven(42))  # expect "universe"
+# print(sixBySeven(14))  # expect "good"
+# print(sixBySeven(84))  # expect "universe"
+# print(sixBySeven(235432))  # expect "oops"
+
+
+def sixBySevenSequence(lower_limit, upper_limit):
+    """assumes lower_limit is an int, representing the smallest number to test
+    assumes upper_limit is an int, representing the largest number to test
+    prints the result of sixBySeven()
+    for each number in the ranger lower_limit to upper_limit, inclusive
+    """
+    for num in range(lower_limit, upper_limit + 1):
+        print(str(num) + " " + sixBySeven(num))
+
+
+# sixBySevenSequence(1, 100)
