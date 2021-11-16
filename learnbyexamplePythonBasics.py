@@ -314,3 +314,36 @@ def returnNthElement(an_iterable, n=1):
 
 # print(returnNthElement('unrecognizable', 3))  # expect "c"
 # print(returnNthElement('abracadabra', 4))  # expect "d"
+
+
+"""
+Q4c) Write a function that accepts a string input and returns slices
+
+if input string is less than 3 characters long,
+return a list with input string as the only element
+otherwise, return list with all string slices greater than 1 character long
+"""
+
+
+def wordSlices(a_string):
+    """assumes a_string is a string of lenght 1 or greater
+    returns a list of strings, representing the slices of 2+ chars
+    that can be taken from a_string
+    """
+    # handle short strings
+    if len(a_string) < 3:
+        return [a_string]
+    # innitialize variables
+    slice_list = []
+    # get slices
+    for i in range(len(a_string)-1):
+        for j in range(i+2, len(a_string)+1):
+            slice_list.append(a_string[i:j])
+    return slice_list
+
+
+print(wordSlices("i"))  # expect ['i']
+print(wordSlices('to'))  # expect ['to']
+print(wordSlices('are'))  # expect ['ar', 'are', 're']
+print(wordSlices('table'))
+# expect ['ta', 'tab', 'tabl', 'table', 'ab', 'abl', 'able', 'bl', 'ble', 'le']
