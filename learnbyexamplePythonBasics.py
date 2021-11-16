@@ -256,3 +256,28 @@ def decimalBinaryOctalHexaPalindromes():
 
 
 # decimalBinaryOctalHexaPalindromes()
+
+
+"""
+Q4a) Write a function that returns product of all numbers of a list
+bonus: works on any kind of iterable
+"""
+
+
+def listProduct(an_iterable):
+    """assumes an_iterable is an iteraqble of numerics
+    returns a numeric, the product of the elements of a_list"""
+    # innitialize product variable
+    product = 1
+    # multiply by elements of iterables
+    for num in an_iterable:
+        product *= num
+    return product
+
+
+# print(listProduct([1, 4, 21]))  # expect 84
+# print(listProduct([-4, 2.3e12, 77.23, 982, 0b101]))  # expect -3.48863356e+18
+# print(listProduct((-3, 11, 2)))  # expect -66
+# print(listProduct({8, 300}))  # expect 2400
+# print(listProduct([234, 121, 23, 945, 0]))  # expect 0
+# print(listProduct(range(2, 6)))  # expect 120
