@@ -168,33 +168,7 @@ def sixBySevenSequence(lower_limit, upper_limit):
 Q3b) Print all numbers from 1 to 1000 which reads the same in reversed form
     in both binary and decimal format
 
-$ ./dec_bin.py
-1 1
-3 11
-5 101
-7 111
-9 1001
-33 100001
-99 1100011
-313 100111001
-585 1001001001
-717 1011001101
 bonus: add octal and hexadecimal checks as well
-
-$ ./dec_bin_oct.py
-1 0b1 0o1
-3 0b11 0o3
-5 0b101 0o5
-7 0b111 0o7
-9 0b1001 0o11
-585 0b1001001001 0o1111
-
-$ ./dec_bin_oct_hex.py
-1 0b1 0o1 0x1
-3 0b11 0o3 0x3
-5 0b101 0o5 0x5
-7 0b111 0o7 0x7
-9 0b1001 0o11 0x9
 """
 
 
@@ -250,8 +224,35 @@ def isHexadecimalPalindrome(num):
 
 
 def decimalAndBinaryPalindromes():
-    pass
+    """prints the decimal and binary form of numbers 1-1000 which
+    are palindromes in both decimal and binary format"""
+    for num in range(1, 1001):
+        if isBinaryPalindrome(num) and isDecimalPalindrome(num):
+            print(num, bin(num))
+
+
+# decimalAndBinaryPalindromes()
+
+
+def decimalBinaryOctalPalindromes():
+    """prints the decimal, binary, and octal form of numbers 1-1000 which
+    are palindromes in decimal, binary, and octal format"""
+    for num in range(1, 1001):
+        if isBinaryPalindrome(num) and isDecimalPalindrome(num) and\
+                isOctalPalindrome(num):
+            print(num, bin(num), oct(num))
+
+
+# decimalBinaryOctalPalindromes()
 
 
 def decimalBinaryOctalHexaPalindromes():
-    pass
+    """prints the decimal, binary, octal, and hexadecimal form of numbers 1-1000 which
+    are palindromes in decimal, binary, octal, and hexadecimal format"""
+    for num in range(1, 1001):
+        if isBinaryPalindrome(num) and isDecimalPalindrome(num) and\
+                isOctalPalindrome(num) and isHexadecimalPalindrome(num):
+            print(num, bin(num), oct(num), hex(num))
+
+
+# decimalBinaryOctalHexaPalindromes()
