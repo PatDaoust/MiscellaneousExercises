@@ -3,6 +3,9 @@ many thanks to github.com/learnbyexample for these exercises
 full exercises at https://github.com/learnbyexample/Python_Basics/blob/master/Exercises.md
 """
 
+import re
+
+
 """
 Q1a) Ask user information, for ex: name, department, college etc
 and display them using print function
@@ -377,3 +380,28 @@ def columnSum(num_list):
 
 
 # print(columnSum(importNums("nums.txt")))  # expect 10485.14
+
+
+"""
+Q5b) Print sum of all numbers (assume only positive integer numbers)
+from a file containing arbitrary string
+"""
+
+
+def extractSum(filename):
+    """assumes filename is the name of a file in the filepath
+    containing integers seperated by other characters
+    returns an int, the sum of all the ints in filename"""
+    # get numbers from file
+    with open(filename) as file:
+        file_contents = file.read()
+        nums_list = re.split(r'\D+', file_contents)
+    # sum non-empty elements
+    my_sum = 0
+    for elem in nums_list:
+        if elem:
+            my_sum += int(elem)
+    return my_sum
+
+
+# print(extractSum("fileQ5b.txt"))  # expect 2298
