@@ -281,3 +281,36 @@ def listProduct(an_iterable):
 # print(listProduct({8, 300}))  # expect 2400
 # print(listProduct([234, 121, 23, 945, 0]))  # expect 0
 # print(listProduct(range(2, 6)))  # expect 120
+
+
+"""
+Q4b) Write a function that returns nth lowest number of a list (or iterable in general).
+Return the lowest if second argument not specified
+
+if a list contains duplicates, they should be handled before determining nth lowest
+"""
+
+
+def returnNthElement(an_iterable, n=1):
+    """assumes an_iterable is an iterable, containing at least n elements
+    assumes n is an integer, representing which element is to be returned
+    default n is 1, representing the lowest elements
+    ignores repeated values
+    returns an element of an_iterable
+    """
+    return sorted(set(an_iterable))[n-1]
+
+
+# nums1 = [42, 23421341, 234.2e3, 21, 232, 12312, -2343]
+# print(returnNthElement(nums1))  # expect -2343
+# print(returnNthElement(nums1, 3))  # expect 42
+# print(returnNthElement(nums1, n=5))  # expect  12312
+# print(returnNthElement(nums1, n=15))  # expect IndexError
+
+# nums2 = [1, -2, 4, 2, 1, 3, 3, 5]
+# print(returnNthElement(nums2))  # expect -2
+# print(returnNthElement(nums2, 4))  # expect 3
+# print(returnNthElement(nums2, 5))  # expect 4
+
+# print(returnNthElement('unrecognizable', 3))  # expect "c"
+# print(returnNthElement('abracadabra', 4))  # expect "d"
