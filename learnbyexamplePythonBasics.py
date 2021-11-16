@@ -342,8 +342,38 @@ def wordSlices(a_string):
     return slice_list
 
 
-print(wordSlices("i"))  # expect ['i']
-print(wordSlices('to'))  # expect ['to']
-print(wordSlices('are'))  # expect ['ar', 'are', 're']
-print(wordSlices('table'))
-# expect ['ta', 'tab', 'tabl', 'table', 'ab', 'abl', 'able', 'bl', 'ble', 'le']
+# print(wordSlices("i"))  # expect ['i']
+# print(wordSlices('to'))  # expect ['to']
+# print(wordSlices('are'))  # expect ['ar', 'are', 're']
+# print(wordSlices('table'))
+# # expect ['ta', 'tab', 'tabl', 'table', 'ab', 'abl', 'able', 'bl', 'ble', 'le']
+
+
+"""
+Q5a) Print sum of all numbers from a file containing only single column and all numbers
+"""
+
+
+def importNums(filename):
+    """assumes filename is the name of a file in the filepath,
+    formated with a single numeric per line and a blank line at the end
+    returns a list of the numerics in filename
+    """
+    num_list = []
+    with open(filename) as file:
+        for line in file:
+            num_list.append(float(line[:-1]))
+    return num_list
+
+
+# print(importNums("nums.txt"))  # expect [8.0, 53.0, 3.14, 84.0, 7300.0, 100.0, 2937.0]
+
+
+def columnSum(num_list):
+    """assumes num_list is a list of numerics
+    returns a numeric, the sum of all the numerics in num_list
+    """
+    return sum(num_list)
+
+
+# print(columnSum(importNums("nums.txt")))  # expect 10485.14
