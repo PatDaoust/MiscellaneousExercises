@@ -405,3 +405,49 @@ def extractSum(filename):
 
 
 # print(extractSum("fileQ5b.txt"))  # expect 2298
+
+
+"""
+Q5c) Sort file contents in alphabetic order based on each line's extension
+
+extension here is defined as the string after the last . in the line
+if line doesn't have a ., those lines should come before lines with .
+sorting should be case-insensitive
+use rest of string as tie-breaker if there are more than one line with same extension
+assume input file is ASCII encoded and small enough to fit in memory
+bonus: instead of printing results to stdout, change the input file itself with sorted result
+
+$ cat f3.txt
+power.Log
+foo.123.txt
+list
+report_12.log
+baz.TXT
+hello.RB
+loop.do.rb
+Fav_books
+
+$ ./sort_by_ext.py
+Fav_books
+list
+power.Log
+report_12.log
+hello.RB
+loop.do.rb
+baz.TXT
+foo.123.txt
+"""
+
+# make a plan:
+#     use dict for sorting
+#     pull in lines from file
+#     for each line:
+#         from right to left, look for "."
+#         store in dict:
+#             value=filename
+#             key=extension
+#         take string.lower() from "." newline
+#         if no "." extension=""
+#     for key in dict: 
+#         take out key alphabetically
+#             take out values alphabetically, store to list
