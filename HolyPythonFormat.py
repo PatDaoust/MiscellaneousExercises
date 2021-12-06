@@ -22,3 +22,14 @@ def printGreeting():
 
 
 # printGreeting()
+
+"""
+Using a string and .format() method print the number: 1 only.
+"""
+
+
+def print1Only():
+    print("{}".format(1))
+
+
+print1Only()
