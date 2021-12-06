@@ -23,13 +23,27 @@ def printGreeting():
 
 # printGreeting()
 
-"""
-Using a string and .format() method print the number: 1 only.
-"""
+"""Using a string and .format() method print the number: 1"""
 
 
 def print1Only():
-    print("{}".format(1))
+    """print '1' """
+    string = "{}".format(1)
+    print(string)
 
 
-print1Only()
+# print1Only()
+
+"""
+using a string and .format() method and three curly brackets, print the numbers:
+    1, 2, 3 each separated with a comma.
+"""
+
+
+def print123():
+    """prints '1, 2, 3' """
+    string = "{}, {}, {}".format(1, 2, 3)
+    print(string)
+
+
+# print123()
