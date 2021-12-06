@@ -438,16 +438,11 @@ baz.TXT
 foo.123.txt
 """
 
-# make a plan:
-#     use dict for sorting
-#     pull in lines from file
-#     for each line:
-#         from right to left, look for "."
-#         store in dict:
-#             value=filename
-#             key=extension
-#         take string.lower() from "." newline
-#         if no "." extension=""
-#     for key in dict: 
-#         take out key alphabetically
-#             take out values alphabetically, store to list
+
+def sortByExtension(filename):
+    with open(filename) as file:
+        file_contents = file.readlines()
+    return sorted(file_contents, key=lambda x: (x.split('.')[-1].lower(), x.lower()))
+
+
+# print(sortByExtension("fileQ5c.txt"))
