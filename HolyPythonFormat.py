@@ -100,7 +100,7 @@ def joinList():
     """prints a list of strings"""
     lst = ["Hawaii", "Phuket", "Aruba", "Keys"]
     # Type your answer here
-    joined = lst[0] + "+++" + lst[1] + "+++" + lst[2] + "+++" + lst[3]
+    joined = "+++".join(lst)
     print(joined)
 
 
@@ -113,8 +113,21 @@ def joinTuples():
     """prints this email address"""
     addresses = ("Mr.Hathaway", "amymail.com")
     # Type your code here.
-    email = addresses[0] + "@" + addresses[1]
+    email = "@".join(addresses)
     print(email)
 
 
 # joinTuples()
+
+""""Exercise 2-c: Join method with a special character " " """
+
+
+def joinSpace():
+    """print elements of list with space in between"""
+    lst = ['Everything', 'has', 'beauty,', 'but', 'not', 'everyone', 'can', 'see.']
+    # Type your code here
+    str = " ".join(lst)
+    print(str)
+
+
+# joinSpace()
