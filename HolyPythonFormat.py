@@ -109,6 +109,7 @@ def joinList():
 
 """Exercise 2-b: Join method of strings w/tuples"""
 
+
 def joinTuples():
     """prints this email address"""
     addresses = ("Mr.Hathaway", "amymail.com")
@@ -131,3 +132,76 @@ def joinSpace():
 
 
 # joinSpace()
+
+
+"""Exercise 2-d: Join method of strings w/dictionaries"""
+
+
+def joinDict():
+    """prints keys and values in dict"""
+    economic_growth = {"India": 7.0,
+                       "Cambodia": 7,
+                       "Tanzania": 6.9,
+                       "Bangladesh": 6.6,
+                       "Senegal": 6.6}
+    # Type your code here
+    str = ",".join(economic_growth)
+    print(str)
+
+
+# joinDict()
+
+
+"""Exercise 2-e: Python join method with new line character"""
+
+
+def joinEscapeReturn():
+    """prints elements of list with return"""
+    poem_lst = ["Not enjoyment, and not sorrow,",
+                "Is our destined end or way;",
+                "But to act, that each tomorrow",
+                "Find us farther than today."]
+    # Type your code here.
+    poem_str = "\n".join(poem_lst)
+    print(poem_str)
+
+
+# joinEscapeReturn()
+
+"""Exercise 3-a: Splitting Up Words Using Split Method"""
+
+
+def splitString():
+    """prints a list"""
+    # Type your answer here.
+    stra = "Hello World!"
+    lst = stra.split()
+    print(lst)
+
+
+# splitString()
+
+"""Exercise 3-b: Splitting based on a specific character (:) split method"""
+
+
+def splitOnChar():
+    stra = "101:102:103:201:202"
+    # Type your code here.
+    lst = stra.split(":")
+    print(lst)
+
+
+# splitOnChar()
+
+"""Exercise 3-c: Splitting based on special character (;)"""
+
+
+def splitOnChar2():
+    stra = "Arsenal:0-Chelsea:1;Barcelona:2-Bayern Munich:2"
+    # Type your code here.
+    lst = stra.split(";")
+    ans_1 = lst[-1]
+    print(ans_1)
+
+
+# splitOnChar2()
