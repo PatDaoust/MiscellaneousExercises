@@ -91,4 +91,30 @@ def scores():
     print(str2)
 
 
-scores()
+# scores()
+
+"""Exercise 2-a: Join method of strings w/lists"""
+
+
+def joinList():
+    """prints a list of strings"""
+    lst = ["Hawaii", "Phuket", "Aruba", "Keys"]
+    # Type your answer here
+    joined = lst[0] + "+++" + lst[1] + "+++" + lst[2] + "+++" + lst[3]
+    print(joined)
+
+
+# joinList()
+
+
+"""Exercise 2-b: Join method of strings w/tuples"""
+
+def joinTuples():
+    """prints this email address"""
+    addresses = ("Mr.Hathaway", "amymail.com")
+    # Type your code here.
+    email = addresses[0] + "@" + addresses[1]
+    print(email)
+
+
+# joinTuples()
