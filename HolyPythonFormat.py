@@ -205,3 +205,29 @@ def splitOnChar2():
 
 
 # splitOnChar2()
+
+
+"""Exercise 4-a: Strip method to remove whitespace on both sides"""
+
+
+def stripWhitespace():
+    stra = "     Hello World!   "
+    # Type your answer here.
+    stra = stra.strip()
+    print(stra)
+
+
+# stripWhitespace()
+
+
+"""Exercise 4-b: Strip method to remove specific characters from a string"""
+
+
+def stripBabylon():
+    a_str = "#$^&#@%$& Babylon #@$&@#"
+    # Type your code here.
+    a_str = a_str.strip("#$^&#@%$& ")
+    print(a_str)
+
+
+# stripBabylon()
