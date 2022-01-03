@@ -231,3 +231,13 @@ def stripBabylon():
 
 
 # stripBabylon()
+
+
+"""Exercise 4-c: Rstrip method to remove from the right side only"""
+
+
+def stripRight():
+    str ="@Bloomberg@@@@@###"
+    str =
+
+    print(str)
