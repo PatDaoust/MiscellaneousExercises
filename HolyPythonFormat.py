@@ -243,4 +243,19 @@ def stripRight():
     print(a_str)
 
 
-stripRight()
+# stripRight()
+
+
+"""Exercise 4-d: Lstrip method to remove from the left side only"""
+
+
+def stripLeft():
+    a_str = "......Macroeconomics,...........Derivatives"
+
+    a_str = a_str.split(",")
+    ans_1 = a_str[1].lstrip(".,")
+
+    print(ans_1)
+
+
+# stripLeft()
