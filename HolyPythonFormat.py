@@ -237,7 +237,10 @@ def stripBabylon():
 
 
 def stripRight():
-    str ="@Bloomberg@@@@@###"
-    str =
+    a_str = "@Bloomberg@@@@@###"
+    a_str = a_str.rstrip("@#")
 
-    print(str)
+    print(a_str)
+
+
+stripRight()
