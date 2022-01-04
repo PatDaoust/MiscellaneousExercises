@@ -259,3 +259,14 @@ def stripLeft():
 
 
 # stripLeft()
+
+
+"""Exercise 5-a"""
+
+
+def methodsAndAttributes():
+    str = "Hello World!"
+    print(dir(str))
+
+
+# methodsAndAttributes()
