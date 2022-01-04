@@ -284,3 +284,10 @@ def printAttributes():
 
 
 """Exercise 5-c print the attributes and methods of a dict"""
+
+
+def printAttributesDict():
+    print(dir(dict()))
+
+
+printAttributesDict()
