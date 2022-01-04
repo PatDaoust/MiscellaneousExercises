@@ -270,3 +270,17 @@ def methodsAndAttributes():
 
 
 # methodsAndAttributes()
+
+
+"""Exercise 5-b print the attributes and methods of a list"""
+
+
+def printAttributes():
+    lst = list()
+    print(dir(lst))
+
+
+# printAttributes()
+
+
+"""Exercise 5-c print the attributes and methods of a dict"""
