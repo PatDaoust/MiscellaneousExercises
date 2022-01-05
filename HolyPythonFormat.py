@@ -326,4 +326,16 @@ def violetColor():
     print(ans_1)
 
 
-violetColor()
+# violetColor()
+
+
+"""Exercise 6-d Print the values of the "roads" key from the nested dictionary."""
+
+
+def printRoads():
+    nested_dict = {"Dakar": {"weather": "sunny", "roads": "dry"}}
+    ans_1 = nested_dict["Dakar"]["roads"]
+    print(ans_1)
+
+
+# printRoads()
