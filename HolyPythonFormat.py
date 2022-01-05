@@ -290,4 +290,16 @@ def printAttributesDict():
     print(dir(dict()))
 
 
-printAttributesDict()
+# printAttributesDict()
+
+
+"""Exercise 6-a Print 5 by accessing the nested data."""
+
+
+def print5():
+    nested_lst = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    ans_1 = nested_lst[1][1]
+    print(ans_1)
+
+
+# print5()
