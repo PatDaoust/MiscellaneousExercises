@@ -314,4 +314,16 @@ def printZ():
     print(ans_1)
 
 
-printZ()
+# printZ()
+
+
+"""Exercise 6-c What color is the violet?"""
+
+
+def violetColor():
+    nested_lst = [{"orange": "orange"}, {"rose": "red"}, {"violet": "blue"}]
+    ans_1 = nested_lst[2]["violet"]
+    print(ans_1)
+
+
+violetColor()
