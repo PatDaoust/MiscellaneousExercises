@@ -303,3 +303,15 @@ def print5():
 
 
 # print5()
+
+
+"""Exercise 6-b Print "Z" from the nested data."""
+
+
+def printZ():
+    nested_lst = [["Hat", "Glove", "Goggle"], ["Button", "Zipper", "Hook"]]
+    ans_1 = nested_lst[1][1][0]
+    print(ans_1)
+
+
+printZ()
