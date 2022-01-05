@@ -339,3 +339,16 @@ def printRoads():
 
 
 # printRoads()
+
+
+"""Exercise 6-e Print the first element of the weather for Tokyo."""
+
+
+def printweather():
+    nested_dict = {"Tokyo": {"weather": ["sunny", "cloudy"], "roads": "dry"},
+                   "Dakar": {"weather": ["foggy", "windy"], "roads": "sandy"}}
+    ans_1 = nested_dict["Tokyo"]["weather"]
+    print(ans_1)
+
+
+printweather()
