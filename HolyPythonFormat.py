@@ -362,7 +362,7 @@ Otherwise make it print "Good morning NAME". (Replace Name with user's name)
 
 
 def goodMorning():
-    """used input() to gather name. prints a greeting"""
+    """uses input() to gather name. prints a greeting"""
     name = input("Please type your name: ")
     if name == "Bond":
         print("Welcome on board 007.")
@@ -370,4 +370,21 @@ def goodMorning():
         print(f"Good morning {name}")
 
 
-goodMorning()
+# goodMorning()
+
+
+"""Exercise 7-b
+Do the same thing as exercise 7-a this time making sure if the name is 
+bond with lower case b it still prints "Welcome on board 007."
+"""
+
+def goodmorningv2():
+    """uses input() to gather name. prints a greeting"""
+    name = input("Please type your name: ")
+    if name == "Bond" or name == "bond":
+        print("Welcome on board 007.")
+    else:
+        print(f"Good morning {name}")
+
+
+goodmorningv2()
