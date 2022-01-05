@@ -347,8 +347,27 @@ def printRoads():
 def printweather():
     nested_dict = {"Tokyo": {"weather": ["sunny", "cloudy"], "roads": "dry"},
                    "Dakar": {"weather": ["foggy", "windy"], "roads": "sandy"}}
-    ans_1 = nested_dict["Tokyo"]["weather"]
+    ans_1 = nested_dict["Tokyo"]["weather"][0]
     print(ans_1)
 
 
-printweather()
+# printweather()
+
+
+"""Exercise 7-a
+Write an if statement that asks for the user's name via input() function.
+If the name is "Bond" make it print "Welcome on board 007."
+Otherwise make it print "Good morning NAME". (Replace Name with user's name)
+    """
+
+
+def goodMorning():
+    """used input() to gather name. prints a greeting"""
+    name = input("Please type your name: ")
+    if name == "Bond":
+        print("Welcome on board 007.")
+    else:
+        print(f"Good morning {name}")
+
+
+goodMorning()
