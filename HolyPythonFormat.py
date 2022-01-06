@@ -463,4 +463,31 @@ treepersqkm = {"Finland": 90652,
                "Syria": 534,
                "Saudi Arabia": 1}
 
-print(moretrees(treepersqkm))
+# print(moretrees(treepersqkm))
+
+
+"""Exercise 7-f Write a function named "count_l"
+that counts the number of words that contain the letter: "l" in a given string."""
+
+string = "Oranges and lemons, Say the bells of St. Clement's. You owe me three farthings, Say the bells of St. Martin's"
+
+
+def count_l(a):
+    """assumes a in a string
+    returns an int, representing the number of words in a with an "l"
+    treats sequences of characters seperated by a space as a word
+    """
+    word_list = a.split()
+    l_count = 0
+    for word in word_list:
+        if "l" in word:
+            l_count +=1
+    return l_count
+            
+    # plan:
+        # split string into list of words
+        # if "l" in word:
+        #     count += 1
+
+
+print(count_l(string))
