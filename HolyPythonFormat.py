@@ -404,5 +404,25 @@ def evens(i):
         return False
 
 
-print(evens(99))
-print(evens(98))
+# print(evens(99))
+# print(evens(98))
+
+
+"""Exercise 7-d Write a function named "thedecimal"
+which returns the decimal part of a number.
+If decimal part is zero function should return this string: "INTEGER"."""
+
+
+def thedecimal(num):
+    """assumes num is a numeric
+    returns an int representing the decimal part of num, if it exists,
+    else returns a string 'INTEGER' """
+    rounded = int(num)
+    if rounded == num:
+        return "INTEGER"
+    else:
+        return num - rounded
+
+
+print(thedecimal(99.09))
+print(thedecimal(99.00))
