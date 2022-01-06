@@ -424,5 +424,43 @@ def thedecimal(num):
         return num - rounded
 
 
-print(thedecimal(99.09))
-print(thedecimal(99.00))
+# print(thedecimal(99.09))
+# print(thedecimal(99.00))
+
+
+"""Exercise 7-e
+treepersqkm is a dictionary showing the tree number of countries per square kilometer
+for random countries with sizeable population numbers.
+Write a function named "moretrees" that returns
+a list of country names with more than 20.000 trees per square kilometer."""
+
+
+def moretrees(a_dict):
+    """assumes a_dict is a dictionary of key strings and value ints,
+    representing country names and number of tree per square kilometer
+    returns a list of strings, representing the name of countries
+    with more than 20.000 trees per square kilometer"""
+    green_contries_list = []
+    for key, value in a_dict.items():
+        if value >= 20000:
+            green_contries_list.append(key)
+    return green_contries_list
+
+
+treepersqkm = {"Finland": 90652,
+               "Taiwan": 69593,
+               "Japan": 49894,
+               "Russia": 41396,
+               "Brazil": 39542,
+               "Canada": 36388,
+               "Bulgaria": 24987,
+               "France": 24436,
+               "Greece": 24323,
+               "United States": 23513,
+               "Turkey": 11126,
+               "India": 11109,
+               "Denmark": 6129,
+               "Syria": 534,
+               "Saudi Arabia": 1}
+
+print(moretrees(treepersqkm))
