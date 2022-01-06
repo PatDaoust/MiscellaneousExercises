@@ -374,9 +374,10 @@ def goodMorning():
 
 
 """Exercise 7-b
-Do the same thing as exercise 7-a this time making sure if the name is 
+Do the same thing as exercise 7-a this time making sure if the name is
 bond with lower case b it still prints "Welcome on board 007."
 """
+
 
 def goodmorningv2():
     """uses input() to gather name. prints a greeting"""
@@ -387,4 +388,21 @@ def goodmorningv2():
         print(f"Good morning {name}")
 
 
-goodmorningv2()
+# goodmorningv2()
+
+
+"""Exercise 7-c Write a function named "evens"
+which returns True if a number is even and otherwise returns False."""
+
+
+def evens(i):
+    """assumes i is a number
+    returns a boolean, True if i is even, else False"""
+    if i % 2 == 0:
+        return True
+    else:
+        return False
+
+
+print(evens(99))
+print(evens(98))
