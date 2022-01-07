@@ -529,11 +529,24 @@ lst = ["Sam", "Lisa", "Micha", "Dave", "Wyatt", "Emma", "Sage"]
 
 def printList(a_list):
     """assumes a_list is a list of strings
-    prints all the items in a_list"""
+    prints all the elements in a_list"""
     for elem in a_list:
         print(elem)
 
 
 list_a = ["koala", "cat", "fox", "panda", "chipmunk", "sloth", "penguin", "dolphin"]
-printList(list_a)
+# printList(list_a)
 
+
+"""Exercise 8-c Write a for loop that iterates through a string and prints every letter"""
+
+
+def printString(a_string):
+    """assumes a_string is a string
+    prints the characters of a_string"""
+    for char in a_string:
+        print(char)
+
+
+str_a = "Antarctica"
+printString(str_a)
