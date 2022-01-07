@@ -507,4 +507,18 @@ def count_a(a):
     return a_count
 
 
-print(count_a(string))
+# print(count_a(string))
+
+
+"""Exercise 8-b Write a for loop which print "Hello!, " plus each name in the list."""
+
+
+def helloLoop(name_list):
+    """assumes name_list is a list of strings, representing names
+    prints a greeting for each name in name_list"""
+    for name in name_list:
+        print("Hello!, " + name)
+
+
+lst = ["Sam", "Lisa", "Micha", "Dave", "Wyatt", "Emma", "Sage"]
+# helloLoop(lst)
