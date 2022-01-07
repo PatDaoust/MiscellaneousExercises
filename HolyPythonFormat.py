@@ -522,3 +522,18 @@ def helloLoop(name_list):
 
 lst = ["Sam", "Lisa", "Micha", "Dave", "Wyatt", "Emma", "Sage"]
 # helloLoop(lst)
+
+
+"""Exercise 8-a Write a for loop so that every item in the list is printed."""
+
+
+def printList(a_list):
+    """assumes a_list is a list of strings
+    prints all the items in a_list"""
+    for elem in a_list:
+        print(elem)
+
+
+list_a = ["koala", "cat", "fox", "panda", "chipmunk", "sloth", "penguin", "dolphin"]
+printList(list_a)
+
