@@ -601,5 +601,23 @@ def squares(num_list):
     return square_list
 
 
-lst2=[3, 7, 6, 8, 9, 11, 15, 25]
-print(squares(lst2))
+lst2 = [3, 7, 6, 8, 9, 11, 15, 25]
+# print(squares(lst2))
+
+
+"""Exercise 8-g Write a for loop using an if statement,
+that appends each number to the new list if it's positive."""
+
+
+def appendPositives(num_list):
+    """assumes num_list is a list of numerics
+    returns a list of numerics, the positive numerics of num_list"""
+    pos_list = []
+    for num in num_list:
+        if num > 0:
+            pos_list.append(num)
+    return pos_list
+
+
+lst4 = [111, 32, -9, -45, -17, 9, 85, -10]
+print(appendPositives(lst4))
