@@ -585,4 +585,21 @@ def Dr(a_list):
 
 
 lst1 = ["Phil", "Oz", "Seuss", "Dre"]
-print(Dr(lst1))
+# print(Dr(lst1))
+
+
+"""Exercise 8-f Write a for loop which appends the square of each number to a new list"""
+
+
+def squares(num_list):
+    """assumes num_list is a list of numerics
+    returns a list of squares of each elem of num_list"""
+    square_list = []
+    for num in num_list:
+        square = num**2
+        square_list.append(square)
+    return square_list
+
+
+lst2=[3, 7, 6, 8, 9, 11, 15, 25]
+print(squares(lst2))
