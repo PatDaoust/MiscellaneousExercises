@@ -560,10 +560,29 @@ Can you guess how many times it will add 1?."""
 
 def countC():
     str_ = "Civilization"
-    c=0
+    c = 0
     for i in str_:
         c += 1
         print(c)
 
 
-countC()
+# countC()
+
+
+"""Exercise 8-e
+Using a for loop and .append() method append each item with a Dr. prefix to the lst.
+"""
+
+
+def Dr(a_list):
+    """assumes a_list is a list of strings
+    returns a new list, of the elements of a_list prepended with 'Dr.' """
+    list2 = []
+    for elem in a_list:
+        mod_elem = "Dr." + elem
+        list2.append(mod_elem)
+    return list2
+
+
+lst1 = ["Phil", "Oz", "Seuss", "Dre"]
+print(Dr(lst1))
