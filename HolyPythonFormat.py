@@ -549,4 +549,21 @@ def printString(a_string):
 
 
 str_a = "Antarctica"
-printString(str_a)
+# printString(str_a)
+
+
+"""Exercise 8-d
+Type a code inside the for loop so that counter variable named c
+is increased by one each time loop iterates.
+Can you guess how many times it will add 1?."""
+
+
+def countC():
+    str_ = "Civilization"
+    c=0
+    for i in str_:
+        c += 1
+        print(c)
+
+
+countC()
