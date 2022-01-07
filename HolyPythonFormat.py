@@ -620,4 +620,24 @@ def appendPositives(num_list):
 
 
 lst4 = [111, 32, -9, -45, -17, 9, 85, -10]
-print(appendPositives(lst4))
+# print(appendPositives(lst4))
+
+
+"""Exercise 8-h Using for loop and if statement,
+append the value minus 1000 for each key to the new list if the value is above 1000.
+ i.e.: if the value is 1500, 500 should be added to the new list."""
+
+
+def over1000minus1000(num_dict):
+    """assumes num_list is a dictionary whose values are numerics
+    returns a list of numerics, of the values over 1000 of num_dict minus 1000"""
+    minus_list = []
+    for key, value in num_dict.items():
+        mod_num = value - 1000
+        if mod_num > 0:
+            minus_list.append(mod_num)
+    return minus_list
+
+
+dict1 = {"z1": 900, "t1": 1100, "p1": 2300, "r1": 1050, "k1": 3200, "g1": 400}
+# print(over1000minus1000(dict1))
