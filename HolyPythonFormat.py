@@ -641,3 +641,20 @@ def over1000minus1000(num_dict):
 
 dict1 = {"z1": 900, "t1": 1100, "p1": 2300, "r1": 1050, "k1": 3200, "g1": 400}
 # print(over1000minus1000(dict1))
+
+
+
+"""Exercise 8-i Write a for loop which appends the type of each element in
+the first list to the second list."""
+
+
+def typeList(a_list):
+    """assumes a_list is a list with at least 1 element
+    returns a list of the types of all the elements of a_list"""
+    type_list = []
+    for elem in a_list:
+        type_list.append(type(elem))
+    return type_list
+
+
+print(typeList([3.01, 66, "teddy bear", True, [], {}]))
