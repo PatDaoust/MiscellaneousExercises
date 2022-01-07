@@ -481,13 +481,30 @@ def count_l(a):
     l_count = 0
     for word in word_list:
         if "l" in word:
-            l_count +=1
+            l_count += 1
     return l_count
-            
-    # plan:
-        # split string into list of words
-        # if "l" in word:
-        #     count += 1
 
 
-print(count_l(string))
+# print(count_l(string))
+
+
+"""Exercise 7-g
+Write a similar function to 7-e
+which returns the number of words that start with letter "A" in a string.
+ (Make sure it counts lower case a's as well.)."""
+
+
+def count_a(a):
+    """assumes a in a string
+    returns an int, representing the number of words in a with an "l"
+    treats sequences of characters seperated by a space as a word
+    """
+    word_list = a.split()
+    a_count = 0
+    for word in word_list:
+        if "a" in word or "A" in word:
+            a_count += 1
+    return a_count
+
+
+print(count_a(string))
