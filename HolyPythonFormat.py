@@ -643,7 +643,6 @@ dict1 = {"z1": 900, "t1": 1100, "p1": 2300, "r1": 1050, "k1": 3200, "g1": 400}
 # print(over1000minus1000(dict1))
 
 
-
 """Exercise 8-i Write a for loop which appends the type of each element in
 the first list to the second list."""
 
@@ -692,3 +691,21 @@ def index100(num_list):
 
 
 # index100([10, 99, 98, 85, 45, 59, 65, 66, 76, 12, 35, 13, 100, 80, 95])
+
+
+"""Exercise 9-c Using while loop and an if statement write a function named
+name_adder which appends all the elements in a list to a new list
+unless the element is an empty string: "". """
+
+
+def name_adder(a_list):
+    """assumes a_list is a list of strings (possibly including empty strings)
+    returns a list of the non-empty strings in a_list"""
+    non_empty_list = []
+    for elem in a_list:
+        if elem:
+            non_empty_list.append(elem)
+    return non_empty_list
+
+
+# print(name_adder(["Joe", "Sarah", "Mike", "Jess", "", "Matt", "", "Greg"]))
