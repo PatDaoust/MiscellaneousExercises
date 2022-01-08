@@ -674,3 +674,21 @@ def whileAdd100():
 
 
 # print(whileAdd100())
+
+
+"""Exercise 9-b Using while loop, if statement and str() function;
+iterate through the list and if there is a 100, print it with its index number.
+ i.e.: "There is a 100 at index no: 5"""
+
+
+def index100(num_list):
+    """asssumes num_list is a list of numerics
+    prints "there is a 100 at index no: " for each 100 found"""
+    i = 0
+    while i < len(num_list):
+        if num_list[i] == 100:
+            print("There is a 100 at index no: " + str(i))
+        i += 1
+
+
+# index100([10, 99, 98, 85, 45, 59, 65, 66, 76, 12, 35, 13, 100, 80, 95])
