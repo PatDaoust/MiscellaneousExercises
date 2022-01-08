@@ -657,4 +657,20 @@ def typeList(a_list):
     return type_list
 
 
-print(typeList([3.01, 66, "teddy bear", True, [], {}]))
+# print(typeList([3.01, 66, "teddy bear", True, [], {}]))
+
+
+"""Exercise 9-a Write a while loop that adds all the numbers up to 100 (inclusive)."""
+
+
+def whileAdd100():
+    """returns an int, the sum of all the integers up to 100 (inclusive)"""
+    n = 0
+    my_sum = 0
+    while n <= 100:
+        my_sum += n
+        n += 1
+    return my_sum
+
+
+# print(whileAdd100())
