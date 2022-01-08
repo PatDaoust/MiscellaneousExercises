@@ -709,3 +709,28 @@ def name_adder(a_list):
 
 
 # print(name_adder(["Joe", "Sarah", "Mike", "Jess", "", "Matt", "", "Greg"]))
+
+
+"""Exercise 9-d inside a function named name_adder,
+ write a while loop that stops appending items to the new list as soon as
+ it encounters an empty string: "".
+ And prints "There is an empty string and returns the new list."
+"""
+
+
+def name_adder_stop(a_list):
+    """assumes a_list is a list of strings (possibly including empty strings)
+    returns a list of the non-empty strings in a_list up to the first empty string"""
+    i = 0
+    new_list = []
+    while i < len(a_list):
+        if a_list[i]:
+            new_list.append(a_list[i])
+        else:
+            print("There is an empty string")
+            return new_list
+        i += 1
+    return new_list
+
+
+# print(name_adder_stop(["Sam", "", "Ben", "Olivia", "Alicia"]))
