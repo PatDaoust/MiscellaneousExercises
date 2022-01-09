@@ -748,3 +748,20 @@ def break7():
 
 
 # break7()
+
+
+"""Exercise 10-b: If and Continue statements inside a For Loop
+Add an if statement and a continue statement to the loop so that
+it skips when iterator equals "sun"."""
+
+
+def skipSun(a_list):
+    """asssumes a_list is a list of strings
+    prints strings != "sun" """
+    for elem in a_list:
+        if elem == "sun":
+            continue
+        print(elem)
+
+
+# skipSun(["snow", "rain", "sun", "clouds"])
