@@ -734,3 +734,17 @@ def name_adder_stop(a_list):
 
 
 # print(name_adder_stop(["Sam", "", "Ben", "Olivia", "Alicia"]))
+
+
+"""Exercise 10-a: Break statement inside a For Loop
+Place a break statement in the for loop so that it prints from 0 to 7 only (including 7)
+"""
+
+def break7():
+    for i in range(100):
+        print(i)
+        if i >= 7:
+            break
+
+
+# break7()
