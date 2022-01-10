@@ -840,3 +840,11 @@ lst9 = [(19542209, "New York"),
 
 lst10 = sorted(lst9, key=lambda a: a[1])
 # print(lst10)
+
+
+"""Exercise 11-h
+Using sorted() function and lambda sort the tuples in the list based on
+the last character of the second items."""
+
+lst11 = sorted(lst9, key=lambda a: a[1][-1])
+# print(lst11)
