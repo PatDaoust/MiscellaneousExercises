@@ -825,3 +825,18 @@ lst7 = ["otter", "whale", "goose", "chipmunk", "fox", "sheep", "rabbit", "marten
 
 lst8 = sorted(lst7, key=lambda a: a[1])
 # print(lst8)
+
+
+"""Exercise 11-g
+Using sorted() function and lambda sort the tuples in the list based on
+the second items."""
+
+lst9 = [(19542209, "New York"),
+        (4887871, "Alabama"),
+        (1420491, "Hawaii"),
+        (626299, "Vermont"),
+        (1805832, "West Virginia"),
+        (39865590, "California")]
+
+lst10 = sorted(lst9, key=lambda a: a[1])
+# print(lst10)
