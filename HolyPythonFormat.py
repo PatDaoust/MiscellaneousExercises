@@ -781,4 +781,13 @@ Write a lambda function which takes z as a parameter and returns z*11
 Assign it to variable named: f."""
 
 f = lambda z: z * 11
-print(f(2))
+# print(f(2))
+
+
+"""Exercise 11-c
+Write a function which takes two arguments: a and b
+and returns the multiplication of them: a*b.
+Assign it to a variable named: f."""
+
+f = lambda a, b: a * b
+# print(f(2,3))
