@@ -805,3 +805,12 @@ Please check out Hint 0 below to be informed about a glitch regarding this exerc
 list5 = [100, 10, 10000, 1, 9, 999, 99]
 list5.sort(key=lambda a: 100/a)
 # print(list5)
+
+
+"""Exercise 11-e
+use the sorted() function to sort the list in ascending order with lambda."""
+
+lst6 = [100, 10, 10000, 1, 9, 999, 99]
+
+new_list = sorted(lst6)
+# print(new_list)
