@@ -814,3 +814,14 @@ lst6 = [100, 10, 10000, 1, 9, 999, 99]
 
 new_list = sorted(lst6)
 # print(new_list)
+
+
+"""Exercise 11-f
+Using sorted() function and lambda sort the words in the list based on
+their second letter from a to z."""
+
+
+lst7 = ["otter", "whale", "goose", "chipmunk", "fox", "sheep", "rabbit", "marten"]
+
+lst8 = sorted(lst7, key=lambda a: a[1])
+# print(lst8)
