@@ -848,3 +848,11 @@ the last character of the second items."""
 
 lst11 = sorted(lst9, key=lambda a: a[1][-1])
 # print(lst11)
+
+
+"""Exercise 11-i
+Using sorted() function, reverse parameter and lambda sort the tuples in the list
+based on the last character of the second items in reverse order."""
+
+lst12 = sorted(lst9, key=lambda a: a[1][-1], reverse=True)
+# print(lst12)
