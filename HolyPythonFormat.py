@@ -896,7 +896,7 @@ coming from lst1 and lst2."""
 
 
 def mergeListsToDict(list1, list2):
-    """assumes list1 is a list of hashable elements
+    """assumes list1 is a list of immutable elements
     assumes list 2 is a list
     returns a dict using list1 as keys and list2 as values"""
     return dict(zip(list1, list2))
@@ -905,3 +905,23 @@ def mergeListsToDict(list1, list2):
 lst16 = ["Netflix", "Hulu", "Sling", "Hbo"]
 lst17 = [198, 166, 237, 125]
 # print(mergeListsToDict(lst16, lst17))
+
+
+"""Exercise 12-d: 2 Lists Zip Merged and Sorted
+Using zip, list and sorted functions create a sorted list of tuples from lst1 and lst2.
+"""
+
+
+def sortedMerge(list1, list2):
+    """assumes list1 and list2 are lists
+    returns a list of tuples, from the elements of list1 and list2"""
+    # zip lists
+    combo_list = list(zip(list1, list2))
+    # sort list by 2nd elem
+    combo_list = sorted(combo_list, key=lambda a: a[1])
+    return combo_list
+
+
+lst18 = ["Mike", "Danny", "Jim", "Annie"]
+lst19 = [4, 12, 7, 19]
+# print(sortedMerge(lst18, lst19))
