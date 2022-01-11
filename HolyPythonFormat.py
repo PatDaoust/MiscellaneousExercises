@@ -925,3 +925,19 @@ def sortedMerge(list1, list2):
 lst18 = ["Mike", "Danny", "Jim", "Annie"]
 lst19 = [4, 12, 7, 19]
 # print(sortedMerge(lst18, lst19))
+
+
+"""Exercise 13-a
+Write a map function that adds plus 5 to each item in the list."""
+
+
+def plus5(num):
+    """assumes num is a numeric
+    returns a numeric, num + 5"""
+    return num + 5
+
+
+lst20 = [10, 20, 30, 40, 50, 60]
+lst21 = list(map(plus5, lst20))
+# print(lst21)
+
