@@ -888,3 +888,20 @@ def mergeRangeList(lst):
 lst15 = ["Energy", "Agriculture", "Industry", "Technology", "Finance", "Forestry",
          "Transport"]
 # print(mergeRangeList(lst15))
+
+
+"""Exercise 12-c: Creating a Dictionary by Merging 2 Lists Using Zip Function
+Using zip and dict functions create a dictionary which has its key-value pairs
+coming from lst1 and lst2."""
+
+
+def mergeListsToDict(list1, list2):
+    """assumes list1 is a list of hashable elements
+    assumes list 2 is a list
+    returns a dict using list1 as keys and list2 as values"""
+    return dict(zip(list1, list2))
+
+
+lst16 = ["Netflix", "Hulu", "Sling", "Hbo"]
+lst17 = [198, 166, 237, 125]
+# print(mergeListsToDict(lst16, lst17))
