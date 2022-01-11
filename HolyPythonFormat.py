@@ -856,3 +856,19 @@ based on the last character of the second items in reverse order."""
 
 lst12 = sorted(lst9, key=lambda a: a[1][-1], reverse=True)
 # print(lst12)
+
+
+"""Exercise 12-a: Merging 2 Lists with Zip Function
+Using zip() function and list() function, create a merged list of tuples
+from the two lists given."""
+
+
+def mergeLists(lst1, lst2):
+    """asssumes lst1 and lst2 are lists
+    returns a list of tuples of the elementsts of lst1 and lst2"""
+    return list(zip(lst1, lst2))
+
+
+lst13 = [19542209, 4887871, 1420491, 626299, 1805832, 39865590]
+lst14 = ["New York", "Alabama", "Hawaii", "Vermont", "West Virginia",  "California"]
+# print(mergeLists(lst13, lst14))
