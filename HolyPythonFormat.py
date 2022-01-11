@@ -872,3 +872,19 @@ def mergeLists(lst1, lst2):
 lst13 = [19542209, 4887871, 1420491, 626299, 1805832, 39865590]
 lst14 = ["New York", "Alabama", "Hawaii", "Vermont", "West Virginia",  "California"]
 # print(mergeLists(lst13, lst14))
+
+
+"""Exercise 12-b: Merging a List and a Range with Zip Function
+First create a range from 1 to 8. Then using zip,
+merge the given list and the range together to create a new list of tuples."""
+
+
+def mergeRangeList(lst):
+    """Assumes lst is a list
+    returns a list of tuples of int and the elements of lst,n of lenght = len(lst)"""
+    return list(zip(list(range(1, len(lst)+1)), lst))
+
+
+lst15 = ["Energy", "Agriculture", "Industry", "Technology", "Finance", "Forestry",
+         "Transport"]
+# print(mergeRangeList(lst15))
