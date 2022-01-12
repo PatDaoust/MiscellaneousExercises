@@ -941,3 +941,17 @@ lst20 = [10, 20, 30, 40, 50, 60]
 lst21 = list(map(plus5, lst20))
 # print(lst21)
 
+
+"""Exercise 13-b
+Write a map function that returns the squares of the items in the list."""
+
+
+def squares2(num):
+    """assumes num is a list of numerics
+    returns a numeric, the square of num"""
+    return num ** 2
+
+
+lst22 = [10, 20, 30, 40, 50, 60]
+lst23 = list(map(squares2, lst22))
+# print(lst23)
