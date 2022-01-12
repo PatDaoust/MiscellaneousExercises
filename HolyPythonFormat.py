@@ -1007,3 +1007,12 @@ the number of occurence of both letters: A and a."""
 
 lst33 = list(map(lambda x: x.count("a") + x.count("A"), lst31))
 # print(lst33)
+
+
+"""Exercise 13-h
+Using map() function, first return a new list with absolute values of existing list.
+Then for ans_1, find the total sum of the new list's elements."""
+
+lst34 = [99.3890, -3.5, 5, -0.7123, -9, -0.003]
+# new_lst = list(map(abs, lst34))
+# print(sum(new_lst))
