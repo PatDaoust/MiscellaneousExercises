@@ -1001,3 +1001,9 @@ lst31 = ["Alaska", "Alabama", "Arizona", "Arkansas", "Colorado", "Montana", "Nev
 lst32 = list(map(lambda x: x.count("a"), lst31))
 # print(lst32)
 
+"""Exercise 13-g
+Using map() function and lambda and count() function create a list consisted of
+the number of occurence of both letters: A and a."""
+
+lst33 = list(map(lambda x: x.count("a") + x.count("A"), lst31))
+# print(lst33)
