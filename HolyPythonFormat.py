@@ -969,5 +969,14 @@ def addHello(a_string):
 
 
 lst24 = ["Jane", "Lee", "Will", "Brie"]
-lst35 = list(map(addHello, lst24))
-# print(lst35)
+lst25 = list(map(addHello, lst24))
+# print(lst25)
+
+
+"""Exercise 13-d
+Using map() function and len() function create a list that's consisted of
+lengths of each element in the first list."""
+
+lst26 = ["Alpine", "Avalanche", "Powder", "Snowflake", "Summit"]
+lst27 = list(map(len, lst26))
+# print(lst27)
