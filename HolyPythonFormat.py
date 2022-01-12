@@ -980,3 +980,14 @@ lengths of each element in the first list."""
 lst26 = ["Alpine", "Avalanche", "Powder", "Snowflake", "Summit"]
 lst27 = list(map(len, lst26))
 # print(lst27)
+
+
+"""Exercise 13-e
+Using map() function and lambda add each elements of two lists together.
+Use a lambda with two arguments."""
+
+lst28 = [100, 200, 300, 400, 500]
+lst29 = [1, 10, 100, 1000, 10000]
+
+lst30 = list(map(lambda a, b: a+b, lst28, lst29))
+print(lst30)
