@@ -990,4 +990,14 @@ lst28 = [100, 200, 300, 400, 500]
 lst29 = [1, 10, 100, 1000, 10000]
 
 lst30 = list(map(lambda a, b: a+b, lst28, lst29))
-print(lst30)
+# print(lst30)
+
+
+"""Exercise 13-f
+Using map() function and lambda and count() function create a list
+which consists of the number of occurence of letter: a."""
+
+lst31 = ["Alaska", "Alabama", "Arizona", "Arkansas", "Colorado", "Montana", "Nevada"]
+lst32 = list(map(lambda x: x.count("a"), lst31))
+# print(lst32)
+
