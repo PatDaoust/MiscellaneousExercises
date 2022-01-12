@@ -955,3 +955,19 @@ def squares2(num):
 lst22 = [10, 20, 30, 40, 50, 60]
 lst23 = list(map(squares2, lst22))
 # print(lst23)
+
+
+"""Exercise 13-c
+Write a map function that adds "Hello, " in front of each item in the list.
+"""
+
+
+def addHello(a_string):
+    """assumes that a_string is a string
+    returns a string, "hello, " + string"""
+    return "Hello, " + a_string
+
+
+lst24 = ["Jane", "Lee", "Will", "Brie"]
+lst35 = list(map(addHello, lst24))
+# print(lst35)
