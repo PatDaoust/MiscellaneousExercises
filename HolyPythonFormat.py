@@ -1016,3 +1016,18 @@ Then for ans_1, find the total sum of the new list's elements."""
 lst34 = [99.3890, -3.5, 5, -0.7123, -9, -0.003]
 # new_lst = list(map(abs, lst34))
 # print(sum(new_lst))
+
+
+"""Exercise 14-a
+Using filter() function filter the list so that only negative numbers are left."""
+
+
+def negative(num):
+    """assumes num is a numeric
+    returns a boolean, True if num is negative, else False"""
+    return num < 0
+
+
+lst35 = [12, -1, 9, 8, -0.5, -0.2, -100]
+lst36 = list(filter(negative, lst35))
+print(lst36)
