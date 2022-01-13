@@ -1074,3 +1074,12 @@ def isDigit(char):
 
 lst38 = list(filter(isDigit, str1))
 # print(lst38)
+
+
+"""Exercise 14-e
+Using map() and filter() functions add 2000 to the values below 8000."""
+
+
+lst39 = [1000, 500, 600, 700, 5000, 90000, 17500]
+lst40 = list(map(lambda b: b + 2000, (filter(lambda a: a < 8000, lst39))))
+# print((lst40))
