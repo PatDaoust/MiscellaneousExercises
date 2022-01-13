@@ -1040,3 +1040,21 @@ are passed to the new list."""
 lst37 = [22, 100, 19, 13, 11, 1, 4, 66]
 lst38 = list(filter(lambda a: a % 2 != 0, lst37))
 # print(lst38)
+
+
+"""Exercise 14-c
+Using filter() and list() functions and .lower() method filter all the vowels
+in a given string."""
+
+
+def isVowel(char):
+    """Assumes char is a single character
+    returns a boolean; True if char is a vowel (aeiou), else False
+    not case sensitive"""
+    vowels = "aeiouAEIOU"
+    return char in vowels
+
+
+str1 = "Winter Olympics in 2022 will take place in Beijing China"
+lst37 = list(filter(isVowel, str1))
+# print(lst37)
