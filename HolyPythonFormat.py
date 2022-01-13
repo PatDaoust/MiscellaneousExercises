@@ -1058,3 +1058,19 @@ def isVowel(char):
 str1 = "Winter Olympics in 2022 will take place in Beijing China"
 lst37 = list(filter(isVowel, str1))
 # print(lst37)
+
+
+"""Exercise 14-d
+This time using filter() and list() functions filter all the positive integers
+in the string."""
+
+
+def isDigit(char):
+    """assumes char is a single character
+    returns a boolean, True is char is a digit, else False"""
+    digits = "0123456789"
+    return char in digits
+
+
+lst38 = list(filter(isDigit, str1))
+# print(lst38)
