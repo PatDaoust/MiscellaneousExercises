@@ -1083,3 +1083,15 @@ Using map() and filter() functions add 2000 to the values below 8000."""
 lst39 = [1000, 500, 600, 700, 5000, 90000, 17500]
 lst40 = list(map(lambda b: b + 2000, (filter(lambda a: a < 8000, lst39))))
 # print((lst40))
+
+
+"""Exercise 14-f
+This time swap the map() and filter() functions so that map() function is
+inside filter() function.
+Convert a number to positive if it's negative in the list.
+Only pass those that are converted from negative to positive to the new list."""
+
+
+lst41 = [-1000, 500, -600, 700, 5000, -90000, -17500]
+lst42 = list(map(abs, filter(lambda a: a < 0, lst41)))
+# print((lst42))
