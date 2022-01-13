@@ -1030,4 +1030,13 @@ def negative(num):
 
 lst35 = [12, -1, 9, 8, -0.5, -0.2, -100]
 lst36 = list(filter(negative, lst35))
-print(lst36)
+# print(lst36)
+
+
+"""Exercise 14-b
+Using filter function, filter the even numbers so that only odd numbers
+are passed to the new list."""
+
+lst37 = [22, 100, 19, 13, 11, 1, 4, 66]
+lst38 = list(filter(lambda a: a % 2 != 0, lst37))
+# print(lst38)
