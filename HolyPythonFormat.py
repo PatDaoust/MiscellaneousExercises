@@ -1111,3 +1111,12 @@ Using sorted() function, sort the list from a to z."""
 
 lst45 = ["zebra", "bird", "ant", "porcupine", "giraffe"]
 lst46 = sorted(lst45)
+
+
+"""Exercise 15-c
+Using sorted() function sort the list from z to a."""
+
+
+lst47 = ["zebra", "bird", "ant", "porcupine", "giraffe"]
+list48 = sorted(lst47, reverse=True)
+# print(list48)
