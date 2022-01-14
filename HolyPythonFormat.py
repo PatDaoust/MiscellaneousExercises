@@ -1104,3 +1104,10 @@ Using sorted() function, sort the list in ascending order."""
 lst43 = [500, 1000, 400, 40000, 999, 2, 0.5, 17]
 lst44 = sorted(lst43)
 # print(lst44)
+
+
+"""Exercise 15-b
+Using sorted() function, sort the list from a to z."""
+
+lst45 = ["zebra", "bird", "ant", "porcupine", "giraffe"]
+lst46 = sorted(lst45)
