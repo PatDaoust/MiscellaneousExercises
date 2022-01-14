@@ -1128,3 +1128,12 @@ Using sorted() function sort the list in descending order."""
 lst49 = [500, 1000, 400, 40000, 999, 2, 0.5, 17]
 lst50 = sorted(lst49, reverse=True)
 # print(lst50)
+
+
+"""Exercise 15-e
+Using len function and sorted() function, sort the list based on the length of the strings
+(In ascending order)"""
+
+lakes1 = ["Malawi", "Medicine", "Tahoe", "Moraine", "Upper Arrow", "Plitvice", "Edith", "Emerald"]
+lakes2 = sorted(lakes1, key=len)
+# print(lakes2)
