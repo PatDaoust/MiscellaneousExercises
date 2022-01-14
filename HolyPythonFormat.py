@@ -1120,3 +1120,11 @@ Using sorted() function sort the list from z to a."""
 lst47 = ["zebra", "bird", "ant", "porcupine", "giraffe"]
 list48 = sorted(lst47, reverse=True)
 # print(list48)
+
+
+"""Exercise 15-d
+Using sorted() function sort the list in descending order."""
+
+lst49 = [500, 1000, 400, 40000, 999, 2, 0.5, 17]
+lst50 = sorted(lst49, reverse=True)
+# print(lst50)
