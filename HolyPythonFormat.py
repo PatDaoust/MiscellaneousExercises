@@ -1095,3 +1095,12 @@ Only pass those that are converted from negative to positive to the new list."""
 lst41 = [-1000, 500, -600, 700, 5000, -90000, -17500]
 lst42 = list(map(abs, filter(lambda a: a < 0, lst41)))
 # print((lst42))
+
+
+"""
+Exercise 15-a
+Using sorted() function, sort the list in ascending order."""
+
+lst43 = [500, 1000, 400, 40000, 999, 2, 0.5, 17]
+lst44 = sorted(lst43)
+# print(lst44)
