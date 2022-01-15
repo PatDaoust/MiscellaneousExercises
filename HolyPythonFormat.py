@@ -1137,3 +1137,11 @@ Using len function and sorted() function, sort the list based on the length of t
 lakes1 = ["Malawi", "Medicine", "Tahoe", "Moraine", "Upper Arrow", "Plitvice", "Edith", "Emerald"]
 lakes2 = sorted(lakes1, key=len)
 # print(lakes2)
+
+
+"""Exercise 15-f
+Using len function and sorted() function, sort the list based on the length of the strings
+this time in descending order."""
+
+lakes3 = sorted(lakes1, key=len, reverse=True)
+# print(lakes3)
