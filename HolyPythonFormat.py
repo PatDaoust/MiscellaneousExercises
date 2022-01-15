@@ -1145,3 +1145,11 @@ this time in descending order."""
 
 lakes3 = sorted(lakes1, key=len, reverse=True)
 # print(lakes3)
+
+
+"""Exercise 15-g
+Using lambda and sorted() function,
+sort the list based on last characters of the items from z to a."""
+
+lakes4 = sorted(lakes1, key=lambda a: a[-1], reverse=True)
+# print(lakes4)
