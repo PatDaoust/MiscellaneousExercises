@@ -1153,3 +1153,12 @@ sort the list based on last characters of the items from z to a."""
 
 lakes4 = sorted(lakes1, key=lambda a: a[-1], reverse=True)
 # print(lakes4)
+
+
+"""Exercise 15-h
+Using lambda and sorted() function,sort the list based on
+the remainder from dividing each element to 5 (From greater to smaller)."""
+
+lst51 = [1000, 50, 66, 101, 333, 9999, 19, 300, 200, 250]
+lst52 = sorted(lst51, key=lambda a: a % 5, reverse=True)
+# print(lst52)
