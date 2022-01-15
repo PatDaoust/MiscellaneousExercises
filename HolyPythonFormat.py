@@ -1187,3 +1187,11 @@ Use list comprehension to contruct a new list but add 6 to each item."""
 lst56 = [44, 54, 64, 74, 104]
 lst57 = [x+6 for x in lst56]
 # print(lst57)
+
+
+"""Exercise 16-d
+Using list comprehension, construct a list from the squares of each element in the list"""
+
+lst58 = [2, 4, 6, 8, 10, 12, 14]
+lst59 = [x**2 for x in lst58]
+print(lst59)
