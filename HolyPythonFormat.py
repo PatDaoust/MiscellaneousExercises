@@ -1179,3 +1179,11 @@ using list comprehension."""
 rng = range(1200, 2000, 130)
 lst55 = [x for x in rng]
 # print(lst55)
+
+
+"""Exercise 16-c
+Use list comprehension to contruct a new list but add 6 to each item."""
+
+lst56 = [44, 54, 64, 74, 104]
+lst57 = [x+6 for x in lst56]
+# print(lst57)
