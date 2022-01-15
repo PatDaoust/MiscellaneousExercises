@@ -1170,3 +1170,12 @@ Create an identical list from the first list using list comprehension"""
 lst53 = [1, 2, 3, 4, 5]
 lst54 = [x for x in lst53]
 # print(lst54)
+
+
+"""Exercise 16-b
+Create a list from the elements of a range from 1200 to 2000 with steps of 130,
+using list comprehension."""
+
+rng = range(1200, 2000, 130)
+lst55 = [x for x in rng]
+# print(lst55)
