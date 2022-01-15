@@ -1162,3 +1162,11 @@ the remainder from dividing each element to 5 (From greater to smaller)."""
 lst51 = [1000, 50, 66, 101, 333, 9999, 19, 300, 200, 250]
 lst52 = sorted(lst51, key=lambda a: a % 5, reverse=True)
 # print(lst52)
+
+
+"""Exercise 16-a
+Create an identical list from the first list using list comprehension"""
+
+lst53 = [1, 2, 3, 4, 5]
+lst54 = [x for x in lst53]
+# print(lst54)
