@@ -1194,4 +1194,12 @@ Using list comprehension, construct a list from the squares of each element in t
 
 lst58 = [2, 4, 6, 8, 10, 12, 14]
 lst59 = [x**2 for x in lst58]
-print(lst59)
+# print(lst59)
+
+
+"""Exercise 16-e
+Using list comprehension, construct a list from the squares of each element in the list,
+if the square is greater than 50."""
+
+lst60 = [x**2 for x in lst59 if x**2 > 50]
+# print(lst60)
