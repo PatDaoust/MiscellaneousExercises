@@ -1221,3 +1221,12 @@ dict2 = {"Sedan": 1500,
 
 lst61 = [x.upper() for x in dict2 if dict2[x] < 5000]
 # print(lst61)
+
+
+"""Exercise 17-a
+Create a dictionary from the list with same key:value pairs, such as: {"key": "key"}"""
+
+lst62 = ["NY", "FL", "CA", "VT"]
+
+dict3 = {key: key for key in lst62}
+# print(dict3)
