@@ -1271,8 +1271,20 @@ str4 = str3.strip()
 Place a pass statement so that if block won't throw an error."""
 
 
-name = input("Please enter your name.")
-if len(name) > 0:
-    print(name)
-else:
+# name = input("Please enter your name.")
+# if len(name) > 0:
+#     print(name)
+# else:
+#     pass
+
+
+"""Exercise 20-b
+Place pass statement in your function so that you can leave it unfinished
+and it doesn't throw an error."""
+
+
+def f_1(x):
     pass
+
+
+f_1(1)
