@@ -1296,3 +1296,16 @@ Put a pass statement in your for loop to avoid an error."""
 lst63 = [9, 10, 100, 999]
 for i in lst:
     pass
+
+
+"""Exercise 20-d
+Put a pass statement in the while loop so it doesn't throw an error."""
+
+
+i = 0
+while i < 20:
+    i = i + 1
+    if i**2 < 49:
+        print(i * 100)
+    else:
+        pass
