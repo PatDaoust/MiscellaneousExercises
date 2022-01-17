@@ -1288,3 +1288,11 @@ def f_1(x):
 
 
 f_1(1)
+
+
+"""Exercise 20-c
+Put a pass statement in your for loop to avoid an error."""
+
+lst63 = [9, 10, 100, 999]
+for i in lst:
+    pass
