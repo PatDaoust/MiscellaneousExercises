@@ -1258,3 +1258,11 @@ dict6 = {key: dict5[key] for key in dict5 if dict5[key] > 2000}
 # help(dict)
 # help(list)
 # help(tuple)
+
+
+"""Exercise 6-a
+Use strip method to strip the whitespaces on both sides of the string."""
+
+str3 = "     Hello World!   "
+str4 = str3.strip()
+# print(str4)
