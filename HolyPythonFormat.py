@@ -1266,3 +1266,13 @@ Use strip method to strip the whitespaces on both sides of the string."""
 str3 = "     Hello World!   "
 str4 = str3.strip()
 # print(str4)
+
+"""Exercise 20-a
+Place a pass statement so that if block won't throw an error."""
+
+
+name = input("Please enter your name.")
+if len(name) > 0:
+    print(name)
+else:
+    pass
