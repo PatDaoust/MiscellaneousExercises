@@ -1240,3 +1240,14 @@ is the key and each item divided by 100 is the value."""
 rng = range(100, 160, 10)
 dict4 = {key: key/100 for key in rng}
 # print(dict4)
+
+
+"""Exercise 17-c
+Using dict comprehension and a conditional argument create a dictionary from the current
+dictionary where only the key:value pairs with value above 2000 are taken to the new
+dictionary."""
+
+dict5 = {"NFLX": 4950, "TREX": 2400, "FIZZ": 1800, "XPO": 1700}
+dict6 = {key: dict5[key] for key in dict5 if dict5[key] > 2000}
+# print(dict6)
+
