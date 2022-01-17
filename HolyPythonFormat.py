@@ -1251,3 +1251,10 @@ dict5 = {"NFLX": 4950, "TREX": 2400, "FIZZ": 1800, "XPO": 1700}
 dict6 = {key: dict5[key] for key in dict5 if dict5[key] > 2000}
 # print(dict6)
 
+
+"""Exercise 18"""
+
+# help(str)
+# help(dict)
+# help(list)
+# help(tuple)
