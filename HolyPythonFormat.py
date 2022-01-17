@@ -1230,3 +1230,13 @@ lst62 = ["NY", "FL", "CA", "VT"]
 
 dict3 = {key: key for key in lst62}
 # print(dict3)
+
+
+"""Exercise 17-b
+First, create a range from 100 to 160 with steps of 10.
+Second, using dict comprehension, create a dictionary where each number in the range
+is the key and each item divided by 100 is the value."""
+
+rng = range(100, 160, 10)
+dict4 = {key: key/100 for key in rng}
+# print(dict4)
