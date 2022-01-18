@@ -58,5 +58,17 @@ str="""
 
 
 data = re.findall('>\w+', str)
+# print(data)
 
-print(data)
+
+"""Exercise 6-b
+Write a regex so that the full email addresses are extracted.
+i.e.: mike@protonmail.com"""
+
+
+str2 = 'The advancements in biomarine studies franky@google.com with the investments necessary and Davos sinatra123@yahoo.com Then The New Yorker article on wind farms...'
+
+regex = "\w+@\w+.com"
+emails = re.findall(regex, str2)
+
+print(emails)
