@@ -83,3 +83,15 @@ i.e: only mike@ part from mike@protonmail.com
 regex2 = "\w+@"
 emails2 = re.findall(regex2, str2)
 # print(emails2)
+
+
+"""Exercise 6-d
+This time write a regex to get only the part of the email before the "@" sign
+excluding the "@" sign.
+i.e: only mike part from mike@protonmail.com
+"""
+
+regex3 = "(\w+)@"
+emails3 = re.findall(regex3, str2)
+print(emails3)
+re.findall
