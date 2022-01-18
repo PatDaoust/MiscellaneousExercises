@@ -4,6 +4,7 @@ Created on Mon Jan 17 13:07:00 2022
 
 @author: catal
 """
+import re
 
 """
 regex exercises from https://www.w3resource.com/python-exercises/re/
