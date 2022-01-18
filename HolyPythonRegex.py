@@ -71,4 +71,15 @@ str2 = 'The advancements in biomarine studies franky@google.com with the investm
 regex = "\w+@\w+.com"
 emails = re.findall(regex, str2)
 
-print(emails)
+# print(emails)
+
+
+"""Exercise 6-c
+This time write a regex to get only the part of the email before the "@" sign
+and include the "@" sign.
+i.e: only mike@ part from mike@protonmail.com
+"""
+
+regex2 = "\w+@"
+emails2 = re.findall(regex2, str2)
+# print(emails2)
