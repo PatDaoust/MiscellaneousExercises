@@ -6,6 +6,14 @@ Created on Mon Jan 17 13:07:00 2022
 """
 import re
 
+string1 = "His fingers rippled down Bran's cock, and Bran jerked his hips again, impaling himself on the three fingers with a groan."
+
+string2 = "His master broke the kiss lingeringly and kissed down the line of his neck; at a bite to the hollow of his throat, Bran's hips jerked against his master's pelvis, his cock now fully hard."
+
+string3 = "Bran curled in an unobtrusive corner of the sofa; his first night he had sat there frozen, trying to watch everyone at once to figure out what direction the danger would come from, but tonight he was content to sit, ignored, and watch the changing expressions on his master's face."
+
+string4 = "abc"
+
 """
 regex exercises from https://www.w3resource.com/python-exercises/re/
 solutions by Pat Daoust
@@ -15,7 +23,14 @@ solutions by Pat Daoust
 1. Write a Python program to check that a string contains only a certain set of characters
 (in this case a-z, A-Z and 0-9).
 """
+def containsSet(a_string, chars):
+    """Assumes a_string is a string
+    assumes chars is a string of characters
+    returns a boolean, True if a_string contains only the characters in chars
+    """
+    pass
 
+print(containsSet(string1, "abc"))
 """
 2. Write a Python program that matches a string that has an a followed by zero or more b's
 """
