@@ -132,4 +132,29 @@ str5 = """Some of the prices were as following TSLA:749.50, ORCL: 50.50, GE: 10.
 
 regex6 = "([A-Z]+):"
 data3 = re.findall(regex6, str5)
-print(data3)
+# print(data3)
+
+
+"""Exercise 6-h
+Find the html tags that are more than 4 letters.
+Html tags can be found inside <> characters and closing html tags can be found
+in the same format after / character. </>
+i.e.: <param> </param>
+"""
+
+
+str6 = """<div class="tut-list tut-list-new tut-row "> 
+<div class="tut-list-primary"> <div class="tut-vote"> 
+<video>intro</video> 
+<span class="count">50</span> <span class="tut-upvotes-text hidden">Upvotes</span> </a> </div>  
+<center>k="11" rel="nofollow"></center>
+<span class="tutorial-title-txt">Automate the Boring Stuff with Python</span> 
+<span class="tut-title-link">  <span class="js-tutorial" data-id="3529" 
+title="Automate the Boring Stuff with Python" target="_blank">(udemy.com)</span>  
+</span>  </a></div> <div class="action-footer">
+<form class="save-tutorial-form" method="post" <button></button> </form>"""
+
+
+regex7 = "<(\w+)>"
+data4 = re.findall(regex7, str6)
+# print(data4)
