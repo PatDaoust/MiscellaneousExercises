@@ -143,14 +143,14 @@ i.e.: <param> </param>
 """
 
 
-str6 = """<div class="tut-list tut-list-new tut-row "> 
-<div class="tut-list-primary"> <div class="tut-vote"> 
-<video>intro</video> 
-<span class="count">50</span> <span class="tut-upvotes-text hidden">Upvotes</span> </a> </div>  
+str6 = """<div class="tut-list tut-list-new tut-row ">
+<div class="tut-list-primary"> <div class="tut-vote">
+<video>intro</video>
+<span class="count">50</span><span class="tut-upvotes-text hidden">Upvotes</span></a></div>
 <center>k="11" rel="nofollow"></center>
-<span class="tutorial-title-txt">Automate the Boring Stuff with Python</span> 
-<span class="tut-title-link">  <span class="js-tutorial" data-id="3529" 
-title="Automate the Boring Stuff with Python" target="_blank">(udemy.com)</span>  
+<span class="tutorial-title-txt">Automate the Boring Stuff with Python</span>
+<span class="tut-title-link">  <span class="js-tutorial" data-id="3529"
+title="Automate the Boring Stuff with Python" target="_blank">(udemy.com)</span
 </span>  </a></div> <div class="action-footer">
 <form class="save-tutorial-form" method="post" <button></button> </form>"""
 
@@ -158,3 +158,26 @@ title="Automate the Boring Stuff with Python" target="_blank">(udemy.com)</span>
 regex7 = "<(\w+)>"
 data4 = re.findall(regex7, str6)
 # print(data4)
+
+
+"""Exercise 6-i
+Loop through the list and apply regex to each element so that only items ending with
+semicolon (;) are matched."""
+
+
+list1 = ["js/prettify-full.en.js 4e6ee9163220",
+         "js/moderator.en.js:",
+         "transaction no: 75553942;",
+         "",
+         "transaction no: 75551263;",
+         "transaction no: 46553942;",
+         "c01c47765ca21b82b08b90403b4c7af3886098683e3869ad1:",
+         "transaction no: 75554942;"]
+
+regex8 = ";$"
+lst = []
+for elem in list1:
+    result = re.search(regex8, elem)
+    if result:
+        lst.append(elem[:-1])
+# print(lst)
