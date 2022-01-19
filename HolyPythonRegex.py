@@ -117,3 +117,19 @@ str4 = '''Ancient Script 21299: The Takenouchi documents are the ancient histori
 regex5 = "212[-*\d*]*"
 data2 = re.findall(regex5, str4)
 # print(data2)
+
+
+"""Exercise 6-g
+You are given stock prices for related financial tickers.
+(Symbols representing companies in the stock market)
+
+Find a way to extract the tickers mentioned in the report.
+i.e.: TSLA, NFLX ...
+"""
+
+str5 = """Some of the prices were as following TSLA:749.50, ORCL: 50.50, GE: 10.90, MSFT: 170.50, BIDU: 121.40. As the macroeconomic developments continue we will update the prices. """
+
+
+regex6 = "([A-Z]+):"
+data3 = re.findall(regex6, str5)
+print(data3)
