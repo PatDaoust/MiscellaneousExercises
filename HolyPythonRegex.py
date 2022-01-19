@@ -107,3 +107,13 @@ Une dame creole aux charmes ignores.'''
 regex4 = "\w{8}"
 words8 = re.findall(regex4, str3)
 # print(words8)
+
+
+"""Exercise 6-f
+Find the numbers starting with 212."""
+
+str4 = '''Ancient Script 21299: The Takenouchi documents are the ancient historical records that have been secretly preserved and passed down from generation to generation by the Takenouchi family, the head of family being the chief priest of the Koso Kotai Jingu shrine. 212-111-5932 '''
+
+regex5 = "212[-*\d*]*"
+data2 = re.findall(regex5, str4)
+# print(data2)
