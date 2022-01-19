@@ -93,5 +93,17 @@ i.e: only mike part from mike@protonmail.com
 
 regex3 = "(\w+)@"
 emails3 = re.findall(regex3, str2)
-print(emails3)
-re.findall
+# print(emails3)
+
+
+"""Exercise 6-e
+Find the words with exactly 8 letters using regex"""
+
+str3 = '''Au pays parfume que le soleil caresse,
+J'ai connu, sous un dais d'arbres tout empourpres
+Et de palmiers d'ou pleut sur les yeux la paresse,
+Une dame creole aux charmes ignores.'''
+
+regex4 = "\w{8}"
+words8 = re.findall(regex4, str3)
+# print(words8)
