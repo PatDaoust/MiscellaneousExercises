@@ -42,18 +42,32 @@ def is_allowed_specific_char(string):
     return not bool(string)
 
 
-print("my results: ")
-print(containsAlphaNumeric("ABCDEFabcdef123450"))
-print(containsAlphaNumeric("*&%@#!}{"))
-print(" ")
-print("expected results: ")
-print(is_allowed_specific_char("ABCDEFabcdef123450"))
-print(is_allowed_specific_char("*&%@#!}{"))
+# print("my results: ")
+# print(containsAlphaNumeric("ABCDEFabcdef123450"))
+# print(containsAlphaNumeric("*&%@#!}{"))
+# print(" ")
+# print("expected results: ")
+# print(is_allowed_specific_char("ABCDEFabcdef123450"))
+# print(is_allowed_specific_char("*&%@#!}{"))
 
 """
 2. Write a Python program that matches a string that has an a followed by zero or more b's
 """
 
+
+def aThenMaybeB(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True is a_string contains n a followed by zero or more b's
+    """
+    regex = "ab*"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(aThenMaybeB("a"))
+# print(aThenMaybeB("ab"))
+# print(aThenMaybeB("abacus"))
+# print(aThenMaybeB("string1"))
 
 """
 3. Write a Python program that matches a string that has an a followed by one or more b's.
