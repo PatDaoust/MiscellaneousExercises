@@ -5,6 +5,7 @@ Created on Mon Jan 17 13:07:00 2022
 @author: catal
 """
 import re
+import pdb
 
 string1 = "His fingers rippled down Bran's cock, and Bran jerked his hips again, impaling himself on the three fingers with a groan."
 
@@ -23,14 +24,32 @@ solutions by Pat Daoust
 1. Write a Python program to check that a string contains only a certain set of characters
 (in this case a-z, A-Z and 0-9).
 """
-def containsSet(a_string, chars):
-    """Assumes a_string is a string
-    assumes chars is a string of characters
-    returns a boolean, True if a_string contains only the characters in chars
-    """
-    pass
 
-print(containsSet(string1, "abc"))
+
+def containsAlphaNumeric(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True if a_string contains only alphanumeric characters
+    (a-z, A-Z and 0-9), else False
+    """
+    regex = "[a-zA-z0-9]+"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+def is_allowed_specific_char(string):
+    charRe = re.compile(r'[^a-zA-Z0-9]')
+    string = charRe.search(string)
+    return not bool(string)
+
+
+print("my results: ")
+print(containsAlphaNumeric("ABCDEFabcdef123450"))
+print(containsAlphaNumeric("*&%@#!}{"))
+print(" ")
+print("expected results: ")
+print(is_allowed_specific_char("ABCDEFabcdef123450"))
+print(is_allowed_specific_char("*&%@#!}{"))
+
 """
 2. Write a Python program that matches a string that has an a followed by zero or more b's
 """
