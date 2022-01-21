@@ -83,13 +83,29 @@ def aThenB(a_string):
     return bool(results)
 
 
-print(aThenB("a"))
-print(aThenB("ab"))
-print(aThenB("abacus"))
-print(aThenB("string1"))
+# print(aThenB("a"))
+# print(aThenB("ab"))
+# print(aThenB("abacus"))
+# print(aThenB("string1"))
 """
 4. Write a Python program that matches a string that has an a followed by zero or one 'b'.
 """
+
+
+def aThen01B(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True is a_string contains n a followed by zero or one b's
+    """
+    regex = "ab?"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(aThen01B("a"))  # expect True
+# print(aThen01B("ab"))  # expect True
+# print(aThen01B("abb"))  # expect False
+# print(aThen01B("abacus"))  # expect True
+# print(aThen01B("string1"))  # expect False
 
 """
 5. Write a Python program that matches a string that has an a followed by three 'b'.
