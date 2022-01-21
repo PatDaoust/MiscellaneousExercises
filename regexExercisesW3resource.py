@@ -73,6 +73,20 @@ def aThenMaybeB(a_string):
 3. Write a Python program that matches a string that has an a followed by one or more b's.
 """
 
+
+def aThenB(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True is a_string contains n a followed by one or more b's
+    """
+    regex = "ab+"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+print(aThenB("a"))
+print(aThenB("ab"))
+print(aThenB("abacus"))
+print(aThenB("string1"))
 """
 4. Write a Python program that matches a string that has an a followed by zero or one 'b'.
 """
