@@ -180,6 +180,23 @@ def wordChars_(a_string):
 followed by lower case letters.
 """
 
+
+def uppercase_lowercase(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True is a_string contains one upper case letter
+    followed by lower case letters
+    else False
+    """
+    regex = "[A-Z][a-z]+"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+print(uppercase_lowercase("Aadfa"))  # expect True
+print(uppercase_lowercase("asdaf"))  # expect False
+print(uppercase_lowercase("AAdsda"))  # expect True
+print(uppercase_lowercase("asdAasdf"))  # expect True
+
 """
 9. Write a Python program that matches a string that has an 'a' followed by anything,
 ending in 'b'.
