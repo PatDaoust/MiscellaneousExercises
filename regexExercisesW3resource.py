@@ -58,6 +58,7 @@ def is_allowed_specific_char(string):
 def aThenMaybeB(a_string):
     """Assumes a_string is a string
     returns a boolean, True is a_string contains n a followed by zero or more b's
+    else False
     """
     regex = "ab*"
     results = re.search(regex, a_string)
@@ -77,6 +78,7 @@ def aThenMaybeB(a_string):
 def aThenB(a_string):
     """Assumes a_string is a string
     returns a boolean, True is a_string contains n a followed by one or more b's
+    else False
     """
     regex = "ab+"
     results = re.search(regex, a_string)
@@ -96,6 +98,7 @@ def aThenB(a_string):
 def aThen01B(a_string):
     """Assumes a_string is a string
     returns a boolean, True is a_string contains n a followed by zero or one b's
+    else False
     """
     regex = "ab?"
     results = re.search(regex, a_string)
@@ -116,6 +119,7 @@ def aThen01B(a_string):
 def aThen3B(a_string):
     """Assumes a_string is a string
     returns a boolean, True is a_string contains n a followed by 3 b's
+    else False
     """
     regex = "ab{3}"
     results = re.search(regex, a_string)
@@ -136,6 +140,7 @@ def aThen3B(a_string):
 def aThen23B(a_string):
     """Assumes a_string is a string
     returns a boolean, True is a_string contains n a followed by 2 or 3 b's
+    else False
     """
     regex = "ab{2,3}"
     results = re.search(regex, a_string)
@@ -151,6 +156,24 @@ def aThen23B(a_string):
 """
 7. Write a Python program to find sequences of lowercase letters joined with a underscore.
 """
+
+
+def wordChars_(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True is a_string contains lowercase letters joined with underscore
+    else False
+    """
+    regex = "[a-z]+_[a-z]+"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(wordChars_("adfkljlkj_aslnkl"))  # expect True
+# print(wordChars_("adfkljlkj_"))  # expect False
+# print(wordChars_("_aslnkl"))  # expect False
+# print(wordChars_("ASDASD_aslnkl"))  # expect False
+# print(wordChars_("asads_ASDS"))  # expect False
+# print(wordChars_("adfkljlkjaslnkl"))  # expect False
 
 """
 8. Write a Python program to find the sequences of one upper case letter
