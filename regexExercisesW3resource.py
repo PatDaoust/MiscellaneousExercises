@@ -205,7 +205,7 @@ ending in 'b'.
 
 def aAnythingB(a_string):
     """Assumes a_string is a string
-    returns a boolean, True is a_string contains an 'a' followed by anything,
+    returns a boolean, True if a_string contains an 'a' followed by anything,
     ending in 'b'
     else False
     """
@@ -214,17 +214,33 @@ def aAnythingB(a_string):
     return bool(results)
 
 
-print(aAnythingB("adb"))  # expect True
-print(aAnythingB("adfjldlfjlkjeijlefwb"))  # expect True
-print(aAnythingB("ab"))  # expect False
-print(aAnythingB("asdklndkldsv"))  # expect False
-print(aAnythingB("sdlknnlkdb"))  # expect False
-print(aAnythingB(""))  # expect False
+# print(aAnythingB("adb"))  # expect True
+# print(aAnythingB("adfjldlfjlkjeijlefwb"))  # expect True
+# print(aAnythingB("ab"))  # expect False
+# print(aAnythingB("asdklndkldsv"))  # expect False
+# print(aAnythingB("sdlknnlkdb"))  # expect False
+# print(aAnythingB(""))  # expect False
 
 """
 10. Write a Python program that matches a word at the beginning of a string.
 """
 
+
+def wordString(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True if a_string contains a word at the beginning of a string
+    else False
+    """
+    regex = "^\w+ "
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+print(wordString("cats are"))  # expect True
+print(wordString("cats"))  # expect False
+print(wordString(" cats"))  # expect False
+print(wordString(" cats "))  # expect False
+print(wordString(""))  # expect False
 """
 11. Write a Python program that matches a word at the end of string,
 with optional punctuation.
