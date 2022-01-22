@@ -192,15 +192,34 @@ def uppercase_lowercase(a_string):
     return bool(results)
 
 
-print(uppercase_lowercase("Aadfa"))  # expect True
-print(uppercase_lowercase("asdaf"))  # expect False
-print(uppercase_lowercase("AAdsda"))  # expect True
-print(uppercase_lowercase("asdAasdf"))  # expect True
+# print(uppercase_lowercase("Aadfa"))  # expect True
+# print(uppercase_lowercase("asdaf"))  # expect False
+# print(uppercase_lowercase("AAdsda"))  # expect True
+# print(uppercase_lowercase("asdAasdf"))  # expect True
 
 """
 9. Write a Python program that matches a string that has an 'a' followed by anything,
 ending in 'b'.
 """
+
+
+def aAnythingB(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True is a_string contains an 'a' followed by anything,
+    ending in 'b'
+    else False
+    """
+    regex = "a.+b$"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+print(aAnythingB("adb"))  # expect True
+print(aAnythingB("adfjldlfjlkjeijlefwb"))  # expect True
+print(aAnythingB("ab"))  # expect False
+print(aAnythingB("asdklndkldsv"))  # expect False
+print(aAnythingB("sdlknnlkdb"))  # expect False
+print(aAnythingB(""))  # expect False
 
 """
 10. Write a Python program that matches a word at the beginning of a string.
