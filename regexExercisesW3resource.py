@@ -236,15 +236,33 @@ def wordString(a_string):
     return bool(results)
 
 
-print(wordString("cats are"))  # expect True
-print(wordString("cats"))  # expect False
-print(wordString(" cats"))  # expect False
-print(wordString(" cats "))  # expect False
-print(wordString(""))  # expect False
+# print(wordString("cats are"))  # expect True
+# print(wordString("cats"))  # expect False
+# print(wordString(" cats"))  # expect False
+# print(wordString(" cats "))  # expect False
+# print(wordString(""))  # expect False
 """
 11. Write a Python program that matches a word at the end of string,
 with optional punctuation.
 """
+
+
+def wordStringEnd(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True if a_string contains a word at the end of string,
+    with optional punctuation
+    else False
+    """
+    regex = " \w+\.*$"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(wordStringEnd("cats"))  # expect False
+# print(wordStringEnd(" cats"))  # expect True
+# print(wordStringEnd(" cats."))  # expect True
+# print(wordStringEnd(" cats "))  # expect False
+# print(wordStringEnd(""))  # expect False
 
 """
 12. Write a Python program that matches a word containing 'z'.
