@@ -268,10 +268,45 @@ def wordStringEnd(a_string):
 12. Write a Python program that matches a word containing 'z'.
 """
 
+
+def wordWithZ(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True if a_string contains "z"
+    else False
+    """
+    regex = "\w*z\w*"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(wordWithZ("zoo"))  # expect True
+# print(wordWithZ("mozzie"))  # expect True
+# print(wordWithZ("boo!"))  # expect False
+# print(wordWithZ(""))  # expect False
 """
 13. Write a Python program that matches a word containing 'z',
 not at the start or end of the word.
 """
+
+
+def wordWithMiddleZ(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True if a_string contains a word with "z"
+    not at the start or end of the word.
+    else False
+    """
+    regex = "[^z]z+[^z]"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(wordWithMiddleZ("mozzie"))  # expect True
+# print(wordWithMiddleZ("is mozzie a good puppy?"))  # expect True
+# print(wordWithMiddleZ("autolyzed"))  # expect True
+# print(wordWithMiddleZ("zoo"))  # expect False
+# print(wordWithMiddleZ("zoom"))  # expect False
+# print(wordWithMiddleZ("move"))  # expect False
+# print(wordWithMiddleZ(""))  # expect False
 
 """
 14. Write a Python program to match a string that contains only
