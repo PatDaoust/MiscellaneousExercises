@@ -313,6 +313,26 @@ def wordWithMiddleZ(a_string):
 upper and lowercase letters, numbers, and underscores.
 """
 
+
+def wordCharWords(a_string):
+    """Assumes a_string is a string
+    returns a boolean, True if a_string contains only upper and lowercase letters,
+    numbers, and underscores
+    else False
+    """
+    regex = "^\w*$"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(wordCharWords("hismasterbrokethekisslingeringly"))  # expect True
+# print(wordCharWords("maple_syrup"))  # expect True
+# print(wordCharWords("his master broke the kiss lingeringly"))  # expect False
+# print(wordCharWords(string1))  # expect False
+# print(wordCharWords("api-services-support@amazon.com."))   # expect False
+# print(wordCharWords(""))
+
+
 """
 15. Write a Python program where a string will start with a specific number.
 """
