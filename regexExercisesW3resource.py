@@ -329,13 +329,31 @@ def wordCharWords(a_string):
 # print(wordCharWords("maple_syrup"))  # expect True
 # print(wordCharWords("his master broke the kiss lingeringly"))  # expect False
 # print(wordCharWords(string1))  # expect False
-# print(wordCharWords("api-services-support@amazon.com."))   # expect False
-# print(wordCharWords(""))
+# print(wordCharWords("api-services-support@amazon.com."))  # expect False
+# print(wordCharWords(""))   # expect False
 
 
 """
 15. Write a Python program where a string will start with a specific number.
 """
+
+
+def numString(a_string, num):
+    """Assumes a_string is a string
+    assumes num is a number
+    returns a boolean, True if a_string starts with num
+    else False
+    """
+    regex = "^" + str(num)
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(numString("123456789", 12))  # expect True
+# print(numString("12", 12))  # expect True
+# print(numString("12awdk;k", 12))  # expect True
+# print(numString("345678912", 12))  # expect False
+# print(numString("3456789", 12))  # expect False
 
 """
 16. Write a Python program to remove leading zeros from an IP address.
