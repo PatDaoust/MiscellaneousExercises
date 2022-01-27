@@ -402,6 +402,26 @@ in a given string.
 "Exercises number 1, 12, 13, and 345 are important"
 """
 
+
+def findNums1to3Digits(a_string):
+    """assumes a_string is a string
+    returns a re span object, representing the numbers of lenght 1 to 2 in a_string"""
+    regex = "[^0-9]*([0-9]{1,3})[^0-9]*"
+    results = re.search(regex, a_string)
+    if results:
+        results = results.group(1)
+    return results
+
+
+# print(findNums1to3Digits("123"))  # expect 123
+# print(findNums1to3Digits("123aefkoakfl"))  # expect 123
+# print(findNums1to3Digits("wfjadfkjl154"))  # expect 154
+# print(findNums1to3Digits("eflafjl123sjljlasf"))  # expect 123
+# print(findNums1to3Digits("1239afkjnjD"))  # expect None
+# print(findNums1to3Digits("EFNNLWDSNAS123456789"))  # expect None
+# print(findNums1to3Digits("afkjnjD"))  # expect None
+# print(findNums1to3Digits(""))  # expect None
+
 """
 19. Write a Python program to search some literals strings in a string.
 Sample text : 'The quick brown fox jumps over the lazy dog.'
