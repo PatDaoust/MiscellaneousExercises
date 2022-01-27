@@ -359,6 +359,20 @@ def numString(a_string, num):
 16. Write a Python program to remove leading zeros from an IP address.
 """
 
+
+def removeLeading0(a_string):
+    """assumes a_string is a string representing an IP address
+    returns a string, a_string without leading 0s"""
+    regex = "\.[0]+"
+    results = re.sub(regex, ".", a_string)
+    return results
+
+
+# print(removeLeading0("69.144.50.56"))  # expect 69.144.50.56
+# print(removeLeading0("69.144.50.56"))  # expect 69.144.50.56
+# print(removeLeading0("69.144.050.056"))  # expect 69.144.50.56
+# print(removeLeading0("69.144.50.056"))  # expect 69.144.50.56
+
 """
 17. Write a Python program to check for a number at the end of a string.
 """
