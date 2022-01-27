@@ -377,6 +377,24 @@ def removeLeading0(a_string):
 17. Write a Python program to check for a number at the end of a string.
 """
 
+
+def numAtEnd(a_string):
+    """assumes a_string is a string
+    returns a bool, True if a_string ends with a number, else False"""
+    regex = "[0-9]+$"
+    results = re.search(regex, a_string)
+    return bool(results)
+
+
+# print(numAtEnd("aadfjifadkjl12"))  # expect True
+# print(numAtEnd("aadfjifadkjl 12"))  # expect True
+# print(numAtEnd("aadfjif  adkjl12"))  # expect True
+# print(numAtEnd("q1e4aadfjifadkjl12"))  # expect True
+# print(numAtEnd("567aadfjifadkjl12"))  # expect True
+# print(numAtEnd("aadfjifadkjl"))  # expect False
+# print(numAtEnd("2124aadfjifadkjl"))  # expect False
+# print(numAtEnd("aadfjif34adkjl"))  # expect False
+# print(numAtEnd(""))  # expect False
 """
 18. Write a Python program to search the numbers (0-9) of length between 1 to 3
 in a given string.
