@@ -405,7 +405,8 @@ in a given string.
 
 def findNums1to3Digits(a_string):
     """assumes a_string is a string
-    returns a re span object, representing the numbers of lenght 1 to 2 in a_string"""
+    returns a re span object, representing the numbers of lenght 1 to 2 in a_string 
+    if it exists, else None"""
     regex = "[^0-9]*([0-9]{1,3})[^0-9]*"
     results = re.search(regex, a_string)
     if results:
@@ -427,6 +428,24 @@ def findNums1to3Digits(a_string):
 Sample text : 'The quick brown fox jumps over the lazy dog.'
 Searched words : 'fox', 'dog', 'horse'
 """
+
+
+def searchLiteral(a_string, patterns):
+    """assumes a_string is a string, being searched in
+    assumes patterns is a list of strings, to be search for in a_string
+    returns a re span object, representing the found literal if it exists,
+    else None"""
+    results = []
+    for pattern in patterns:
+        regex = pattern
+        results.append(re.search(regex, a_string))
+    return results
+
+
+string5 = "The quick brown fox jumps over the lazy dog."
+patterns = ["fox", "dog", "horse"]
+# print(searchLiteral(string5, patterns))
+# print(searchLiteral(string1, patterns))
 
 """
 20. Write a Python program to search a literals string in a string
