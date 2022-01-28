@@ -455,6 +455,24 @@ Sample text : 'The quick brown fox jumps over the lazy dog.'
 Searched words : 'fox'
 """
 
+
+def searchLiteralLocation(a_string, patterns):
+    """assumes a_string is a string, being searched in
+    assumes patterns is a list of strings, to be search for in a_string
+    returns a list of re span object, representing the found literal if it exists,
+    else returns an empty list"""
+    results = []
+    for pattern in patterns:
+        regex = pattern
+        match = re.search(regex, a_string)
+        if match:
+            results.append((match, match.span()))
+    return results
+
+
+print(searchLiteralLocation(string5, patterns))
+print(searchLiteralLocation(string1, patterns))
+
 """
 21. Write a Python program to find the substrings within a string.
 
