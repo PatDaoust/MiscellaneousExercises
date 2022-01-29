@@ -470,9 +470,8 @@ def searchLiteralLocation(a_string, patterns):
     return results
 
 
-print(searchLiteralLocation(string5, patterns))
-print(searchLiteralLocation(string1, patterns))
-
+# print(searchLiteralLocation(string5, patterns))
+# print(searchLiteralLocation(string1, patterns))
 """
 21. Write a Python program to find the substrings within a string.
 
@@ -487,6 +486,24 @@ Pattern :
 Note: There are two instances of exercises in the input string.
 """
 
+
+def findSubstring(a_string, substring):
+    """assumes a_string is a string
+    assumes substring is a string
+    return a list of 2-tuples of ints, representing the span(s) where the substring is
+    found, if it is found. Else returns an empty list"""
+    pattern = substring
+    results = re.finditer(pattern, a_string)
+    spans = []
+    for item in results:
+        spans.append(item.span())
+    return spans
+
+
+string6 = "Python exercises, PHP exercises, C# exercises"
+substring = "exercises"
+# print(findSubstring(string6, substring))
+# print(findSubstring(string2, substring))
 """
 22. Write a Python program to find the occurrence and position of
 the substrings within a string.
