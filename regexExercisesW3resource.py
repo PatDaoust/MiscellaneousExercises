@@ -509,6 +509,23 @@ substring = "exercises"
 the substrings within a string.
 """
 
+
+def findSubstringLocation(a_string, substring):
+    """assumes a_string is a string
+    assumes substring is a string
+    return a list of 2-tuple of string and 2-tuple of ints, representing the occurence
+    and span where the substring is found, if it is found. Else returns an empty list"""
+    pattern = substring
+    results = re.finditer(pattern, a_string)
+    spans = []
+    for item in results:
+        print(item)
+        spans.append((pattern, item.span()))
+    return spans
+
+
+# print(findSubstringLocation(string6, substring))
+# print(findSubstringLocation(string2, substring))
 """
 23. Write a Python program to replace whitespaces with an underscore and vice versa.
 """
