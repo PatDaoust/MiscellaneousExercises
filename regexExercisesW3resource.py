@@ -530,6 +530,22 @@ def findSubstringLocation(a_string, substring):
 23. Write a Python program to replace whitespaces with an underscore and vice versa.
 """
 
+
+def swapWhitespaceUnderscores(a_string):
+    """assumes a_string is a string
+    returns a string, with underscores where a_string hadswhitespace, and whitespace
+    where a_string has underscores"""
+    new_string = re.sub(" ", "_", a_string)
+    new_string = re.sub("_", " ", a_string)
+    return new_string
+
+
+# print(swapWhitespaceUnderscores(string1))
+# print(swapWhitespaceUnderscores("hello_friends_and_enemies"))
+# print(swapWhitespaceUnderscores("who_goes there?"))
+# print(swapWhitespaceUnderscores("begone whiper-snapper!"))
+# print(swapWhitespaceUnderscores("kittens"))
+# print(swapWhitespaceUnderscores(""))
 """
 24. Write a Python program to extract year, month and date from an url.
 """
