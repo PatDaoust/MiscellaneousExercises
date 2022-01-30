@@ -550,6 +550,17 @@ def swapWhitespaceUnderscores(a_string):
 24. Write a Python program to extract year, month and date from an url.
 """
 
+
+def extractYearMonthDate(url):
+    """Assumes url is a string, representing a url with a full date
+    returns re match object, representing the full date from the url"""
+    pattern = "\d{4}/\d{2}/\d{2}"
+    result = re.search(pattern, url)
+    return result
+
+
+url1 = "https://www.washingtonpost.com/news/football-insider/wp/2016/09/02/odell-beckhams-fame-rests-on-one-stupid-little-ball-josh-norman-tells-author/"
+# print(extractYearMonthDate(url1))
 """
 25. Write a Python program to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.
 """
