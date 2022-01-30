@@ -565,6 +565,17 @@ url1 = "https://www.washingtonpost.com/news/football-insider/wp/2016/09/02/odell
 25. Write a Python program to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.
 """
 
+
+def convertDateFormat(date):
+    """assumes date is a string, representing a date in yyyy-mm-dd format
+    returns a string, representing a date in dd-mm-yyyy format"""
+    pattern = "(\d{4})-(\d{2})-(\d{2})"
+    result = re.sub(pattern, r"\3-\2-\1", date)
+    return result
+
+
+# print(convertDateFormat("1993-01-02"))
+# print(convertDateFormat("2022-01-30"))
 """
 26. Write a Python program to match if two words from a list of words
 starting with letter 'P'.
