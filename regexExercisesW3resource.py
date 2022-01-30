@@ -581,6 +581,19 @@ def convertDateFormat(date):
 starting with letter 'P'.
 """
 
+
+def matchPP(a_string):
+    """assumes a_string is a string
+    returns re match object if it finds two consecutive words that start with P,
+    else returns None"""
+    pattern = "[P|p]\w+\s[P|p]\w+"
+    result = re.search(pattern, a_string)
+    return result
+
+
+# print(matchPP("Pretty ponies in the field"))
+# print(matchPP("A field full of pretty ponies."))
+# print(matchPP(string2))
 """
 27. Write a Python program to separate and print the numbers of a given string.
 """
