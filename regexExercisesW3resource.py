@@ -661,6 +661,20 @@ def printTheNumsPositions(a_string):
 30. Write a Python program to abbreviate 'Road' as 'Rd.' in a given string.
 """
 
+
+def replaceRoadWithRd(a_string):
+    """assumes a_string is a string
+    returns a string, with "Rd." where a_string has "Road" """
+    pattern = "[Rr]oad"
+    replacement = "Rd."
+    result = re.sub(pattern, replacement, a_string)
+    return result
+
+
+# print(replaceRoadWithRd("A road is a linear way for the conveyance of traffic"))
+# print(replaceRoadWithRd("Select the region or road where you plan to travel"))
+# print(replaceRoadWithRd("Curvy Road"))
+# print(replaceRoadWithRd(""))
 """
 31. Write a Python program to replace all occurrences of space, comma, or dot with a colon
 """
