@@ -640,6 +640,23 @@ def startWithAorE(a_string):
 of a given string.
 """
 
+def printTheNumsPositions(a_string):
+    """Assumes a_string is a string
+    prints the numbers and their span in a_string"""
+    pattern = "\d+"
+    results = re.finditer(pattern, a_string)
+    if results:
+        for result in results:
+            print(str(result.group()) + " found at location " + str(result.span()))
+
+
+# printTheNumsPositions("114387054870")
+# printTheNumsPositions("mary had 1 little lamb")
+# printTheNumsPositions("1 afjidsjlk")
+# printTheNumsPositions("gWJL1")
+# printTheNumsPositions("14 fsnjfa `231 dbijoja")
+# printTheNumsPositions("Ten 10, Twenty 20, Thirty 30")
+# printTheNumsPositions(string1)
 """
 30. Write a Python program to abbreviate 'Road' as 'Rd.' in a given string.
 """
