@@ -621,6 +621,20 @@ def printTheNums(a_string):
 """
 
 
+def startWithAorE(a_string):
+    """assumes a_string is a string
+    returns a list of strings, representing the words in a_string starting with 'a' or 'e'
+    if any are found. else returns an empty list"""
+    pattern = "\s((a|e)+\w*)\s"
+    results = re.finditer(pattern, a_string)
+    results_list = [result.group(1) for result in results]
+    return results_list
+
+
+# print(startWithAorE(string1))
+# print(startWithAorE(string2))
+# print(startWithAorE("Write a Python program to abbreviate for each word"))
+# print(startWithAorE("hello world"))
 """
 29. Write a Python program to separate and print the numbers and their position
 of a given string.
