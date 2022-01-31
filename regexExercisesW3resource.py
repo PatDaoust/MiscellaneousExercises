@@ -598,6 +598,24 @@ def matchPP(a_string):
 27. Write a Python program to separate and print the numbers of a given string.
 """
 
+
+def printTheNums(a_string):
+    """Assumes a_string is a string
+    prints the numbers in a_string"""
+    pattern = "\D+"
+    results = re.split(pattern, a_string)
+    if results:
+        for result in results:
+            print(result)
+
+
+# printTheNums("114387054870")
+# printTheNums("mary had 1 little lamb")
+# printTheNums("1 afjidsjlk")
+# printTheNums("gWJL1")
+# printTheNums("14 fsnjfa `231 dbijoja")
+# printTheNums("Ten 10, Twenty 20, Thirty 30")
+# printTheNums(string1)
 """
 28. Write a Python program to find all words starting with 'a' or 'e' in a given string.
 """
