@@ -716,6 +716,21 @@ def subColonForSpaceCommaDotMax2(a_string):
 33. Write a Python program to find all five characters long word in a string.
 """
 
+
+def find5CharWords(a_string):
+    """assumes a_string is a string
+    returns a list of strings, representing all the 5 character long words in a_string"""
+    pattern = r"(\b)(\w{5})(\b)"
+    results = re.findall(pattern, a_string)
+    print(results)
+
+
+# print(find5CharWords(string1))
+# print(find5CharWords("hello world"))
+# print(find5CharWords("Bonjour toute le monde"))
+# print(find5CharWords("The quick brown fox jumps over the lazy dog."))
+# print(find5CharWords("jfhajEJLJFEW'IJOEGTHONETG57579YHGIIH;F EFR"))  # expect blank
+# print(find5CharWords(""))  # expect blank
 """
 34. Write a Python program to find all three, four, five characters long words in a string
 """
