@@ -679,6 +679,20 @@ def replaceRoadWithRd(a_string):
 31. Write a Python program to replace all occurrences of space, comma, or dot with a colon
 """
 
+
+def subColonForSpaceCommaDot(a_string):
+    """assumes a_string is a string
+    returns a new string, with a colon where a_string has a space, comma, or dot"""
+    pattern = "[\s,.]"
+    new_string = re.sub(pattern, ":", a_string)
+    return new_string
+
+
+# print(subColonForSpaceCommaDot(string1))
+# print(subColonForSpaceCommaDot(string6))
+# print(subColonForSpaceCommaDot(" ,."))
+# print(subColonForSpaceCommaDot(" "))
+# print(subColonForSpaceCommaDot(""))
 """
 32. Write a Python program to replace maximum 2 occurrences of
 space, comma, or dot with a colon.
