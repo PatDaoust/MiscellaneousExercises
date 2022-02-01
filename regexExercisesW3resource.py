@@ -698,6 +698,20 @@ def subColonForSpaceCommaDot(a_string):
 space, comma, or dot with a colon.
 """
 
+
+def subColonForSpaceCommaDotMax2(a_string):
+    """assumes a_string is a string
+    returns a new string, with a colon where a_string has 2 spaces, commas, or dots"""
+    pattern = "[\s,.]"
+    new_string = re.sub(pattern, ":", a_string, count=2)
+    return new_string
+
+
+# print(subColonForSpaceCommaDotMax2(string1))
+# print(subColonForSpaceCommaDotMax2(string6))
+# print(subColonForSpaceCommaDotMax2(" ,."))
+# print(subColonForSpaceCommaDotMax2(" "))
+# print(subColonForSpaceCommaDotMax2(""))
 """
 33. Write a Python program to find all five characters long word in a string.
 """
