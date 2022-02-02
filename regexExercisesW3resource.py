@@ -777,7 +777,7 @@ def find4PlusCharWords(a_string):
 
 
 def camelCaseToSnakeCase(a_string):
-    """assume a_string is a string in camelCase
+    """assumes a_string is a string in camelCase
     returns a new string, representing a_string in snake_case"""
     pattern = "([a-z]+)([A-Z]{1})"
     new_string = re.sub(pattern, r"\1_\2", a_string)
@@ -791,6 +791,18 @@ def camelCaseToSnakeCase(a_string):
 37. Write a python program to convert snake case string to camel case string.
 """
 
+
+def snakeCasetoCamelCase(a_string):
+    """assumes a_string is a string in snake_case
+    returns a new string, representing a_string in camelCase"""
+    pattern = "(\w)(_)(\w)"
+    new_string = re.sub(pattern, r"\1\3", a_string)
+    return new_string
+
+
+# print(snakeCasetoCamelCase("camel_case"))
+# print(snakeCasetoCamelCase("Na_no_wri_mo"))
+# print(snakeCasetoCamelCase("have_you_seen_this_purrfect_kitten"))
 """
 38. Write a Python program to extract values between quotation marks of a string.
 """
