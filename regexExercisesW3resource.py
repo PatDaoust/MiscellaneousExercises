@@ -848,6 +848,23 @@ def removeMultipleSpaces(a_string):
 40. Write a Python program to remove all whitespaces from a string.
 """
 
+
+def removeWhitespace(a_string):
+    """assumes a_string is a string
+    returns a new string, a_string without whitespace"""
+    pattern = "\s*"
+    replace = ""
+    new_string = re.sub(pattern, replace, a_string)
+    return new_string
+
+
+# print(removeWhitespace(string1))
+# print(removeWhitespace(" "))
+# print(removeWhitespace("                       "))
+# print(removeWhitespace("hello     kitten"))
+# print(removeWhitespace(" hello kitten "))
+# print(removeWhitespace(" "))
+# print(removeWhitespace(""))
 """
 41. Write a Python program to remove everything except alphanumeric characters
 from a string.
