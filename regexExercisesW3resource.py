@@ -888,6 +888,24 @@ def removeNonAlphanumeric(a_string):
 42. Write a Python program to find urls in a string.
 """
 
+
+def findURL(a_string):
+    """Assumes a_string is a string
+    returns a list of strings, representing any potentual URLs found in a_string"""
+    pattern = "(https?://www.\w+.com/*\S*)"
+    results = re.finditer(pattern, a_string)
+    results_list = [result.group(1) for result in results]
+    return results_list
+
+
+# print(findURL("http://www.example.com/index.html"))
+# print(findURL("https://www.google.com/search?q=url+format&rlz=1C1ONGR_enCA931CA931&oq=url+format&aqs=chrome..69i57j0i512l3j0i20i263i512j0i512l5.1808j0j7&sourceid=chrome&ie=UTF-8"))
+# print(findURL("https://www.youtube.com/playlist?list=PLui6Eyny-UzwIo3OBXV_KlsWaxUANvWhh"))
+# print(findURL("https://leetcode.com/problems/add-two-numbers/"))
+# print(findURL("https://www.ravelry.com/patterns/library/little-diamonds-cowl"))
+# print(findURL("https://www.ravelry.com/patterns/library/little-diamonds-cowl or https://www.ravelry.com/patterns/library/cowl-66"))
+# print(findURL(string1))
+# print(findURL(""))
 """
 43. Write a Python program to split a string at uppercase letters.
 """
