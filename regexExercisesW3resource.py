@@ -722,7 +722,7 @@ def find5CharWords(a_string):
     returns a list of strings, representing all the 5 character long words in a_string"""
     pattern = r"(\b)(\w{5})(\b)"
     results = re.findall(pattern, a_string)
-    print(results)
+    return results
 
 
 # print(find5CharWords(string1))
@@ -735,6 +735,21 @@ def find5CharWords(a_string):
 34. Write a Python program to find all three, four, five characters long words in a string
 """
 
+
+def find3to5CharWords(a_string):
+    """assumes a_string is a string
+    returns a list of strings, representing all the 5 character long words in a_string"""
+    pattern = r"(\b)(\w{3,5})(\b)"
+    results = re.findall(pattern, a_string)
+    return results
+
+
+# print(find3to5CharWords(string1))
+# print(find3to5CharWords("hello world"))
+# print(find3to5CharWords("Bonjour toute le monde"))
+# print(find3to5CharWords("The quick brown fox jumps over the lazy dog."))
+# print(find3to5CharWords("jfhajEJLJFEW'IJOEGTHONETG57579YHGIIH;F"))  # expect blank
+# print(find3to5CharWords(""))  # expect blank
 """
 35. Write a Python program to find all words which are at least 4 characters long
 in a string.
