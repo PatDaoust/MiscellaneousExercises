@@ -808,9 +808,38 @@ def snakeCasetoCamelCase(a_string):
 """
 
 
+def extractQuotes(a_string):
+    """Assumes a_string is a string
+    returns a new string, any values between quotation marks of a_string"""
+    pass
+
+
+# print(extractQuotes("'hello world'"))
+# print(extractQuotes("say 'hello'"))
+# print(extractQuotes("say 'hello' Curry"))
+# print(extractQuotes(string2))
+# print(extractQuotes(""))
+
 """
 39. Write a Python program to remove multiple spaces in a string.
 """
+
+
+def removeMultipleSpaces(a_string):
+    """assumes a_string is a string
+    returns a new string, a_string but with any multiple spaces removed"""
+    pattern = "\s{2,}"
+    replace = ""
+    new_string = re.sub(pattern, replace, a_string)
+    return new_string
+
+
+# print(removeMultipleSpaces("hello    "))
+# print(removeMultipleSpaces("...kittens"))
+# print(removeMultipleSpaces("my  favorite food is salmon"))
+# print(removeMultipleSpaces("   "))
+# print(removeMultipleSpaces(""))
+# print(removeMultipleSpaces(string1))
 
 """
 40. Write a Python program to remove all whitespaces from a string.
