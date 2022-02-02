@@ -775,6 +775,18 @@ def find4PlusCharWords(a_string):
 36. Write a python program to convert camel case string to snake case string.
 """
 
+
+def camelCaseToSnakeCase(a_string):
+    """assume a_string is a string in camelCase
+    returns a new string, representing a_string in snake_case"""
+    pattern = "([a-z]+)([A-Z]{1})"
+    new_string = re.sub(pattern, r"\1_\2", a_string)
+    return new_string
+
+
+# print(camelCaseToSnakeCase("camelCase"))
+# print(camelCaseToSnakeCase("NaNoWriMo"))
+# print(camelCaseToSnakeCase("haveYouSeenThisPurrfectKitten"))
 """
 37. Write a python program to convert snake case string to camel case string.
 """
