@@ -870,6 +870,20 @@ def removeWhitespace(a_string):
 from a string.
 """
 
+
+def removeNonAlphanumeric(a_string):
+    """assumes a_string is a string
+    returns a new string, representing only the alphanumeric characters in a_string"""
+    pattern = "[^a-zA-Z0-9]+"
+    replace = ""
+    new_string = re.sub(pattern, replace, a_string)
+    return new_string
+
+
+# print(removeNonAlphanumeric(string3))
+# print(removeNonAlphanumeric("!$)(*&%*&@$)(@_$"))
+# print(removeNonAlphanumeric("I have 1 cat!"))
+# print(removeNonAlphanumeric(""))
 """
 42. Write a Python program to find urls in a string.
 """
