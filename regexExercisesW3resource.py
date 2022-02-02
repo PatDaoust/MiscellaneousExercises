@@ -755,6 +755,22 @@ def find3to5CharWords(a_string):
 in a string.
 """
 
+
+def find4PlusCharWords(a_string):
+    """assumes a_string is a string
+    returns a list of strings, representing all the words 4 or more characrers
+    long in a_string"""
+    pattern = r"(\b)(\w{4,})(\b)"
+    results = re.findall(pattern, a_string)
+    return results
+
+
+# print(find4PlusCharWords(string1))
+# print(find4PlusCharWords("hello world"))
+# print(find4PlusCharWords("Bonjour toute le monde"))
+# print(find4PlusCharWords("The quick brown fox jumps over the lazy dog."))
+# print(find4PlusCharWords("jfhajEJLJFEW'IJOEGTHONETG57579YHGIIH;F"))  # expect blank
+# print(find4PlusCharWords(""))  # expect blank
 """
 36. Write a python program to convert camel case string to snake case string.
 """
