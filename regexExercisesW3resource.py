@@ -811,7 +811,11 @@ def snakeCasetoCamelCase(a_string):
 def extractQuotes(a_string):
     """Assumes a_string is a string
     returns a new string, any values between quotation marks of a_string"""
-    pass
+    pattern = """'(.*)'"""
+    result = re.search(pattern, a_string)
+    if result:
+        result = result.group(1)
+    return result
 
 
 # print(extractQuotes("'hello world'"))
@@ -819,7 +823,6 @@ def extractQuotes(a_string):
 # print(extractQuotes("say 'hello' Curry"))
 # print(extractQuotes(string2))
 # print(extractQuotes(""))
-
 """
 39. Write a Python program to remove multiple spaces in a string.
 """
