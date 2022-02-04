@@ -909,10 +909,22 @@ def findURL(a_string):
 """
 43. Write a Python program to split a string at uppercase letters.
 """
-#plsn
 
 
+def splitAtUppercase(a_string):
+    """assumes a_string is a string
+    returns a list of strings, a_string split at each uppercase letter"""
+    pattern = "([A-Z])"
+    string_list = re.split(pattern, a_string)
+    return string_list
 
+
+# print(splitAtUppercase(string1))
+# print(splitAtUppercase(string2))
+# print(splitAtUppercase(string3))
+# print(splitAtUppercase("what if it is all lowercase?"))
+# print(splitAtUppercase("what IF CONSECUTIVE uppercase?"))
+# print(splitAtUppercase(""))
 """
 44. Write a Python program to do a case-insensitive string replacement.
 """
