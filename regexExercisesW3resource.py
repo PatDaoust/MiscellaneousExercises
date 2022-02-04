@@ -929,6 +929,21 @@ def splitAtUppercase(a_string):
 44. Write a Python program to do a case-insensitive string replacement.
 """
 
+
+def replaceCaseInsensitive(a_string, to_replace, replacement):
+    """assumes a_string is a string
+    assumes to_replace is a string
+    assumes replacement is a string
+    returns a new string, a_string with any instances of to_replace replased
+    with replacement. case insinsitive."""
+    pattern = re.compile(to_replace, re.IGNORECASE)
+    new_string = re.sub(pattern, replacement, a_string)
+    return new_string
+
+
+# print(replaceCaseInsensitive(string1, "Bran", "Pat"))
+# print(replaceCaseInsensitive(string1, "bran", "Pat"))
+# print(replaceCaseInsensitive(string1, "BRAN", "Pat"))
 """
 45. Write a Python program to remove the ANSI escape sequences from a string.
 """
