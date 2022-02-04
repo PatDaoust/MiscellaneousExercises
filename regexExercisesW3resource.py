@@ -948,6 +948,18 @@ def replaceCaseInsensitive(a_string, to_replace, replacement):
 45. Write a Python program to remove the ANSI escape sequences from a string.
 """
 
+
+def removeANSIEscapeSequences(a_string):
+    """assumes a_string is a string
+    returns a new string, like a_string with any ANSI escape sequences removed"""
+    pattern = "(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]"
+    new_string = re.sub(pattern, "", a_string)
+    return new_string
+
+
+# string7 = "\t\u001b[0;35mgoogle.com\u001b[0m \u001b[0;36m216.58.218.206\u001b[0m"
+# print(removeANSIEscapeSequences(string7))  # expect "google.com 216.58.218.206"
+# print(removeANSIEscapeSequences(""))
 """
 46. Write a Python program to find all adverbs and their positions in a given sentence.
 
