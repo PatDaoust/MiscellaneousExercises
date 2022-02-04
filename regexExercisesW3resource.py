@@ -991,6 +991,26 @@ An example of a delimiter is the comma character,
 which acts as a field delimiter in a sequence of comma-separated values.
 """
 
+
+def splitAtDelimiter(a_string, delimeters):
+    """assumes a_string is a string
+    assumes delimeters is a string sconsisting of the desired delimiters
+    returns a list of strings, a_string split at the delimeters"""
+    pattern = "("
+    for item in delimeters:
+        pattern += (item+"|")
+    pattern = pattern[:-1]
+    pattern += ")"
+    results = re.split(pattern, a_string)
+    return results
+
+
+# print(splitAtDelimiter(string1, ",:;"))
+# print(splitAtDelimiter(string1, ","))
+# print(splitAtDelimiter(string2, ",;:"))
+# print(splitAtDelimiter(string3, ",;:"))
+# print(splitAtDelimiter("To github.com:PatDaoust/MiscellaneousExercises.git", ",:;"))
+# print(splitAtDelimiter("", ",:;"))
 """
 48. Write a Python program to check a decimal with a precision of 2.
 """
