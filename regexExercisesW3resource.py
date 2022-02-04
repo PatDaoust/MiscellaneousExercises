@@ -966,6 +966,22 @@ def removeANSIEscapeSequences(a_string):
 Sample text : "Clearly, he has no excuse for such behavior."
 """
 
+
+def findAdverbs(a_string):
+    """assumes a_string is a string
+    returns a list of re.match objects, representing all the adverbs ending in "ly"
+    in a_string, and their position"""
+    pattern = re.compile("[A-Za-z]+ly", re.IGNORECASE)
+    results = re.finditer(pattern, a_string)
+    results_list = [result for result in results]
+    return results_list
+
+
+# print(findAdverbs("Clearly, he has no excuse for such behavior."))
+# print(findAdverbs(string1))
+# print(findAdverbs(string2))
+# print(findAdverbs(string3))
+# print(findAdverbs(" "))
 """
 47. Write a Python program to split a string with multiple delimiters.
 
