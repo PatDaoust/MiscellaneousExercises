@@ -1137,6 +1137,20 @@ def evaluateString(a_string):
 53. Write a Python program to remove lowercase substrings from a given string.
 """
 
+
+def removeLowercase(a_string):
+    """assumes a_string is a string
+    returns a new string, like a_string with any requences of 2 or more
+    lowercase characters removed"""
+    pattern = "[a-z]{2,}"
+    new_string = re.sub(pattern, "", a_string)
+    return new_string
+
+
+# print(removeLowercase(string2))
+# print(removeLowercase("HELLO WORLD"))
+# print(removeLowercase("MY pRETTY kITTEN"))
+# print(removeLowercase(" "))
 """
 54. Write a Python program to concatenate the consecutive numbers in a given string.
 Original string:
