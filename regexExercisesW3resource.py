@@ -1015,6 +1015,32 @@ def splitAtDelimiter(a_string, delimeters):
 48. Write a Python program to check a decimal with a precision of 2.
 """
 
+
+def isDecimalPrecision2(num):
+    """assumes num is a float or a string representing a float
+    returns a boolean, True if num is a decial with a precision of 2,
+    else False"""
+    num = str(num)
+    pattern = "\d+\.(\d+)"
+    result = re.match(pattern, num)
+    if result:
+        decimal_len = len(result.group(1))
+        if decimal_len == 2:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
+print(isDecimalPrecision2(2.22))  # expect True
+print(isDecimalPrecision2("2.22"))  # expect True
+print(isDecimalPrecision2(2.2))  # expect False
+print(isDecimalPrecision2(2.222))  # expect False
+print(isDecimalPrecision2(222))  # expect False
+print(isDecimalPrecision2("2.222222"))  # expect False
+print(isDecimalPrecision2("kittens"))  # expect False
+print(isDecimalPrecision2(""))  # expect False
 """
 49. Write a Python program to remove words from a string of length
 between 1 and a given number.
