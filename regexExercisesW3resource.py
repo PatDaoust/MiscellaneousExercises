@@ -1094,6 +1094,21 @@ def removeParentesised(a_string):
 51. Write a Python program to insert spaces between words starting with capital letters.
 """
 
+
+def insertCapitalSpace(a_string):
+    """assumes a_string is a string
+    returns a new string, with space between words starting with capital letters"""
+    pattern = "([A-Z].*)([A-Z])"
+    new_string = re.sub(pattern, r"\1 \2", a_string)
+    return new_string
+
+
+# print(insertCapitalSpace("HelloWorld"))
+# print(insertCapitalSpace("Hello World"))
+# print(insertCapitalSpace("World Wide Web"))
+# print(insertCapitalSpace("pretty kittens"))
+# print(insertCapitalSpace("ABCDEFU"))
+# print(insertCapitalSpace(""))
 """
 52. Write a Python program that reads a given expression and evaluates it.
 Terms and conditions:
