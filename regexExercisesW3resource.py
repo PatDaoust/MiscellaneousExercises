@@ -1033,19 +1033,38 @@ def isDecimalPrecision2(num):
         return False
 
 
-print(isDecimalPrecision2(2.22))  # expect True
-print(isDecimalPrecision2("2.22"))  # expect True
-print(isDecimalPrecision2(2.2))  # expect False
-print(isDecimalPrecision2(2.222))  # expect False
-print(isDecimalPrecision2(222))  # expect False
-print(isDecimalPrecision2("2.222222"))  # expect False
-print(isDecimalPrecision2("kittens"))  # expect False
-print(isDecimalPrecision2(""))  # expect False
+# print(isDecimalPrecision2(2.22))  # expect True
+# print(isDecimalPrecision2("2.22"))  # expect True
+# print(isDecimalPrecision2(2.2))  # expect False
+# print(isDecimalPrecision2(2.222))  # expect False
+# print(isDecimalPrecision2(222))  # expect False
+# print(isDecimalPrecision2("2.222222"))  # expect False
+# print(isDecimalPrecision2("kittens"))  # expect False
+# print(isDecimalPrecision2(""))  # expect False
 """
 49. Write a Python program to remove words from a string of length
 between 1 and a given number.
 """
 
+
+def removeWordsLenghtNum(a_string, lenght_x):
+    """assumes a_string is a string
+    assumes lenght_x is an int
+    returns a new string, like a_string with every word of lenght 1 to x removed"""
+    # import pdb
+    # pdb.set_trace()
+    if not isinstance(lenght_x, int):
+        raise ValueError("lenght_x must me an int")
+    pattern = r"\b\w{1," + str(lenght_x) + r"}\b"
+    new_string = re.sub(pattern, "", a_string)
+    return new_string
+
+
+# print(removeWordsLenghtNum(string1, 1))
+# print(removeWordsLenghtNum(string1, 2))
+# print(removeWordsLenghtNum(string1, 3))
+# print(removeWordsLenghtNum(string1, 20))
+# print(removeWordsLenghtNum(string1, "kittens"))
 """
 50. Write a Python program to remove the parenthesis area in a string.
 Sample data : ["example (.com)", "w3resource", "github (.com)", "stackoverflow (.com)"]
