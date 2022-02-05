@@ -1075,6 +1075,21 @@ github
 stackoverflow
 """
 
+
+def removeParentesised(a_string):
+    """assumes a_string is a string
+    returns a new string, as a_string with any sub-string contained in parenthesis removed
+    e.g. "example" --> "example" """
+    pattern = "(\(.*\))"
+    new_string = re.sub(pattern, "", a_string)
+    return new_string
+
+
+# print(removeParentesised("example (.com)"))
+# print(removeParentesised("github(.com)/hellow"))
+# print(removeParentesised("my (favorite) cat"))
+# print(removeParentesised(string2))
+# print(removeParentesised(""))
 """
 51. Write a Python program to insert spaces between words starting with capital letters.
 """
