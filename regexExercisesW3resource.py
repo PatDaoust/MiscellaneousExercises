@@ -1122,6 +1122,17 @@ Length of the expression will not exceed 100.
 -1 ? 10 9 = intermediate results of computation = 10 9
 """
 
+
+def evaluateString(a_string):
+    """Assumes a_string is a string that consists of numerical values, operators
+    and parentheses, and ends with '='
+    returns a numeric, the evaluation of a_string"""
+    expression = a_string[:-1]
+    return eval(expression)
+
+
+# print(evaluateString("4-2*3="))
+# print(evaluateString("4*(8+4+3)="))
 """
 53. Write a Python program to remove lowercase substrings from a given string.
 """
