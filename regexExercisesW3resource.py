@@ -1161,6 +1161,18 @@ Enter at 120 Kearny Street. The security desk can direct you to floor 16.
 Please have your identification ready.
 """
 
+
+def concatNums(a_string):
+    """assumes a_string is a string
+    returns a new string, like a_string but without any spaces seperating numbers"""
+    pattern = "(\d)(\s+)(\d)"
+    new_string = re.sub(pattern, r"\1\3", a_string)
+    return new_string
+
+
+string8 = """Enter at 1 20 Kearny Street. The security desk can direct you to floor 1 6.
+Please have your identification ready."""
+print(concatNums(string8))
 """
 55. Write a Python program to convert a given string to snake case.
 Sample Output:
