@@ -1181,6 +1181,22 @@ gd-script
 btw...-what-*-do*-you-call-that-naming-style?-snake-case?
 """
 
+
+def convertToDashCase(a_string):
+    """assumes a_string is a string
+    returns a new string, with dashes where a_string has whitespace"""
+    pattern = "\s"
+    replacement = "-"
+    new_string = re.sub(pattern, replacement, a_string)
+    return new_string
+
+
+# print(convertToDashCase(string2))
+# print(convertToDashCase("java script"))
+# print(convertToDashCase("gd script"))
+# print(convertToDashCase(" "))
+# print(convertToDashCase("\n"))
+# print(convertToDashCase(""))
 """
 56. Write a Python program that takes any number of iterable objects or objects
 with a length property and returns the longest one.
