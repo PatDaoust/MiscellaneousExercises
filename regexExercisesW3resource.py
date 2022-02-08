@@ -1206,3 +1206,24 @@ Orange
 Java
 Python
 """
+
+
+def returnLongestIterable(iterable_list):
+    """assumes iterables_list is a list of iterables
+    returns the longest iterable in iterables_list,
+    if iterable_list has at least one element with lenght
+    note: if there is a tie, will return the 1st element of that lenght encountered
+    else returnes None"""
+    max_elem = None
+    for elem in iterable_list:
+        if (max_elem is None) or (len(elem) > len(max_elem)):
+            max_elem = elem
+    return max_elem
+
+
+iterables_list = ["Orange",
+                  [1, 2, 3, 4, 5],
+                  "Java",
+                  "Python",
+                  ("a", "b", "c")]
+# print(returnLongestIterable(iterables_list))
