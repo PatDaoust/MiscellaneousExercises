@@ -149,8 +149,21 @@ compl\'e9ment \'e0 deux = repr\'e9sentation\par
 bit de poids fort = le bit situ\'e9 \'e0 l'extr\'eame gauche = represente le signe. 0 pour positif ou nul, 1 pour negatif\par
 le plus grand entier relatif positif cod\'e9 sur n bits sera (2^(n-1))-1.\par
 \highlight3\f1 3.4. Repr\f0\'e9sentation des nombres r\'e9els\highlight0\par
-a\par
-\par
+Attention ! Un nombre \'e0 d\'e9veloppement d\'e9cimal fini en base 10 ne l'est pas forc\'e9ment en base 2.\par
+Cela peut engendrer de mauvaises surprises. \par
+e.g. on n'arrive pas \'e0 repr\'e9senter exactement 0.3 en binaire\par
+3.4.2. La norme IEEE 754 = d\'e9finit la fa\'e7on de coder un nombre r\'e9el. \par
+utilise 32 bits + d\'e9finit trois composantes :\par
+
+\pard\li720\sa200\sl276\slmult1\f1\bullet  le signe \f0\lang4105 = \lang1033 un bit, le bit de poids fort \par
+\f1\bullet  l'exposant \f0\lang4105 = \lang1033 8 bits cons\'e9cutifs au signe \par
+\f1\bullet  la mantisse\f0\lang4105  = \f1\lang1033  bits situ\f0\'e9s apr\'e8s la virgule = 23 bits \par
+
+\pard\sa200\sl276\slmult1 l'exposant 00000000 est pour \'e9crire le nombre 0 uniquement\par
+\f1 l'exposant 11111111 signaler des erreurs\f0\lang4105  =\f1\lang1033  NaN\f0\lang4105  = \lang1033 Not a number \par
+\f1 il faut ajouter \f0\'e0 l'exposant un biais, fix\'e9 \'e0 27-1 = 127 (01111111)\par
+Il y a deux 0 : un n\'e9gatif (1 suivi de 31 z\'e9ros) et un positif (32 z\'e9ros)\par
+\highlight3 3.5. Le code ASCII \highlight0 = American Standard Code for Information Interchange\par
 \par
 \par
 \par
