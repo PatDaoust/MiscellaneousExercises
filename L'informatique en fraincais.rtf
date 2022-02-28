@@ -173,7 +173,20 @@ code ASCII \'e9tendu = ISO-8859  = 8 bits, inclue accents\par
 Unicode = normal aternative =  d\'e9finit des dizaines de milliers de codes, les 128 premiers restent compatibles avec ASCII.\par
 UTF-8 = Universal Character Setm Transformation Format 1 - 8 bits = \'ab r\'e9pertoire universel de caract\'e8res cod\'e9s \'bb " = totalement compatible avec Unicode et  ASCII = le plus utilis\'e9 \par
 \highlight3 3.6. Codes d\'e9tecteurs/correcteurs d'erreurs\par
-\highlight0 a\par
+\highlight0 code correcteur = utilise la redondance pour corriger les erreurs de transmission d'un message \par
+Comment d\'e9tecter et/ou corriger des erreurs ?\par
+On peut transmettre un nombre soit en chiffres, soit en lettres :\par
+si on envoie \'ab 0324614103 \'bb = erreure pas detectable, plus concise\par
+si on envois \'ab z\'e9ro trente-deux quatre cent soixante et un quarante et un z\'e9ro trois \'bb. = facile de detecter et corriger les erreures, pas concise\par
+canaux de transmission imparfaits -> erreurs lors des \'e9changes. \f1 probabilit\f0\'e9 d'erreur sur une ligne t\'e9l\'e9phonique est de 10^7\par
+Principe g\'e9n\'e9ral = \f1 Chaque suite de\f0\lang4105  k \f1\lang1033  bits \f0\'e0 transmettre est augment\'e9e par une autre suite de r bits de redondance/contr\'f4le.-> \f1 on utilise un code\f0\lang4105  \f1\lang1033 C(n, k) avec n = k + r \par
+3.6.1. La distance de Hamming\f0\lang4105  = \lang1033 compte le nombre de bits alt\'e9r\'e9s dans la transmission d'un message d'une longueur donn\'e9e.\par
+e.g. : la distance de Hamming entre 1011101 et 1001001 est 2 car deux bits sont diff\'e9rents.\par
+3.6.2. Somme de contr\'f4le = checksum = d\'e9tecter les erreurs, mais pas les corriger. = d'ajouter aux donn\'e9es des \'e9l\'e9ments simple a calculer et d\'e9pendant des donnees \par
+Bit de parit\'e9 = \'e9tant \'e9gal \'e0 z\'e9ro si la somme des autres bits est paire et \'e0 un  si impaire = permet de d\'e9tecter un nombre impairs d'erreurs, mais pas un nombre pair \par
+3.6.3. Le code ISBN\par
+\par
+a\par
 \par
 \par
 \par
