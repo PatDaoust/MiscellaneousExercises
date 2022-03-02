@@ -194,7 +194,26 @@ num\'e9ro ISBN-10= quatre segments total de 10 chiffres = segments ABC de longue
 
 \pard\sa200\sl276\slmult1 3.6.4. Formule de Luhn = algorithme \'ab modulo 10 \'bb = formule de somme de contr\'f4le, utilis\'e9e pour valider une vari\'e9t\'e9 de num\'e9ros de comptes + l'immatriculation du mat\'e9riel ferroviaire =prend in  un num\'e9ro d'identit\'e9 partiel +  g\'e9n\'e8re un chiffre de v\'e9rification -> identifiant complet.\par
 3.6.5. V\'e9rification des CCP = Compte Courant Postal\par
-3.6.6. Code de Hamming\par
+3.6.6. Code de Hamming\line permet la d\'e9tection et la correction automatique d'une d'un bit du message. \par
+code parfait = il n'existe pas d'autre code plus compact ayant la m\'eame capacit\'e9 de correction. \line aka rendement maximal.\par
+Structure d'un code de Hamming\par
+
+\pard\li720\sa200\sl276\slmult1\f1\bullet  les m bits du message \f0\'e0 transmettre et les n bits de contr\'f4le de parit\'e9.\par
+\f1\bullet  longueur totale : 2\f0\lang4105 ^\f1\lang1033 n - 1\par
+\bullet  longueur du message : m = (2\f0\lang4105 ^\f1\lang1033 n - 1) - n\par
+\bullet  on parle de code x-y : \par
+
+\pard\li1440\sa200\sl276\slmult1 x\f0\lang4105  =\f1\lang1033  la longueur totale du code (n+m) \par
+y \f0\lang4105 =\f1\lang1033  longueur du message\f0\lang4105  \f1\lang1033 (m)\par
+
+\pard\li720\sa200\sl276\slmult1\bullet  les bits de contr\f0\'f4le de parit\'e9 Ci sont en position 2i (pour i = 0, 1, 2, ...)\par
+\f1\bullet  les bits du message Dj occupe le reste du message. \f0\par
+
+\pard\sa200\sl276\slmult1 Retrouver l'erreur dans un mot de Hamming\par
+Si les bits de contr\'f4le de parit\'e9 C2, C1, C0 ont tous la bonne valeur, il n'y a pas d'erreur ; \line sinon la valeur des bits de contr\'f4le indique la position de l'erreur entre\par
+3.7. Codage de Huffman\par
+\par
+\par
 a\par
 \par
 \par
