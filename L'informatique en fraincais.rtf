@@ -211,15 +211,17 @@ y \f0\lang4105 =\f1\lang1033  longueur du message\f0\lang4105  \f1\lang1033 (m)\
 
 \pard\sa200\sl276\slmult1 Retrouver l'erreur dans un mot de Hamming\par
 Si les bits de contr\'f4le de parit\'e9 C2, C1, C0 ont tous la bonne valeur, il n'y a pas d'erreur ; \line sinon la valeur des bits de contr\'f4le indique la position de l'erreur entre\par
-\highlight3 3.7. Codage de Huffman\highlight0\par
-une m\'e9thode de compression statistique de donn\'e9es qui permet\par
-de r\'e9duire la longueur du codage d'un alphabet. Cela signifie que l'on va d'abord calculer les\par
-fr\'e9quences des caract\'e8res du texte (ou les couleurs d'une image). Puis on va construire un arbre\par
-binaire (voir ci-dessous) dont les extr\'e9mit\'e9s seront les lettres. Les lettres les plus fr\'e9quentes seront en\par
-haut de l'arbre, les moins fr\'e9quentes en bas. Le codage sera obtenu en parcourant l'arbre depuis le\par
-haut en allant vers la lettre : un mouvement \'e0 gauche sera cod\'e9 0 et un mouvement \'e0 droite sera cod\'e9\par
-1. Ainsi, dans l'arbre ci-dessous, \'ab a \'bb sera cod\'e9 \'ab 010 \'bb, et \'ab x \'bb \'ab 10010 \'bb.\par
-\par
+\highlight3 3.7. Codage de Huffman\highlight0  = m\'e9thode de compression statistique de donn\'e9es qui r\'e9duie la longueur du codage d'un alphabet en calculant les fr\'e9quences des caract\'e8res du, puis on va construire un arbre binaire dont les extr\'e9mit\'e9s seront les lettres. \par
+Les lettres les plus fr\'e9quentes en haut de l'arbre, les moins fr\'e9quentes en bas. \par
+recode les donn\'e9es a occurrence faible a une longueur binaire sup\'e9rieure \'e0 la moyenne, et les donn\'e9es fr\'e9quentes sur une longueur binaire courte.\par
+Au d\'e9part, chaque lettre a une \'e9tiquette correspondant \'e0 sa fr\'e9quence d'apparition. Il y a autant d'arbres (\'e0 1 sommet) que de lettres.\par
+L'algorithme choisit \'e0 chaque \'e9tape les deux arbres d'\'e9tiquettes minimales, x et y, et les remplace par l'arbre form\'e9 de x et y et ayant comme \'e9tiquette la somme de l'\'e9tiquette de x et de l'\'e9tiquette de y. \par
+Ce principe de compression est aussi utilis\'e9 dans le codage d'image TIFF (Tagged Image Format\par
+File) et JPEG (Join Photographic Experts Group) \par
+ancienne m\'e9thode qui a encore des performances appr\'e9ciables.\par
+\highlight3 3.8. Codes-barres\highlight0\par
+a\par
+.\par
 \par
 a\par
 \par
