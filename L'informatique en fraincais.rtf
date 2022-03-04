@@ -219,12 +219,23 @@ L'algorithme choisit \'e0 chaque \'e9tape les deux arbres d'\'e9tiquettes minima
 Ce principe de compression est aussi utilis\'e9 dans le codage d'image TIFF (Tagged Image Format\par
 File) et JPEG (Join Photographic Experts Group) \par
 ancienne m\'e9thode qui a encore des performances appr\'e9ciables.\par
-\highlight3 3.8. Codes-barres\highlight0\par
-a\par
-.\par
-\par
-a\par
-\par
+\highlight3 3.8. Codes-barres = \highlight0 repr\'e9sentation d'une donn\'e9e alphanum\'e9rique = symbole constitu\'e9 de barres et d'espaces dont l'\'e9paisseur varie en fonction de la donnee. destin\'e9s \'e0 lakjnm  lecture automatis\'e9e par un capteur \'e9lectronique.\par
+3.8.1. Codes-barres EAN = European Article Numbering = identifie des articles de fa\'e7on unique\par
+\f1\bullet  les codes EAN-8 sont r\f0\'e9serv\'e9s \'e0 l'usage sur des produits de petite taille \par
+\f1\bullet  les codes EAN-13 sont utilis\f0\'e9s sur tous les autres produits.\par
+utilise des notions d'arithm\'e9tique modulaire. \par
+Structure du code EAN-13\par
+
+\pard\li720\sa200\sl276\slmult1\f1\bullet  Le caract\f0\'e8re de D\'e9but cod\'e9 101 (1 = noir, 0 = blanc)\par
+\f1\bullet  Le second caract\f0\'e8re du Pr\'e9fixe (6). Le premier caract\'e8re du pr\'e9fixe n'est pas cod\'e9.\par
+\f1\bullet  Les cinq caract\f0\'e8res du Num\'e9ro de Participant (12345)\par
+\f1\bullet  Le S\f0\'e9parateur Central est cod\'e9 01010\par
+\f1\bullet  Les cinq caract\f0\'e8res du Num\'e9ro d'Article (67890)\par
+\f1\bullet  Le Check Digit (0)\par
+\bullet  Le caract\f0\'e8re de Fin cod\'e9 101.\par
+
+\pard\sa200\sl276\slmult1 3.8.2. Codes QR = code-barres en deux dimensions = code \'e0 matrice = constitu\'e9 de modules noirs dispos\'e9s dans un carr\'e9 \'e0 fond blanc. standard ISO (IEC18004)\par
+7089 caract\'e8res num\'e9riques, ou 4296 caract\'e8res alphanum\'e9riques, ou 2953 octets\par
 \par
 \par
 \par
