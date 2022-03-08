@@ -265,9 +265,22 @@ courbe tonale = outil pour modification global. une pour chaque couleur RVB\par
 augmenter/diminuer la luminosit\'e9 = ajouter/soustraire une valeur fixe \'e0 tous les niveaux.\line possible perte d'informations si le changement irais en bas de 0 ou en haut de 255\par
 augmenter le contraste =assombrir les points fonc\'e9s + \'e9claircir les points clairs\par
 \highlight3 4.4. Quelques traitements classiques\par
-\highlight0 a\par
-\par
-\par
+\highlight0 4.4.1. N\'e9gatif = toutes les composantes x de tous les pixels de l'image sont remplac\'e9es par 255-x.\par
+4.4.2. Rouge = assignant la valeur 0 aux composantes verte et bleue\par
+(similairement pour le traiment vert et le traimement bleu)\par
+4.4.3. Niveaux de gris = les trois composantes ont la "m\'eame" valeur.\par
+L'\f2\u339?il est plus sensible \f0\'e0 certaines couleurs, pour tenir compte de cette sensibilit\'e9, la formule standard donnant le niveau de gris est : gris = int(round(0.299\'b7rouge + 0.587\'b7vert + 0.114\'b7bleu))\par
+4.4.4. Seuillage = m\'e9thode la plus simple de segmentation d'image\par
+pour une image en niveau de gris = le seuillage d'image peut cr\'e9er une image comportant uniquement deux valeurs, noir ou blanc. \line remplace un \'e0 un les pixels d'une image par rapport \'e0 une valeur seuil fix\'e9e.\line si un pixel \'e0 valeur > au seuil -> valeur = 255 (blanc), et  si valeur < au seuil -> valeur = 0 (noir)\par
+Avec une image en couleur, on fera de m\'eame avec les trois composantes rouge, vert et bleu. \par
+possible avec huit couleurs: blanc, noir, rouge, vert, bleu, magenta, jaune et cyan.\par
+4.4.5. S\'e9pia = qualit\'e9 de tirage "niveaux de brun"\par
+la couleur s\'e9pia dans le syst\'e8me RVB = S(94, 38, 18)\par
+la transformation d'une image couleur en une image en nuances de est fait en deux temps. \line 1. seuillage au noir/blank ou niveau de gris\line 2. remplacement au spectrum sepia\par
+4.4.6. Pixellisation\par
+L'image est divis\'e9e en rectangles de la taille sp\'e9cifi\'e9e \line Chaque rectangle est ensuite rempli avec la couleur moyenne de la zone.\par
+\highlight3 4.5. Les drapeaux\highlight0\par
+a\par
 \par
 \par
 \par
