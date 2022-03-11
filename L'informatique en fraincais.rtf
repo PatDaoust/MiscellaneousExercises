@@ -289,8 +289,20 @@ filtre = transformation math\'e9matique = produit de convolution = permet de mod
 \highlight3 4.7. Le photomaton\highlight0\par
 Chacune image est obtenue \'e0 partir de la pr\'e9c\'e9dente, en r\'e9duisant la taille de l'image de moiti\'e9, ce qui a donn\'e9 quatre morceaux analogues qu'on a plac\'e9s en carr\'e9 pour obtenir une image ayant la m\'eame taille que l'image d'origine. Le nombre de pixels a \'e9t\'e9 exactement conserv\'e9, on a seulement d\'e9plac\'e9 chacun des pixels (sans en changer la couleur)\par
  au bout de neuf \'e9tapes, l'image original est r\'e9apparue.\par
-\highlight3 4.8. St\'e9ganographie\highlight0\par
-a\par
+\highlight3 4.8. St\'e9ganographie\highlight0  = cache les messages dans un support, e.g. images ou texte qui semble anodin.\par
+\f2 tatouage \f0\lang4105 = w\f2\lang1033 atermarking \f0\lang4105 =\lang1033 cacher un texte dans une image num\'e9rique invisible \'e0 l'\f2\u339?il nu\f0\lang4105 . \line\f2\lang1033 utilis\f0\'e9e pour prot\'e9ger des images par copyright, et transmettre des messages cach\'e9s. \par
+4.8.1 Description d'une image bitmap = un tableau de triplets. \line Chaque triplet = la couleur d'un pixel dans le syst\'e8me RVB\par
+4.8.2. Repr\'e9sentation binaire du texte\line Chaque caract\'e8re du texte \'e0 cacher repr\'e9sent\'e9 par son code ASCII \'e9tendu, \'e9crit en base 2\par
+4.8.3. Int\'e9gration du texte dans l'image\par
+technique de camouflage = dire qu'un nombre pair correspond \'e0 un 0 du texte et qu'un nombre impair correspond \'e0 un 1.\par
+si le nombre du tableau de l'image a la parit\'e9 que l'on veut, on le laisse inchang\'e9. \line Si non, on lui ajoute 1 (on soustraira 1 si la valeur de d\'e9part est 255, afin d'\'e9viter les d\'e9bordements).\par
+4.8.4. R\'e9cup\'e9ration du texte en cinq \'e9tapes :\par
+1. R\'e9cup\'e9rer le tableau d\'e9crivant l'image.\par
+2. Remplacer un nombre pair par 0, un nombre impair par 1.\par
+3. Grouper les bits par groupes de 8.\par
+4. Convertir chaque octet en nombre d\'e9cimal.\par
+5. \'c9crire les caract\'e8res correspondant aux codes ASCII obtenus. \par
+.\par
 \par
 \par
 \par
