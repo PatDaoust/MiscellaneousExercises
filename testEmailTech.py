@@ -9,11 +9,8 @@ import os
 import smtplib
 from email.message import EmailMessage
 
-# TODO figure out when os cant get variables
-# email_address = os.environ.get("gmail_app_user")
-email_address = "catalunalilith2680@gmail.com"
-# email_password = os.environ.get("gmail_app_pass")
-email_password = "kevxdlddhhgaruqx"
+email_address = os.environ.get("gmail_app_user")
+email_password = os.environ.get("gmail_app_pass")
 
 msg = EmailMessage()
 msg['Subject'] = "wanna scene this weekend?"
