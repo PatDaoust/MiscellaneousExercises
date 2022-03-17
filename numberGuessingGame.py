@@ -28,7 +28,6 @@ c: if guess = num:
         your guess is too low
     if guess > num:
         your guess is too high
-        
     option: track guesses that are too high and two low, display
     display last guess
 """
@@ -83,9 +82,9 @@ Please type 'easy' for easy mode, or 'hard' for hard mode\n")
         elif guess < random_num:
             print("Nope, your guess of " + str(guess) + " was too low")
         else:
-            # TODO win
+            print("you guessed the random number " + str(random_num) + " in "
+                  + str(guesses_count) + " guesses.")
             print(pickAWinningMessage())
-            # how many guesses
             break
         guess = None
         guesses_count += 1
@@ -113,6 +112,4 @@ def pickAWinningMessage():
 
 
 if __name__ == "__main__":
-    # for i in range(20):
-    #     print(pickAWinningMessage())
     main()
