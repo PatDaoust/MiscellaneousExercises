@@ -84,12 +84,35 @@ Please type 'easy' for easy mode, or 'hard' for hard mode\n")
             print("Nope, your guess of " + str(guess) + " was too low")
         else:
             # TODO win
-            print("you win!")
+            print(pickAWinningMessage())
             # how many guesses
             break
         guess = None
         guesses_count += 1
 
 
+def pickAWinningMessage():
+    """returns a string, a congratulatory message"""
+    messages = ["You won!",
+                "Congratulations, champ!",
+                "You did it!",
+                "I knew it was only a matter of time",
+                "Well done!",
+                "What an impressive achievement!",
+                "You’re awesome! Way to go!",
+                "Keep it up!",
+                "You have the determination to do whatever you can dream.",
+                "I commend you on this latest success",
+                "The reward of a thing well done is to have done it",
+                "Hats off to you",
+                "Attagamer",
+                "Good job",
+                "Way to shine"]
+    random_index = random.randint(0, len(messages)-1)
+    return messages[random_index]
+
+
 if __name__ == "__main__":
+    # for i in range(20):
+    #     print(pickAWinningMessage())
     main()
