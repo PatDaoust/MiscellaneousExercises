@@ -418,7 +418,28 @@ symboles utilis\'e9s:\par
 \bullet  rectangle =modification des variables.\par
 \bullet  losange = test conditionnel qui d\'e9bouche surdeux possibilit\'e9s (oui/non).\par
 \highlight3 6.7. Les notions principales de la programmation\highlight0\par
-a\par
+dans la plupart des langages de programmation \par
+6.7.1. L'affectation = op\'e9ration qui permet d'attribuer une valeur \'e0 une variable\line imaginer un case m\'e9moire appel\'e9e x. \line L'instruction x=t consiste \'e0 remplir la case x avec la valeur de l'expression t. \line Si x contenait d\'e9j\'e0 une valeur, celle-ci est \'e9cras\'e9e.\par
+Il ne pas confondre l'affectation avec la comparaison.\line la comparaison x==3 permet de savoir si oui ou non la valeur de la variable x est 3. \par
+Incr\'e9mentation / d\'e9cr\'e9mentation = augmenter (ou diminuer) sa valeur d'une ou plusieurs unit\'e9s. on prend la valeur contenue dans x, on y ajoute 1, puis on remet le nouveau r\'e9sultat dans la variable x.\par
+e.g. x=x+18\line tellement fr\'e9quente qu'il existe souvent des raccourcis : \line x+=1 (Python)\line x++ (C, Mathematica)\par
+6.7.2. Les tests = instruction du genre si\'85 alors\'85 sinon. La suite du programme d\'e9pend du r\'e9sultat du test. On peut encha\'eener des instructions \'ab sinon si \'bb : seule la premi\'e8re dont la condition sera v\'e9rifi\'e9e sera ex\'e9cut\'e9e. une clause sinon qui ne sera que si aucune clause sinon si n'a \'e9t\'e9 v\'e9rifi\'e9e.\par
+e.g. python\line if x>=10:\line\tab  x=x-20\line else:\line\tab x=x+2\par
+6.7.3. Les boucles = structure de contr\'f4le permettant de r\'e9p\'e9ter une ou un ensemble d'instructions plusieurs fois, tant qu'une condition est satisfaite.\par
+Boucle \'ab Tant que \'bb\line TANT QUE Test\line\tab Instruction 1\line FIN TANT QUE\line\tab Instruction 2\par
+boucles infinies = boucles qui ne finissent jamais car la condition est toujours satisfaite e.g. on oublie d'incr\'e9menter un compteur. danger\par
+Boucles imbriqu\'e9es e.g. les heures et minutes d'une journ\'e9e. premi\'e8re boucle parcourra les heures, la deuxi\'e8me parcourra les minutes, et que l'on incr\'e9mente l'heure seulement quand 60 minutes seront pass\'e9es. \par
+Boucle \'ab Jusqu'\'e0 ce que \'bb = ex\'e9cute au moins une fois les instructions comprises \par
+Compteur = permet de r\'e9aliser une boucle associ\'e9e \'e0 une variable enti\'e8re qui sera incr\'e9ment\'e9e (ou d\'e9cr\'e9ment\'e9e) \'e0 chaque it\'e9ration.\par
+POUR compteur DE 0 A fin\line\tab Instruction 1\line FIN POUR\line\tab Instruction 2\par
+It\'e9rateur = objet qui permet une boucle parcourant tous les \'e9l\'e9ments contenus dans une structure de donn\'e9es (e.g.une liste).\par
+POUR CHAQUE valeur DANS collection\line\tab Instruction 1\line FIN POUR CHAQUE\line\tab Instruction 2\par
+6.7.5. Les sous-programmes = ensemble d'instructions pouvant \'eatre appel\'e9 depuis plusieurs endroits du programme. am\'e9liorer la structure et lisibilit\'e9 du programme . \par
+ fonction = effectue une action (par exemple afficher un r\'e9sultat) et/ou retourne une valeur\par
+proc\'e9dure =  fonction qui ne renvoie pas de valeur \par
+Port\'e9e d'une variable\par
+variable locale = variable d\'e9finie dans un sous-programme, est \'ab visible \'bb que dans ce sousprogramme. \par
+variable globale = d\'e9finie dans le programme principal ,visible et utilisable partout\par
 \par
 \par
 \par
@@ -426,8 +447,6 @@ a\par
 \par
 \par
 \f0\par
-\par
-\par
 chattons\par
 \par
 \par
