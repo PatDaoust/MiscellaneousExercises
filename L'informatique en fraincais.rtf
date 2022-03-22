@@ -361,7 +361,7 @@ Les plus populaires en 2018 sont C, C++, C#, Objective-C, Java, Python, Ruby, Vi
 6.2.1. \'c9volution des langages informatiques\par
 cinq g\'e9n\'e9rations de langages.\par
 premi\'e8re g\'e9n\'e9ration = langage machine = code machine = langage natif = d'instructions et de donn\'e9es \'e0 traiter cod\'e9es en binaire\line e.g.A1 01 10 03 06 01 12 A3 01 14\par
-deuxi\'e8me g\'e9n\'e9ration = langage assembleur = code lisible et compr\'e9hensible par les initi\'e9s.\line un par type de processeur. \lang1033 utilis\'e9 pour l'optimisations\line e.g.\line MOV AX, [0110]\line ADD AX, [0112]\line MOV [0114], AX\par
+deuxi\'e8me g\'e9n\'e9ration = langage assembleur = code lisible et compr\'e9hensible par les initi\'e9s.\line un par type de processeur. utilis\'e9 pour l'optimisations\line e.g.\line MOV AX, [0110]\line ADD AX, [0112]\line MOV [0114], AX\par
 troisi\'e8me g\'e9n\'e9ration =  syntaxe proche de l'anglais. gain \'e9norme en lisibilit\'e9 et en productivit\'e9. Ils ne d\'e9pendent d'un compilateur sp\'e9cifique du processeur. permet la portabilit\'e9 des programmes. beaucoup de langages de programmation actuels sont de troisi\'e8me g\'e9n\'e9ration: Ada, Algol, Basic, Cobol, Eiffel, Fortran, C, C++, Java, Perl, Pascal, Python, Ruby\par
 quatri\'e8me g\'e9n\'e9ration = L4G = souvent associ\'e9e \'e0 des bases de donn\'e9esse = int\'e9grant la gestion de l'interface utilisateur et un langage moins technique. chaque con\'e7us pour un travail sp\'e9cifique : gestion de base de donn\'e9es (Microsoft Access, SQL), production graphique (Postscript), cr\'e9ation d'interface (4D).\par
 cinqui\'e8me g\'e9n\'e9ration = langages destin\'e9s \'e0 r\'e9soudre des probl\'e8mes \'e0 l'aide de contraintes, et non d'algorithmes \'e9crits. reposent sur la logique. tres utilis\'e9s en intelligence artificielle. e.g. Prolog\par
@@ -373,8 +373,8 @@ C'est dans un memorandum interne de Brian Kernighan, Programming in C : A tutori
 \highlight3 6.3. Transformation du code source\highlight0\par
 Le code source = pas utilisable tel quel = \'e9crit dans un langage de haut niveau \par
 deux strat\'e9gies de traduction\par
-\bullet  \lang1033 compilation \'e0 la vol\'e9e = l'interpr\'e9tation = Le langage traduit les instructions au fur et \'e0 mesure qu'elles se pr\'e9sentent. \par
-\bullet  \lang1033 compilation = Le langage traduire l'ensemble du programme en langage machine, constituant ainsi un deuxi\'e8me programme/fichier. Ensuite il ex\'e9cute ce second programme.\par
+\bullet  compilation \'e0 la vol\'e9e = l'interpr\'e9tation = Le langage traduit les instructions au fur et \'e0 mesure qu'elles se pr\'e9sentent. \par
+\bullet  compilation = Le langage traduire l'ensemble du programme en langage machine, constituant ainsi un deuxi\'e8me programme/fichier. Ensuite il ex\'e9cute ce second programme.\par
 6.3.1. Compilation = transformer un langage source en un langage cible. e.g. du code source du programme, en code machine. Une fois compliler l'ex\'e9cutable obtenu peut \'eatre utilis\'e9 sans le code source.\par
 6.3.2. Interpr\'e9tation = Chaque ligne de code est compil\'e9e \'ab en temps r\'e9el \'bb par un programme. ce programme interpr\'e8te le code source. e.g. Python\par
 6.3.3. Avantages, inconv\'e9nients\par
@@ -384,7 +384,7 @@ Les langages interpr\'e9t\'e9s = plus de portabilit\'e9 + facilit\'e9 pour l'\'e
  pas de compilation pour tester le code source.\par
 \highlight3 6.4. Paradigmes\highlight0\par
 paradigme = mod\'e8le qui oriente notre mani\'e8re de penser pour formuler et r\'e9soudre un probl\'e8me.\par
-Smalltalk et Java = programmation orient\'e9e objet\line Haskell = programmation fonctionnelle\line\lang1033 C++, Common Lisp, OCaml, Python, Ruby, et Scheme = paradigmes multiples \par
+Smalltalk et Java = programmation orient\'e9e objet\line Haskell = programmation fonctionnelle\line C++, Common Lisp, OCaml, Python, Ruby, et Scheme = paradigmes multiples \par
 6.4.1. Programmation imp\'e9rative = le paradigme le plus ancien, la majorite des languages = Les op\'e9rations sont d\'e9crites en termes de s\'e9quences d'instructions ex\'e9cut\'e9es par l'ordinateur pour modifier l'\'e9tat du programme.\par
 6.4.2. Programmation structur\'e9e = proc\'e9durale = un sous-ensemble de la programmation imp\'e9rative = possible dans n'importe quel langage de programmation proc\'e9dural. evite le GO TO, utilise le Si-Alors-Sinon \par
 proc\'e9dure = routine, sous-routine, module ou fonction =  une s\'e9rie d'\'e9tapes \'e0 r\'e9aliser, generalment moin de 50 ligne\par
@@ -411,14 +411,21 @@ pseudo-code = fa\'e7on de d\'e9crire un algorithme en respectant certaines conve
 \bullet  si ecrit a la main, laisser des lignes blanches r\'e9guli\'e8rement pour pouvoir ajouter \par
 \bullet  indentez vers la droite le corps des boucles et des fonctions. \par
 \highlight3 6.6. Organigrammes de programmation\par
-\highlight0 s\par
+\highlight0 organigramme = logigramme = algorigramme = ordinogramme = flowchart = forme visuelle d'un algorithme \par
+symboles utilis\'e9s:\par
+\bullet  ovale = le d\'e9but et la fin du programme.\par
+\bullet  parall\'e9logramme = une entr\'e9e (lire une donn\'e9e) ou une sortie (\'e9crire un r\'e9sultat).\par
+\bullet  rectangle =modification des variables.\par
+\bullet  losange = test conditionnel qui d\'e9bouche surdeux possibilit\'e9s (oui/non).\par
+\highlight3 6.7. Les notions principales de la programmation\highlight0\par
+a\par
 \par
 \par
 \par
 \par
 \par
 \par
-\f0\lang1033\par
+\f0\par
 \par
 \par
 chattons\par
