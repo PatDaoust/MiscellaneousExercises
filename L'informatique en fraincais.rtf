@@ -448,8 +448,28 @@ r\'e9cursivit\'e9 = utilisant une m\'e9thode de r\'e9solution qui est r\'e9p\'e9
 \b0 7.1.2. Vie courante : le format A4\par
 format A0 = plus grand format normalis\'e9 (1 m\'e8tre carr\'e9 de surface) se d\'e9cline jusqu'au format A10. \line longueur de A(i) = largeur de A(i-1)\line largeur de A(i) = \'bd longueur de A(i-1)\par
 \highlight3 7.2. Fonctions r\'e9cursives et it\'e9ratives\highlight0\par
+une fonction qui s'appelle elle-m\'eame = r\'e9cursive.\par
+r\'e9cursivit\'e9 crois\'e9e = deux fonctions qui s'appeler l'une l'autre. commune dans la programmation fonctionnelle\par
+7.2.1. \'c9l\'e9vation d'un entier x \'e0 une puissance n\par
+def puissance(x,n):\par
+
+\pard\li720\sa200\sl276\slmult1  if n==0:\par
+
+\pard\li1440\sa200\sl276\slmult1  return 1\par
+
+\pard\li720\sa200\sl276\slmult1  elif n==1:\par
+ \tab return x\par
+ elif n%2==0:\par
+ \tab return puissance(x*x, n//2)\par
+ else:\par
+ \tab return puissance(x*x, n//2)*x\par
+
+\pard\sa200\sl276\slmult1 7.2.2. Calcul de la factorielle\par
+7.2.3. Coefficients binomiaux\par
+La fonction C(n, p) --> le nombre de mani\'e8res de prendre p \'e9l\'e9ments parmi n. \line C(n+1, p+1) = C(n, p) + C(n, p+1) (formule de Pascal)\par
+def C(n,p):\line\tab if (n>p) and (p>0):\line\tab\tab return C(n-1,p-1)+C(n-1,p)\line\tab else:\line\tab\tab return 1\par
+\highlight3 7.3. Les dangers de la r\'e9cursivit\'e9\highlight0\par
 a\par
-\par
 \par
 \par
 \par
