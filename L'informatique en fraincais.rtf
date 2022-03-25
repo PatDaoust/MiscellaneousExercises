@@ -1,4 +1,4 @@
-{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset238 Calibri;}{\f3\fnil\fcharset2 Wingdings;}{\f4\fnil\fcharset1 Cambria Math;}{\f5\fnil\fcharset0 Cambria Math;}{\f6\fnil\fcharset2 Symbol;}}
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset238 Calibri;}{\f3\fnil\fcharset2 Wingdings;}{\f4\fnil\fcharset1 Cambria Math;}{\f5\fnil\fcharset0 Cambria Math;}{\f6\fnil\fcharset238 Cambria Math;}{\f7\fnil\fcharset2 Symbol;}}
 {\colortbl ;\red0\green0\blue255;\red0\green255\blue0;\red0\green255\blue255;}
 {\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont4\mwrapIndent1440 }\viewkind4\uc1 
 \pard\sa200\sl276\slmult1 {\f0\fs22\lang9{\field{\*\fldinst{HYPERLINK https://www.apprendre-en-ligne.net/info/ }}{\fldrslt{https://www.apprendre-en-ligne.net/info/\ul0\cf0}}}}\f0\fs22\lang1033\par
@@ -6,12 +6,12 @@ apprendre les bases de l'informatique, en Francais. \par
 \highlight2 Chapitre 1: L'histoire\highlight0\par
 un ordinateure est:\par
 
-\pard{\pntext\f6\'B7\tab}{\*\pn\pnlvlblt\pnf6\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 electonique\par
-{\pntext\f6\'B7\tab}numeric\par
-{\pntext\f6\'B7\tab}programmable\par
-{\pntext\f6\'B7\tab}peux executer des operations elementaire\par
-{\pntext\f6\'B7\tab}peux enregistrer un programme en memoire, et l'exicuter\par
-{\pntext\f6\'B7\tab}?a ete construite, n'est pas que theorique\par
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 electonique\par
+{\pntext\f7\'B7\tab}numeric\par
+{\pntext\f7\'B7\tab}programmable\par
+{\pntext\f7\'B7\tab}peux executer des operations elementaire\par
+{\pntext\f7\'B7\tab}peux enregistrer un programme en memoire, et l'exicuter\par
+{\pntext\f7\'B7\tab}?a ete construite, n'est pas que theorique\par
 
 \pard\sa200\sl276\slmult1 la premiere generation commence en 1936 avec circuits \'e9lectroniques, tubes \'e0 vide, condensateurs et relais.\par
 \highlight2 Chapitre 2: Comment Ca Marche\highlight0\par
@@ -468,9 +468,16 @@ def puissance(x,n):\par
 7.2.3. Coefficients binomiaux\par
 La fonction C(n, p) --> le nombre de mani\'e8res de prendre p \'e9l\'e9ments parmi n. \line C(n+1, p+1) = C(n, p) + C(n, p+1) (formule de Pascal)\par
 def C(n,p):\line\tab if (n>p) and (p>0):\line\tab\tab return C(n-1,p-1)+C(n-1,p)\line\tab else:\line\tab\tab return 1\par
-\highlight3 7.3. Les dangers de la r\'e9cursivit\'e9\highlight0\par
+\highlight3 7.3. Les dangers de la r\'e9cursivit\'e9\par
+\highlight0 appeler le programme multiple fois pour calculer ce qui a deja eter calculer --> pas efficace \par
+\f6 algorithmes r\f5\'e9cursifs n\'e9cessite souvent une pile (stack), peux etre difficile a implementer\par
+arguments en faveur de la pr\'e9sentation r\'e9cursive :\par
+\bullet  permet de pr\'e9senter simplement des algorithmes plus astucieux et efficaces\par
+\bullet  Les compilateurs d'aujourd'hui peuvent mettre en \f6\u339?uvre leurs\f5\lang4105  \f6\lang1033 optimisations et aboutir \f5\'e0 des codes objets efficaces.\par
+\bullet  Des structures de donn\'e9es r\'e9cursives ont \'e9t\'e9 con\'e7ues pour leur efficacit\'e9, mais innutile pour les algorithmes non r\'e9cursifs.\par
+compilateur = programme qui transforme un code source \'e9crit dans un langage de programmation (le langage source) en un autre langage informatique (le langage cible).\par
+\highlight3 7.4. Les tours de Hano\'ef\highlight0\par
 a\par
-\par
 \par
 \par
 \par
