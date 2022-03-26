@@ -477,10 +477,18 @@ arguments en faveur de la pr\'e9sentation r\'e9cursive :\par
 \bullet  Des structures de donn\'e9es r\'e9cursives ont \'e9t\'e9 con\'e7ues pour leur efficacit\'e9, mais innutile pour les algorithmes non r\'e9cursifs.\par
 compilateur = programme qui transforme un code source \'e9crit dans un langage de programmation (le langage source) en un autre langage informatique (le langage cible).\par
 \highlight3 7.4. Les tours de Hano\'ef\highlight0\par
+les tours de Hano\'ef = jeu de r\'e9flexion. but = d\'e9placer des disques de diam\'e8tres diff\'e9rents d'une tour de \'ab d\'e9part \'bb \'e0 une tour d' \'ab arriv\'e9e \'bb (avec une tour \'ab interm\'e9diaire \'bb), en un minimum de coups\line les r\'e8gles:\line\bullet  on peut d\'e9placer que un disque \'e0 la fois\line\bullet  on peut placer un disque sur un autre disque plus grand ou sur un emplacement vide\par
+jeu \'e0 64 disques = minimum de 2^64 -1 = \b 18,446,744,073,709,551,616\b0  d\'e9placements\par
+d\'e9placer n disques de A vers C en passant par B consiste \'e0 :\par
+ \tab 1. d\'e9placer (n-1) disques de A vers B (en passant par C);\par
+\tab  2. d\'e9placer le plus grand disque de A vers C ;\par
+ \tab 3. d\'e9placer (n-1) disques de B vers C (en passant par A). \par
+7.4.2. R\'e9solution it\'e9rative\par
+effectuer successivement les deux d\'e9placements suivants, iterativement :\line\bullet  d\'e9placer le plus petit disque d'un emplacement \'e0 l'emplacement suivant (de A vers B, de B vers C, ou de C vers A)\line\bullet  d\'e9placer un autre disque\par
+7.4.3. Hano\'ef, Pascal et Sierpinski\par
+Si l'on repr\'e9sente sur un graphique tous les mouvements possibles des tours de Hano\'ef, on obtient une figure fractale. Ce triangle ressemble \'e0 deux autres triangles c\'e9l\'e8bres : le triangle de Pascal et  de Sierpinski \par
+\highlight3 7.5. Le compte est bon\highlight0\par
 a\par
-\par
-\par
-\par
 \par
 \par
 \par
