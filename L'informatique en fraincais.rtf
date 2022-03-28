@@ -488,7 +488,12 @@ effectuer successivement les deux d\'e9placements suivants, iterativement :\line
 7.4.3. Hano\'ef, Pascal et Sierpinski\par
 Si l'on repr\'e9sente sur un graphique tous les mouvements possibles des tours de Hano\'ef, on obtient une figure fractale. Ce triangle ressemble \'e0 deux autres triangles c\'e9l\'e8bres : le triangle de Pascal et  de Sierpinski \par
 \highlight3 7.5. Le compte est bon\highlight0\par
-ans\par
+Le principe du jeu\par
+En choisissant 6 nombres (on peut choisir plusieurs fois le m\'eame) dans l'ensemble \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25, 50, 75, 100\} et en leur appliquant les quatre op\'e9rations \'e9l\'e9mentaires (addition, soustraction, multiplication et division), il s'agit d'atteindre le r\'e9sultat demand\'e9 (possible dans 94% des cas). Tous les r\'e9sultats des calculs interm\'e9diaires doivent \'eatre des nombres entiers positifs. Chacun des nombres (parmi ceux de d\'e9part et ceux obtenus par un calcul interm\'e9diaire) ne peut \'eatre utilis\'e9 qu'une fois au plus. \par
+Exemple : atteindre 952 avec les nombres 25, 50, 75, 100, 3, 6.\line 100 + 3 = 103\line 103 x 6 = 618\line 618 x 75 = 46350\line 46350 / 50 = 927\line 927 + 25 = 952\par
+Algorithme de r\'e9solution\line 1. on s\'e9lectionne une paire de nombres\line 2. on fait une op\'e9ration sur cette paire\line 3. si on a trouv\'e9 le nombre voulu, STOP\line 4. on sauvegarde le tableau courant dans un tableau auxiliaire\line 5. on remplace les deux nombres utilis\'e9s par le r\'e9sultat de l'op\'e9ration. On obtient donc un tableau auxiliaire plus petit d'un \'e9l\'e9ment\line 6. on trie le tableau auxiliaire par ordre d\'e9croissant\line 7. on fait un appel r\'e9cursif pour recommencer le raisonnement sur ce tableau\line 8. si on n'a pas fini les quatre op\'e9rations, aller \'e0 2\line 9. si on n'a pas fini toutes les paires, aller \'e0 1\par
+\highlight3 7.6. R\'e9solution d'un Sudoku\par
+\highlight0 a\par
 \par
 \par
 \par
