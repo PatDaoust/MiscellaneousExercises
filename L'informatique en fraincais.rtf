@@ -493,7 +493,25 @@ En choisissant 6 nombres (on peut choisir plusieurs fois le m\'eame) dans l'ense
 Exemple : atteindre 952 avec les nombres 25, 50, 75, 100, 3, 6.\line 100 + 3 = 103\line 103 x 6 = 618\line 618 x 75 = 46350\line 46350 / 50 = 927\line 927 + 25 = 952\par
 Algorithme de r\'e9solution\line 1. on s\'e9lectionne une paire de nombres\line 2. on fait une op\'e9ration sur cette paire\line 3. si on a trouv\'e9 le nombre voulu, STOP\line 4. on sauvegarde le tableau courant dans un tableau auxiliaire\line 5. on remplace les deux nombres utilis\'e9s par le r\'e9sultat de l'op\'e9ration. On obtient donc un tableau auxiliaire plus petit d'un \'e9l\'e9ment\line 6. on trie le tableau auxiliaire par ordre d\'e9croissant\line 7. on fait un appel r\'e9cursif pour recommencer le raisonnement sur ce tableau\line 8. si on n'a pas fini les quatre op\'e9rations, aller \'e0 2\line 9. si on n'a pas fini toutes les paires, aller \'e0 1\par
 \highlight3 7.6. R\'e9solution d'un Sudoku\par
-\highlight0 a\par
+\highlight0 backtracking = retour sur trace = m\'e9thode qui consiste \'e0 revenir l\'e9g\'e8rement en arri\'e8re sur des d\'e9cisions prises afin de sortir d'un blocage = strat\'e9gie pour trouver des solutions \'e0 des probl\'e8mes de satisfaction de contraintes.\par
+La grille de 9 cases sur 9 sera impl\'e9ment\'e9e par une liste de 81 \'e9l\'e9ments.  Chaque \'e9l\'e9ment = chiffre de 0 \'e0 9.  0 = case vide.\par
+La fonction conflit(i,j) permet de savoir si les cases i et j sont dans la m\'eame colonne, ligne, ou bloc.\par
+r\'e9soudre(s) = fonction r\'e9cursive = c\f6\u339?ur du programme.\par
+Le param\f5\'e8tre s = la grille du Sudoku = liste\par
+Pour chaque case vide, on essaiera les chiffres possibles en allant de 1 \'e0 9. Si un chiffre est possible, on l'\'e9crit (peut-\'eatre provisoirement) et on passe \'e0 la case vide suivante\par
+Il arrivera forc\'e9ment un moment o\'f9 l'on sera bloqu\'e9 : aucun chiffre de 1 \'e0 9 ne pourra \'eatre plac\'e9. On revient alors une case en arri\'e8re et on essaie un autre chiffre. Si on trouve une nouvelle possibilit\'e9, on remplace l'ancienne et on pourra continuer d'avancer. Sinon, on efface la valeur \'e9crite et on revient encore une case en arri\'e8re pour un autre essai. Et ainsi de suite. Il est tout \'e0 fait possible que l'on doive ainsi remonter jusqu'\'e0 la premi\'e8re case\par
+recherche exhaustive = recherche par force brute =n'utilise aucun raisonnement =  technique extr\'eamement simple et tr\'e8s g\'e9n\'e9rale.\par
+\highlight3 7.7. Les fractales\highlight0\par
+s\par
+\par
+\par
+\par
+\par
+\par
+\par
+j\par
+\par
+\par
 \par
 \par
 \par
