@@ -502,8 +502,13 @@ Pour chaque case vide, on essaiera les chiffres possibles en allant de 1 \'e0 9.
 Il arrivera forc\'e9ment un moment o\'f9 l'on sera bloqu\'e9 : aucun chiffre de 1 \'e0 9 ne pourra \'eatre plac\'e9. On revient alors une case en arri\'e8re et on essaie un autre chiffre. Si on trouve une nouvelle possibilit\'e9, on remplace l'ancienne et on pourra continuer d'avancer. Sinon, on efface la valeur \'e9crite et on revient encore une case en arri\'e8re pour un autre essai. Et ainsi de suite. Il est tout \'e0 fait possible que l'on doive ainsi remonter jusqu'\'e0 la premi\'e8re case\par
 recherche exhaustive = recherche par force brute =n'utilise aucun raisonnement =  technique extr\'eamement simple et tr\'e8s g\'e9n\'e9rale.\par
 \highlight3 7.7. Les fractales\highlight0\par
-s\par
-\par
+figure fractale = une courbe ou surface de forme irr\'e9guli\'e8re ou morcel\'e9e qui se cr\'e9e en suivant des r\'e8gles d\'e9terministes ou stochastiques impliquant une homoth\'e9tie interne. \par
+auto-similarit\'e9 = Si l'on ne regarde qu'une des pointes, on a l'impression de voir l'entier\par
+antenne fractale = emaximise la longueur efficace ou encore d'augmenter le p\'e9rim\'e8tre de mat\'e9riau pouvant recevoir ou transmettre un rayonnement \'e9lectromagn\'e9tique dans une surface ou un volume total donn\'e9. tr\'e8s compactes, multibandes ou \'e0 large bande\par
+7.7.1. La courbe du dragon. construction = \line Si t = 0, 'ordinateur doit dessiner une ligne. C'est la base (ou l'initiateur). La longueur a peu d'importance. On d\'e9finit la longueur une fois avec s. La commande tortue est : av(s).\line Sinon, si t > 0 : Dragon(t) = Dragon (t-1) \u9488? Dragon (t -1). C'est la r\'e8gle de r\'e9cursivit\'e9 (ou le g\'e9n\'e9rateur).\par
+7.7.2. Le flocon de von Koch\par
+en modifiant r\'e9cursivement chaque segment de droite de la fa\'e7on suivante :\line 1. On divise le segment de droite en trois segments de longueurs \'e9gales.\line 2. On construit un triangle \'e9quilat\'e9ral ayant pour base le segment m\'e9dian de la premi\'e8re \'e9tape.\line 3. On supprime le segment de droite qui \'e9tait la base du triangle de la deuxi\'e8me \'e9tape\par
+flocon de von Koch = partant d'un triangle \'e9quilat\'e9ral au lieu d'un segment de droite, et en effectuant les modifications en orientant les triangles vers l'ext\'e9rieur.\par
 \par
 \par
 \par
