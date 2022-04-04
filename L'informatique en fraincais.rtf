@@ -528,13 +528,44 @@ but = placer huit dames sur un \'e9chiquier de 8 x 8 cases sans que les dames ne
 algorithme glouton = greedy = suit le principe de faire un choix optimum local, \'e9tape par \'e9tape dans l'espoir d'obtenir un r\'e9sultat optimum global. Il n'y a pas de retour en arri\'e8re \par
 Exemple : rendu de monnaie. but = donner une somme avec le moins possible de pi\'e8ces = r\'e9p\'e9ter le choix de la pi\'e8ce de plus grande valeur qui ne d\'e9passe pas la somme restante \par
 \highlight3 9.4. Algorithmes de tri\highlight0\par
-j\par
+caract\'e9ristiques qui permettent de diff\'e9rencier les algorithmes = complexit\'e9 algorithmique et les ressources n\'e9cessaires (notamment en terme d'espace m\'e9moire utilis\'e9)\par
+la complexit\'e9 temporelle en moyenne et dans le pire des cas d'un algorithmebas\'e9 sur une fonction de comparaison ne peut pas \'eatre meilleure que O(nlog(n)). \par
+9.4.1. Tri par s\'e9lection = triviaux = On recherche le plus grand \'e9l\'e9ment que l'on va replacer \'e0 sa position finale. repete jusqu'\'e0 ce que le tableau soit enti\'e8rement tri\'e9.\line Complexit\'e9\line\bullet  Meilleur des cas : O(n**2) quand le tableau est d\'e9j\'e0 tri\'e9\line\bullet  Pire cas : O(n**2) quand le tableau est tri\'e9 en ordre inverse\line\bullet  En moyenne : O(n**2)\par
+9.4.2. Tri \'e0 bulles = Bubble sort = faire remonter progressivement les plus petits \'e9l\'e9ments d'une liste, comme les bulles d'air remontent \'e0 la surface d'un liquide =  parcourt la liste, et compare les couples d'\'e9l\'e9ments successifs. Lorsque deux \'e9l\'e9ments successifs ne sont pas dans l'ordre croissant, ils sont \'e9chang\'e9s.  l'algorithme recommence, juste a ce que aucun \'e9change n'a lieu pendant un parcours\line Complexit\'e9 \line\bullet  Meilleur des cas : O(n) quand le tableau est d\'e9j\'e0 tri\'e9\line\bullet  Pire cas : O(n**2) \par
+9.4.3. Tri par insertion = le plus efficace sur des listes de petite taille. utilis\'e9  Quicksort. plus rapide quand les donn\'e9es sont d\'e9j\'e0 tri\'e9es. On prend un \'e9l\'e9ments et on le met \'e0 sa place parmi les \'e9l\'e9ments d\'e9j\'e0 tri\'e9s. repete.\line Complexit\'e9\line\bullet  Pire cas : O(n**2) quand le tableau est tri\'e9 en ordre inverse\line\bullet  Moyenne : O(n**2)\par
+9.4.4. Quicksort = diviser pour r\'e9gner = un des tris les plus rapide pour des donn\'e9es r\'e9parties al\'e9atoirement = placer un \'e9l\'e9ment du tableau (pivot) \'e0 sa place d\'e9finitive, en permutant tous les \'e9l\'e9ments pour que ceux qui lui sont inf\'e9rieurs \'e0 sa gauche et ceux qui lui sont sup\'e9rieurs \'e0 sa droite = le partitionnement. Pour chacun des sous-tableaux, repete.\line en pratique, pour les partitions avec un faible nombre d'\'e9l\'e9ments (~15 \'e9l\'e9ments), on a souvent recours \'e0 un tri par insertion qui se r\'e9v\'e8le plus efficace que le Quicksort.\line probl\'e8me le plus important = choix du pivot. ideal = element central\line Complexit\'e9\line\bullet  Pire des cas : O(n**2) quand le tableau est tri\'e9 en ordre inverse\line\bullet  En moyenne et dans le meilleur des cas : O(nlog(n)) \par
+\f0 9.4.5. Tri par fusion = Mergesort = utilise O(n) m\'e9moire suppl\'e9mentaire\par
+ stable = ne m\'e9langer pas ce qui est d\'e9j\'e0 tri\'e9.\par
+algorithme it\'e9ratif :\line 1. On trie les \'e9l\'e9ments deux \'e0 deux.\line 2. On fusionne les listes obtenues.\line 3. On recommence l'op\'e9ration pr\'e9c\'e9dente jusqu'\'e0 ce qu'on ait une seule liste tri\'e9e.\par
+Complexit\'e9\line\f1\bullet  Moyenne et pire des cas : O(nlog(n)) \f0\par
+9.4.6. Tri par tas = Heapsort = faible consommation m\'e9moire \par
+Complexit\'e9\par
+
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 pire des cas: O(n log (n)) \line\par
+
+\pard\sa200\sl276\slmult1 id\'e9e = voir le tableau comme un arbre binaire. 1er \'e9l\'e9ment = la racine. 2em + 3em = descendants du 1er, etc.\par
+but = un tas = arbre binaire qui:\line\f1\bullet  la diff\f0\'e9rence maximale de profondeur entre deux feuilles est de 1 (i.e. toutes les feuilles se trouvent sur la derni\'e8re ou sur l'avant-derni\'e8re ligne) ;\line\f1\bullet  les feuilles de profondeur maximale sont \f0\'ab tass\'e9es \'bb sur la gauche.\line\f1\bullet  chaque n\f2\u339?ud est de valeur sup\f0\'e9rieure \'e0 celles de ses deux fils, pour un tri ascendant.\par
+arbre binaire peut \'eatre stock\'e9 dans un tableau = posant que les deux descendants de l'\'e9l\'e9ment d'indice n sont les \'e9l\'e9ments d'indices 2n+1 et 2n+2 \par
+tamisage = suppos\'e9 le seul \'e9l\'e9ment \'ab mal plac\'e9 \'bb dans un arbre qui est presque un tas. \par
+consid\'e9rons un arbre T = T[0] dont les deux sous-arbres (T[1] et T[2]) sont des tas, tandis que la racine est \'e9ventuellement plus petite que ses fils. tamisage = \'e9changer la racine avec le plus grand de ses fils, repete jusqu'\'e0 ce qu'elle soit \'e0 sa place.\par
+Pour construire un tas \'e0 partir d'un arbre quelconque = tamise les racines de chaque sous-tas, de bas en haut, et de droite \'e0 gauche.\par
+Pour trier un tableau \'e0 partir de ces op\'e9rations, on commence par le transformer en tas. On\par
+\'e9change la racine avec le dernier \'e9l\'e9ment du tableau, et on restreint le tas en ne touchant plus au\par
+dernier \'e9l\'e9ment, c'est-\'e0-dire \'e0 l'ancienne racine. On tamise la racine dans le nouveau tas, et on r\'e9p\'e8te\par
+l'op\'e9ration sur le tas restreint jusqu'\'e0 l'avoir vid\'e9 et remplac\'e9 par un tableau tri\'e9.\par
 \par
 \par
 \par
 \par
 \par
-\f0\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
 chattons\par
 \par
 \par
