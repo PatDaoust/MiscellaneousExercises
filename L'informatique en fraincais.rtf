@@ -538,28 +538,14 @@ la complexit\'e9 temporelle en moyenne et dans le pire des cas d'un algorithmeba
  stable = ne m\'e9langer pas ce qui est d\'e9j\'e0 tri\'e9.\par
 algorithme it\'e9ratif :\line 1. On trie les \'e9l\'e9ments deux \'e0 deux.\line 2. On fusionne les listes obtenues.\line 3. On recommence l'op\'e9ration pr\'e9c\'e9dente jusqu'\'e0 ce qu'on ait une seule liste tri\'e9e.\par
 Complexit\'e9\line\f1\bullet  Moyenne et pire des cas : O(nlog(n)) \f0\par
-9.4.6. Tri par tas = Heapsort = faible consommation m\'e9moire \par
-Complexit\'e9\par
-
-\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 pire des cas: O(n log (n)) \line\par
-
-\pard\sa200\sl276\slmult1 id\'e9e = voir le tableau comme un arbre binaire. 1er \'e9l\'e9ment = la racine. 2em + 3em = descendants du 1er, etc.\par
+9.4.6. Tri par tas = Heapsort = faible consommation m\'e9moire. id\'e9e = voir le tableau comme un arbre binaire. 1er \'e9l\'e9ment = la racine. 2em + 3em = descendants du 1er, etc.\par
 but = un tas = arbre binaire qui:\line\f1\bullet  la diff\f0\'e9rence maximale de profondeur entre deux feuilles est de 1 (i.e. toutes les feuilles se trouvent sur la derni\'e8re ou sur l'avant-derni\'e8re ligne) ;\line\f1\bullet  les feuilles de profondeur maximale sont \f0\'ab tass\'e9es \'bb sur la gauche.\line\f1\bullet  chaque n\f2\u339?ud est de valeur sup\f0\'e9rieure \'e0 celles de ses deux fils, pour un tri ascendant.\par
 arbre binaire peut \'eatre stock\'e9 dans un tableau = posant que les deux descendants de l'\'e9l\'e9ment d'indice n sont les \'e9l\'e9ments d'indices 2n+1 et 2n+2 \par
 tamisage = suppos\'e9 le seul \'e9l\'e9ment \'ab mal plac\'e9 \'bb dans un arbre qui est presque un tas. \par
 consid\'e9rons un arbre T = T[0] dont les deux sous-arbres (T[1] et T[2]) sont des tas, tandis que la racine est \'e9ventuellement plus petite que ses fils. tamisage = \'e9changer la racine avec le plus grand de ses fils, repete jusqu'\'e0 ce qu'elle soit \'e0 sa place.\par
 Pour construire un tas \'e0 partir d'un arbre quelconque = tamise les racines de chaque sous-tas, de bas en haut, et de droite \'e0 gauche.\par
-Pour trier un tableau \'e0 partir de ces op\'e9rations, on commence par le transformer en tas. On\par
-\'e9change la racine avec le dernier \'e9l\'e9ment du tableau, et on restreint le tas en ne touchant plus au\par
-dernier \'e9l\'e9ment, c'est-\'e0-dire \'e0 l'ancienne racine. On tamise la racine dans le nouveau tas, et on r\'e9p\'e8te\par
-l'op\'e9ration sur le tas restreint jusqu'\'e0 l'avoir vid\'e9 et remplac\'e9 par un tableau tri\'e9.\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
+\f5 Complexit\'e9\line\bullet  Pire des cas : \f0 O(n log (n)) \f5\line\highlight3 9.5. Tester si un point est dans un polygone\highlight0\par
+a\f0\par
 \par
 \par
 \par
