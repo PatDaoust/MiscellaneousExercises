@@ -545,8 +545,13 @@ tamisage = suppos\'e9 le seul \'e9l\'e9ment \'ab mal plac\'e9 \'bb dans un arbre
 consid\'e9rons un arbre T = T[0] dont les deux sous-arbres (T[1] et T[2]) sont des tas, tandis que la racine est \'e9ventuellement plus petite que ses fils. tamisage = \'e9changer la racine avec le plus grand de ses fils, repete jusqu'\'e0 ce qu'elle soit \'e0 sa place.\par
 Pour construire un tas \'e0 partir d'un arbre quelconque = tamise les racines de chaque sous-tas, de bas en haut, et de droite \'e0 gauche.\par
 \f5 Complexit\'e9\line\bullet  Pire des cas : \f0 O(n log (n)) \f5\line\highlight3 9.5. Tester si un point est dans un polygone\highlight0\par
-a\f0\par
-\par
+\bullet  Tracer une demi-droite \'e0 partir du point vers l'infini.\line\bullet  Calculer le nombre L d'intersections entre cette demi-droite et les c\'f4t\'e9s du polygone.\line\bullet  Un nombre L impair indique que le point est \'e0 l'int\'e9rieur.\line\bullet  Il faut bien s\'fbr faire attention aux coins qui tombent juste sur la demi-droite.\par
+9.5.1. Pour savoir si deux segments se coupent\par
+m\'e9thode pour localiser un point P par rapport \'e0 une ligne passant par les points P0 et P1 = utiliser les d\'e9terminants. \par
+d\'e9terminant = comme une aire sign\'e9e.\par
+SI orientation(Q0,Q1,P0) \f3\'b9\f5  orientation(Q0,Q1,P1)\line ET orientation(P0,P1,Q0) \f3\'b9\f5  orientation(P0,P1,Q1) ALORS\line\tab RETOURNER \'ab les deux segments se coupent \'bb \f0\par
+\highlight3 9.6. Enveloppe convexe\par
+\highlight0 a\par
 \par
 \par
 \par
