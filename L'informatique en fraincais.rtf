@@ -551,7 +551,17 @@ m\'e9thode pour localiser un point P par rapport \'e0 une ligne passant par les 
 d\'e9terminant = comme une aire sign\'e9e.\par
 SI orientation(Q0,Q1,P0) \f3\'b9\f5  orientation(Q0,Q1,P1)\line ET orientation(P0,P1,Q0) \f3\'b9\f5  orientation(P0,P1,Q1) ALORS\line\tab RETOURNER \'ab les deux segments se coupent \'bb \f0\par
 \highlight3 9.6. Enveloppe convexe\par
-\highlight0 a\par
+\highlight0 planche avec des clous + Englobons ces points avec un \'e9lastique = Le polygone obtenu = l'enveloppe convexe = convex hull\par
+9.6.1. Marche de Jarvis = Gift wrapping algorithm = \'ab enveloppe \'bb un ensemble de points dans un \'ab papier cadeau \'bb = accroche point initial p1 + on tourne autour du nuage de points, retourne a p0. Il ne doit y avoir aucun point \'e0 gauche du prochain segment pi pi+1. On s'arr\'eate lorsque pi+1 = p0.\par
+Complexit\'e9 = O(nh). \line n = le nombre total de sommets. \line h =nombre de sommets de l'enveloppe convexe. \par
+9.6.2. Parcours de Graham (Graham's scan)\par
+1er \'e9tape = rechercher le point le plus \'e0 gauche = P0. complexit\'e9 de cette \'e9tape est en O(n), n =nombre de points de l'ensemble.\par
+2em etape = Les autres points Pi sont  tri\'e9s en fonction de la pente du segment P0Pi, de la plus grande pente \'e0 la plus petite -> tableau T contenant les points ainsi tri\'e9s.  Complexit\'e9 = O(nlog(n)). \par
+3em etape = consid\'e8re successivement les s\'e9quences de trois points contigus dans le tableau T, vus comme deux segments successifs. complexite = O(n**2)\line\f1\bullet  Si l'on rencontre un \f0\'ab tournant \'e0 droite \'bb, l'algorithme passe au point suivant de T.\line\f1\bullet  Si c'est un \f0\'ab tournant \'e0 gauche \'bb, cela signifie que l'avant-dernier point consid\'e9r\'e9 (le deuxi\'e8me des trois) ne fait pas partie de l'enveloppe convexe, et qu'il doit \'eatre enlev\'e9 de T.\line termine quand on retombera sur le point P0. \par
+complexit\'e9 globale = O(nlog(n))\par
+\par
+\par
+\par
 \par
 \par
 \par
