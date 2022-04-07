@@ -568,13 +568,20 @@ jeu = id\'e9al pour IA =r\'e8gles simples et peu nombreuses + les situations bie
 IA peut \'eatre utilis\'e9e pour piloter des bots  dans les MMOGs \par
 obstacles:\line pas de strat\'e9gie unique gagnante, et l'IA doit constamment s'adapter.\line information est incompl\'e8te, les joueurs d\'e9couvrant la carte au fur et \'e0 mesure. \line relation de cause \'e0 effet n'est pas imm\'e9diate, et il faut \'eatre capable de planifier \'e0 long terme. \line jeu se d\'e9roule en temps r\'e9el, plut\'f4t qu'au tour par tour. \line nombre d'actions possibles est gigantesque\par
 Deep Learning = r\'e9seau neuronal profond ainsi que l'apprentissage supervis\'e9 qui s'apparente \'e0 l'apprentissage par renforcement qui vise \'e0 obtenir une r\'e9compense maximale.\par
-10.1.2. Jeux de r\'e9flexion\par
+10.1.2. Jeux de r\'e9flexionghbv\par
 les principes de la logique floue pour am\'e9liorer son jeu au cours de ces phases d'intrainement\par
 la taille tr\'e8s approximative de l'arbre des possibilit\'e9s du jeu de go est environ de 10**600\par
 10.1.3. Jeux de connaissance\par
 \highlight3 10.2. Jeu avec strat\'e9gie gagnante : Marienbad\par
-\highlight0 a\par
-\par
+\highlight0 jeu de soci\'e9t\'e9 combinatoire, plusieurs variantes. dans \'e0 la famille plus large des jeux de Nim.\par
+Dans la version du film = quatre rang\'e9es, avec respectivement 1, 3, 5, 7 allumettes.  \'c0 chaque tour, le joueur prend le nombre d'allumettes qu'il veut, au moins une et dans une m\'eame rang\'e9e. Celui qui prend la derni\'e8re allumette a perdu\par
+Strat\'e9gie gagnante repose sur le syst\'e8me binaire. \par
+La position de d\'e9part \line 1 = 0 0 1 \line 3 = 0 1 1 \line 5 = 1 0 1 \line 7 = 1 1 1 \par
+les sommes des chiffres du binaire colonne par colonne en base dix, on trouve \line S = 2 2 4 \line Tous les chiffres de S sont pairs. \par
+Le joueur qui d\'e9butera la partie perdra si son adversaire prend le soin de conserver cette propri\'e9t\'e9 de S tant que ce nombre poss\'e8de au moins deux chiffres. En fin de partie, il convient de choisir S = 3 ou S = 1 pour l'emporter.\par
+on voit qu'il existe un chemin = kernel = ensemble de n\f2\u339?uds\f0\lang4105 = \f2\lang1033  de coups gagnants. un joueur qui se trouve dans une \f0\lang4105  \f2\lang1033 situation\f0\lang4105  \f2\lang1033 gagnante et qui conna\f0\'eet l'astuce est s\'fbr de gagner \'e0 la fin. Le joueur qui ne commence pas est dans le kernel (S pair) et est donc s\'fbr de gagner quelles que soient les actions de l'adversaire (pourvu qu'il connaisse l'astuce= reste dans le kernel). Son adversaire n'a pas son destin entre ses mains.\par
+\highlight3 10.3. Utilisation de la force brute : Mastermind \highlight0\par
+a\par
 \par
 \par
 \par
