@@ -581,9 +581,13 @@ les sommes des chiffres du binaire colonne par colonne en base dix, on trouve \l
 Le joueur qui d\'e9butera la partie perdra si son adversaire prend le soin de conserver cette propri\'e9t\'e9 de S tant que ce nombre poss\'e8de au moins deux chiffres. En fin de partie, il convient de choisir S = 3 ou S = 1 pour l'emporter.\par
 on voit qu'il existe un chemin = kernel = ensemble de n\f2\u339?uds\f0\lang4105 = \f2\lang1033  de coups gagnants. un joueur qui se trouve dans une \f0\lang4105  \f2\lang1033 situation\f0\lang4105  \f2\lang1033 gagnante et qui conna\f0\'eet l'astuce est s\'fbr de gagner \'e0 la fin. Le joueur qui ne commence pas est dans le kernel (S pair) et est donc s\'fbr de gagner quelles que soient les actions de l'adversaire (pourvu qu'il connaisse l'astuce= reste dans le kernel). Son adversaire n'a pas son destin entre ses mains.\par
 \highlight3 10.3. Utilisation de la force brute : Mastermind \highlight0\par
+jeu de d\'e9duction = un plateau perfor\'e9 de 10 rang\'e9es de quatre trous pouvant accueillir des boules de couleurs. Il y a \'e9galement des pions blancs et noirs\par
+joueur 1 commence par placer des boules sans qu'elles soient vues de l'autre joueur.\line joueur 2 doit trouver la couleur et position des quatre boules.\line\'e0 chaque tour, le joueur se ser de boules pour remplir une rang\'e9e selon l'id\'e9e qu'il se fait des boules dissimul\'e9es. L'autre joueur indique alors :\line 1. le nombre de boules de la bonne couleur bien plac\'e9es , avec les pions noirs ;\line 2. le nombre de boules de la bonne couleur, mais mal plac\'e9es, avec les pions blancs.\par
+Comment l'ordinateur trouve la solution:\par
+construire une liste de toutes les k**n solutions possibles\line n = le nombre d'emplacements \line k = nombre de couleurs des boules\par
+force brute = on passe en revue toutes les possibilit\'e9s et on \'e9limine celles qui ne vont pas\par
+\highlight3 10.4. Les trois piliers d'un jeu de strat\'e9gie\highlight0\par
 a\par
-\par
-\par
 \par
 \par
 \par
