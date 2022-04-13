@@ -630,8 +630,23 @@ commutateur r\'e9seau = switch= \'e9quipement qui relie plusieurs segments (c\'e
 routeur =\'e9l\'e9ment physique interm\'e9diaire dans un r\'e9seau informatique assurant le routage des paquets = transite des paquets d'une interface r\'e9seau vers une autre. Quand un tombe en panne, selon l'architecture globale du r\'e9seau, un autre peut prendre le relais.\par
 la box = c\f2\u339?ur du r\f0\'e9seau domestique = bo\'eetier polyvalent qui offre aussi un switch et le Wi-Fi. \par
 \highlight3 12.2. Mod\'e8les en couches\highlight0\par
-a\par
-\par
+La communication passe par un ensemble de couches empil\'e9es :\par
+\f1 chaque couche a un r\f0\'f4le pr\'e9cis (e.g conversion, routage, d\'e9coupage, v\'e9rification...)\par
+\f1 chaque couche fournit des services \f0\'e0 la couche au-dessus, et utilise les services de la couche en-dessous.\par
+\f1 chaque couche encapsule les donn\f0\'e9es venant de la couche du dessus en y ajoutant ses propres informations avant de le passer \'e0 la couche du dessous (et op\'e9ration inverse dans l'autre sens).\par
+12.2.1.Mod\'e8le OSI = Open Systems Interconnection = standard de communication en r\'e9seau  de tous les syst\'e8mes informatiques. comporte sept couches.\par
+1. couche \'ab physique \'bb = charg\'e9e de la transmission effective des signaux entre les interlocuteurs. Son service est limit\'e9 \'e0 l'\'e9mission et la r\'e9ception d'un bit ou d'un train de bit \par
+2. couche \'ab liaison de donn\'e9es \'bb = g\'e8re les communications entre deux machines adjacentes, directement reli\'e9es entre elles par un support physique.\par
+3. couche \'ab r\'e9seau \'bb = g\'e8re les communications de proche en proche, g\'e9n\'e9ralement entre machines : routage et adressage des paquets.\par
+4. couche \'ab transport \'bb = g\'e8re les communications de bout en bout entre processus (programmes en cours d'ex\'e9cution).\par
+5. couche \'ab session \'bb = g\'e8re la synchronisation des \'e9changes et les \'ab transactions \'bb, permet l'ouverture et la fermeture de session.\par
+6. couche \'ab pr\'e9sentation \'bb = charg\'e9e du codage des donn\'e9es applicatives, pr\'e9cis\'e9ment de la conversion entre donn\'e9es manipul\'e9es au niveau applicatif et cha\'eenes d'octets effectivement transmises.\par
+7. couche \'ab application \'bb = est le point d'acc\'e8s aux services r\'e9seaux, elle n'a pas de service propre sp\'e9cifique et entrant dans la port\'e9e de la norme.\par
+12.2.2.TCP/IP = mod\'e8le Internet =approche modulaire,  de quatre couches: application + transport + internet + interface reseau. plus souple, plus utiliser. \par
+Encapsulation des donn\'e9es/IP\par
+Lors d'une transmission, les donn\'e9es traversent chacune des couches au niveau de la machine \'e9mettrice. \'c0 chaque couche, un en-t\'eate, est ajout\'e9e au paquet de donn\'e9es. Au niveau de la machine r\'e9ceptrice, lors du passage dans chaque couche, l'en-t\'eate est lu, puis supprim\'e9. Ainsi, \'e0 la r\'e9ception, le message est dans son \'e9tat originel.\par
+\highlight3 12.3. Internet\par
+\highlight0 a\par
 \par
 \par
 \par
