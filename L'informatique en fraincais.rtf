@@ -665,9 +665,17 @@ Les principaux protocol:\par
 \f1\bullet  NNTP \f0\lang4105 = \f1\lang1033 Network News Transfer Protocol\f0\lang4105  =\f1\lang1033  protocole de transfert de message utilis\f0\'e9 par les forums de discussion Usenet\par
 \f1\bullet  SSL \f0\lang4105 =\f1\lang1033  protocoles de transaction s\f0\'e9curis\'e9e, utilis\'e9s notamment pour le paiement s\'e9curis\'e9.\par
 \f1\bullet  DNS \f0\lang4105 = \f1\lang1033 Domain Name System\f0\lang4105  = \f1\lang1033 syst\f0\'e8me de r\'e9solution de noms Internet.\par
-\par
-\par
-\par
+ paquets = unit\'e9s \'e9l\'e9mentaires d'l'information, qui circule dans un reseaux. Chaque paquet circule ind\'e9pendamment des autres = suite d'octets \par
+packet IP = contient un en-t\'eate indiquant une  destination identifi\'e9e par une suite de 4 octets\par
+adresse IP = adresse unique attribu\'e9e \'e0 chaque appareil d'un r\'e9seau = 4 nombres (entre 0 et 255) format ddd.ddd.ddd.ddd = contient 2 informations essentielles : \f1 num\f0\'e9ro du r\'e9seau auquel appartient la machine + \f1 num\f0\'e9ro de la machine sur le r\'e9seau.\par
+masque de sous-r\'e9seau = autre groupe de 4 nombres pour savoir quels nombres correspondent au num\'e9ro du r\'e9seau et lesquels correspondent au num\'e9ro de la machine sur le r\'e9seau\line masque = 255 = nombrecorrespondant de l'adresse IP fait partie du num\'e9ro de r\'e9seau \line masque = 0 = nombre correspondant de l'adresse IP fait partie du num\'e9ro de la machine\par
+r\'e9seau = routeurs + liens de communication. \par
+h\'f4te = machine qui est ainsi mises en relation par un r\'e9seau\par
+routeur passerelle = relie un r\'e9seau avec l'Internet.\par
+h\'f4te envoye un paquet : directement \'e0 la destination dans le r\'e9seau local, sinon \'e0 la passerelle \par
+L'acheminement g\'e9n\'e9rale d'un paquet IP :\line 1. le paquet remonte la hi\'e9rarchie de r\'e9seau jusqu'\'e0 un routeur du syst\'e8me autonome de la source\line 2. le paquet  transite de syst\'e8me autonome en syst\'e8me autonome jusqu'\'e0 celui de la destination\line 3. le paquet  descend la hi\'e9rarchie jusqu'\'e0 la passerelle en charge du r\'e9seau local de la destination\line 4. cette passerelle l'envoie \'e0 la destination. \par
+\highlight3 12.4. World Wide Web\highlight0\par
+a\par
 \par
 \par
 \par
