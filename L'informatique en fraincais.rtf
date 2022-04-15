@@ -597,7 +597,7 @@ Trouver les caract\'e9ristiques d'un jeu n'est pas facile,  aide d'expere de jeu
 jeu \'e0 somme nulle = la somme des gains de tous les joueurs est \'e9gale \'e0 0.  si jouer 1 gagne, jouer 2 perd\par
 l'\'e9lagage alpha-b\'eata =  visite l'arbre de jeu pour faire remonter \'e0 la racine \'ab valeur du jeu \'bb qui est calcul\'e9e r\'e9cursivement.\par
 p = un n\f2\u339?ud de l'arbre de jeu\line f \f0\lang4105 =\f2\lang1033  une fonction d'\f0\'e9valuation de la position du jeu. \par
-\f1\bullet  valeur(p) = f (p) si p est une feuille de l'arbre\line\bullet  valeur(p) = MAX(valeur(O1), \'85, valeur(On)) si p est un n\f2\u339?ud Joueur ayant pour fils Oi\line\f1\bullet  valeur(p) = MIN(valeur(O1), \'85, valeur(On)) si p est un n\f2\u339?ud Opposant ayant pour fils Oi\par
+\f1\bullet  valeur(p) = f (p) si p est une feuille de l'arbre\line\bullet\f0  valeur(p) = MAX(valeur(O1), \'85, valeur(On)) si p est un n\f2\u339?ud Joueur ayant pour fils Oi\line\f1\bullet\f0  valeur(p) = MIN(valeur(O1), \'85, valeur(On)) si p est un n\f2\u339?ud Opposant ayant pour fils Oi\par
 L'\f0\'e9lagage alpha-b\'eata = alpha-beta pruning = technique tr\'e8s utilis\'e9e permettant de r\'e9duire le nombre de n\f2\u339?uds \f0\'e9valu\'e9s par l'algorithme minimax, il n'est pas n\'e9cessaire d'examiner les sous-arbres qui conduisent \'e0 des configurations dont la valeur ne contribuera s\'fbrement pas au calcul du gain \'e0 la racine de l'arbre. \'e9vite d'\'e9valuer des n\f2\u339?uds dont on est s\f0\'fbr que leur qualit\'e9 sera inf\'e9rieure \'e0 un n\f2\u339?ud d\f0\'e9j\'e0 \'e9valu\'e9 = optimiser grandement l'algorithme minimax sans en modifier le r\'e9sultat. \par
 Trois type de coupures  :\par
 1. Le n\f2\u339?ud MIN vient de mettre \f0\'e0 jour sa valeur courante \'e0 4. Celle-ci, qui ne peut que baisser, est d\'e9j\'e0 inf\'e9rieure \'e0 \f7\lang1032\'e1=5, la valeur actuelle du n\f2\u339?ud MAX pr\f0\lang1033\'e9c\'e9dent. Celui-ci cherchant la valeur la plus grande possible, ne la choisira donc de toute fa\'e7on pas.\par
@@ -675,7 +675,37 @@ routeur passerelle = relie un r\'e9seau avec l'Internet.\par
 h\'f4te envoye un paquet : directement \'e0 la destination dans le r\'e9seau local, sinon \'e0 la passerelle \par
 L'acheminement g\'e9n\'e9rale d'un paquet IP :\line 1. le paquet remonte la hi\'e9rarchie de r\'e9seau jusqu'\'e0 un routeur du syst\'e8me autonome de la source\line 2. le paquet  transite de syst\'e8me autonome en syst\'e8me autonome jusqu'\'e0 celui de la destination\line 3. le paquet  descend la hi\'e9rarchie jusqu'\'e0 la passerelle en charge du r\'e9seau local de la destination\line 4. cette passerelle l'envoie \'e0 la destination. \par
 \highlight3 12.4. World Wide Web\highlight0\par
+World Wide Web= le Web = WWW = syst\'e8me hypertexte public fonctionnant sur Internet qui permet de consulter, avec un navigateur, des pages accessibles sur des sites.  d'innombrables webs priv\'e9s existent.\par
+12.4.1. Termes rattach\'e9s au web\par
+en ligne =  connect\'e9 \'e0 un r\'e9seau, surtout l'internet\par
+h\'f4te =ordinateur en ligne. Chaque h\'f4te d'Internet est identifi\'e9 par une adresse IP \par
+ressource (du Web) = entit\'e9 informatique (texte, image, forum Usenet, bo\'eete aux lettres \'e9lectronique, etc.) accessible ind\'e9pendamment d'autres ressources. \line ressource en acc\'e8s public = librement accessible depuis Internet.\line ressource locale = pr\'e9sente sur l'ordinateur utilis\'e9\line ressource distante = ressource en ligne = accessible \'e0 travers un r\'e9seau.\par
+URL = Uniform Resource Locator = pointe sur une ressource = cha\'eene de caract\'e8res permettant d'indiquer un protocole de communication et un emplacement pour toute ressource du Web.\par
+hyperlien = lien = \'e9l\'e9ment dans une ressource associ\'e9 \'e0 une URL. sont orient\'e9s : permettent d'aller d'une source \'e0 une destination.\par
+HTML = HyperText Markup Language = langage informatique permettant de d\'e9crire le contenu d'un document et hyperliens. \par
+serveur = h\'f4te sur lequel fonctionne un logiciel serveur auquel peuvent se connecter des logiciels clients fonctionnant sur des h\'f4tes clients.\par
+serveur Web = h\'f4te sur lequel fonctionne un serveur HTTP.  h\'e9berge les ressources qu'il dessert.\par
+navigateur Web =logiciel client HTTP pour acc\'e9der aux ressources du Web. fonction de base = consultater des documents HTML disponibles sur les serveurs HTTP. \par
+page Web = page = document destin\'e9 \'e0 \'eatre consult\'e9 avec un navigateur Web. constitu\'e9e d'une ressource centrale (g\'e9n\'e9ralement un document HTML) et d'\'e9ventuelles ressources\par
+\'e9diteur HTML = \'e9diteur Web = logiciel con\'e7u pour faciliter l'\'e9criture de documents HTML et de pages Web \par
+site Web = site = ensemble de pages Web et d'\'e9ventuelles autres ressources, li\'e9es dans une structure coh\'e9rente, publi\'e9es par un propri\'e9taire et h\'e9berg\'e9es sur un ou plusieurs serveurs Web.\par
+Visiter un site Web signifie = consulter ses pages \par
+adresse Web = URL de page Web, g\'e9n\'e9ralement \'e9crite sous une forme simplifi\'e9e limit\'e9e \'e0 un nom d'h\'f4te. \par
+h\'e9bergeur Web = entreprise de services informatiques h\'e9bergeant (mettant en ligne) sur ses serveurs Web les ressources constituant les sites Web de ses clients.\par
+12.4.2. Web profond (deep web)\par
+Web profond = Web invisible = la partie du Web qui n'est pas index\'e9e, et donc introuvable avec les moteurs de recherche g\'e9n\'e9ralistes. repr\'e9sente plus de 99 % du Web\par
+comprend :\line\f1\bullet  les ressources inaccessibles au public, donc aux robots d'indexation\line\bullet  les\f0\lang4105  \f1\lang1033 pages administratives ou payantes, prot\f0\'e9g\'e9es par un mot de passe \line\f1\bullet  les ressources qui ne sont pas communiqu\f0\'e9es par des protocoles de communication pris en charge par les robots \line\f1\bullet  les ressources dont le format de donn\f0\'e9es n'est pas pris en charge par le robot \line\f1\bullet  les ressources list\f0\'e9es dans un fichier d'exclusion des robots \line\f1\bullet  les ressources exclues pour r\f0\'e9f\'e9rencement abusif (spandexing)\line\f1\bullet  les ressources exclues par le robot car consid\f0\'e9r\'e9es comme trop peu pertinentes \line\f1\bullet  les ressources vers lesquelles les hyperliens sont cr\f0\'e9\'e9s dynamiquement en r\'e9ponse aux interrogations des visiteurs. proviennent g\'e9n\'e9ralement de bases de donn\'e9es et constituent la partie la plus importante du Web profond.\par
+spamdexing = ensemble de techniques consistant \'e0 tromper les moteurs de recherche sur la qualit\'e9 d'une page ou d'un site afin d'obtenir, pour un mot-clef donn\'e9, un bon classement dans les r\'e9sultats des moteurs.\par
+12.4.3.Exploration du Web\par
+WWW peut \'eatre mod\'e9lis\'e9 par un graphe orient\'e9 o\'f9 les ressources sont les sommets et les hyperliens les arcs. le graphe est orient\'e9. certaines ressources peuvent constituer des puits : il n'existe aucun chemin vers le reste du Web. certaines ressources peuvent constituer des sources en indiquant des liens vers d'autres ressources.\par
+Le graphe  n'est pas forc\'e9ment connexe \par
+Un moteur de recherche = ensemble de robots qui parcourent le Web de page en page, en suivant les liens entre ces pages, puis qui indexent automatiquement les pages visit\'e9es. e.g. Google\par
+ \'e9tapes indispensables au fonctionnement d;un moteur de recherche : \line\f1\bullet  La collecte d'information gr\f0\'e2ce \'e0 des robots = spiders = crawlers\line\f1\bullet  L'indexation des donn\f0\'e9es collect\'e9es et la constitution d'une base de donn\'e9es nomm\'e9e \'ab index \'bb.\line\f1\bullet  Le traitement des requ\f0\'eates, avec en particulier un syst\'e8me d'interrogation de l'index et de classement des r\'e9sultats en fonction de crit\'e8res de pertinence suite \'e0 la saisie de mots-cl\'e9s.\par
+\highlight3 12.5. Google\highlight0\par
 a\par
+\par
+\par
+\par
 \par
 \par
 \par
