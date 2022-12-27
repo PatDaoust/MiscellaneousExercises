@@ -80,3 +80,8 @@ simscreen
 chai latte
 food!
 friends
+cookies
+holidays
+relaxing days
+cats
+doggoes
