@@ -3,6 +3,15 @@ yarn
 art
 hot chocolate
 crochet
+
+JavaScript
+Python
+flowers
+pears
+hot sauce
+kiwis
+cilantro
+jalapeno
 stitch markers
 water
 my water bottle
